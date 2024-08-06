@@ -8,7 +8,7 @@ This is the official code repository for the in progress work *Navigating the Di
 
 Release Plans
 
-- [] Inference code & model checkpoint
-- [] Online Demo
-- [] Code for training and evaluation
-- [] Code for collecting and processing data
+- [ ] Inference code & model checkpoint
+- [ ] Online Demo
+- [ ] Code for training and evaluation
+- [ ] Code for collecting and processing data
