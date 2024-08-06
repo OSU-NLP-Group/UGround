@@ -125,9 +125,6 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>The Ohio State University</span>&nbsp; &nbsp; &nbsp;
-          </div>
-          
-          <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>2</sup>Orby AI</span>
           </div>
 
@@ -148,24 +145,24 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <!-- @PAN TODO: change links -->
-                <a href="https://arxiv.org/abs/2401.01614" target="_blank"
+                <a href="" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (link to be updated)</span>
+                  <span>Paper (Coming soon)</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/OSU-NLP-Group/UGround"  target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
+               <a href="https://huggingface.co/osunlp/UGround" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                 <span class="icon">
+                     <!-- <i class="far fa-images"></i> -->
+                     <p style="font-size:18px">🤗</p>
+                     <!-- 🔗 -->
+                 </span>
+                 <span>Model checkpoint</span>
+               </a>
+             </span>
             </div>
           </div>
         </div>
@@ -187,7 +184,16 @@
        <div class="box m-5">
         <div class="content has-text-justified">
           <p>
-            Introduction
+            UGround is an universal visual grounding model for locating the element of an action by pixel coordinates on the screen. 
+            GUI agents using UGround as the grounding model achieved SOTA 0-shot performance on the following benchmarks:
+           <ul>
+            <li>ScreenSpot</li>
+            <li>AndroidControl</li>
+            <li>OmniAct</li>
+            <li>AndroidWorld</li>
+            <li>Mind2Web-Live</li>
+            <li>Multimodal-Mind2Web</li>
+           </ul>
           </p>
 
           <p>
@@ -195,7 +201,7 @@
           </p>
           <ul>
             <li>
-              2024/8/6: v0 paper is released.
+              2024/8/6: Website is live. The initial evaluation results are available on <a href="https://lamb.community">lamb.community</a>.
             </li>
           </ul>
 
@@ -213,8 +219,6 @@
   <h1 class="title is-1 mmmu">
     <img src="static/images/uground-icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
     <span class="mmmu" style="vertical-align: middle">UGround Method</span>
-    <p><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:300px" /></p>
-    <p><img src="static/images/screens.png" alt="MY ALT TEXT" style="width:800px" /></p>
   </h1>
   </div>
 </section>
@@ -231,7 +235,44 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            TBD
+           Multimodal large language models (MLLMs) are transforming the capabilities of
+           graphical user interface (GUI) agents, facilitating their transition from controlled
+           simulations to complex, real-world applications across various platforms. However,
+           the effectiveness of these agents hinges significantly on the robustness of their
+           grounding mechanisms. Traditional GUI agents predominantly utilize text-based
+           inputs such as HTML or accessibility trees, which, despite their utility, often introduce noise, incompleteness, and increased computational overheads. In this paper,
+           we introduce UGround, a universal pixel-level visual grounding model developed
+           specifically for GUIs. This model, trained on 1.3 million diverse samples, leverages MLLMs as a planning module while concurrently grounding actions directly
+           via pixel coordinates. UGround is designed to operate across different operating
+           systems and handle both referential and action-based descriptions effectively. Our
+           comprehensive evaluation across six benchmarks—including desktop, mobile, and
+           web platforms—demonstrates that UGround not only outperforms existing visual
+           grounding models, but also matches or exceeds the performance of state-of-the-art
+           methods that rely on additional textual inputs. These results underscore UGround’s
+           potential in significantly advancing the field of vision-based GUI agents, illustrating its ability to navigate digital environments with human-like perception and
+           precision. This approach not only reduces dependencies on text-based inputs but
+           also minimizes latency and inference costs, thus enhancing the practicality and
+           user experience in real-world applications.
+          </p>
+
+          <p style="display:flex;"><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:300px" /><img src="static/images/screens.png" alt="MY ALT TEXT" style="width:800px" /></p>
+        </div>
+
+
+        <h2 class="title is-3">Offline Experiments</h2>
+        <div class="content has-text-justified">
+          <p>We evaluate UGround on a very recent visual grounding becnhmark, ScreenSpot. Serveral multimodal large language models including LLaVa, GPT-4, and GPT-4o have been exploited for planning.  
+          </p>
+          <p class="has-text-centered"><img src="static/images/screenspot.png" alt="MY ALT TEXT" style="width:800px" /></p>
+          <p>UGround demonstrated strong performance with or without a separate planinng model. With the help of GPT-4o, UGround achieved the new SOTA results on ScreenSpot in every dimension.</p>
+          <p>Below are detailed evaluation results on AndroidControl and Multimodal-Mind2Web. This further shows that UGround can enable existing multimodal large language models to achieve strong performance just by relying on the visual inputs / screenspots without HTML or accessibility tree.</p>
+          <p class="has-text-centered"><img src="static/images/androidcontrol.png" alt="AndroidControl" style="width:400px" /></p>
+          <p class="has-text-centered"><img src="static/images/multimodal-mind2web.png" alt="Multimodal-Mind2Web" style="width:600px" /></p>
+        </div>
+
+        <h2 class="title is-3">Online Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
           </p>
         </div>
       </div>
