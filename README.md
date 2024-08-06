@@ -12,3 +12,5 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [ ] Online demo
 - [ ] Code for training and evaluation
 - [ ] Code for collecting and processing data
+
+Note: This is a work in progress. The evaluation results and model checkpoints will be kept updated in later versions.
