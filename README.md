@@ -5,3 +5,10 @@ This is the official code repository for the in progress work *Navigating the Di
 - Page: https://osu-nlp-group.github.io/UGround
 - Model Coming Soon: https://huggingface.co/osunlp/UGround
 - Online Demo: Coming Soon
+
+Release Plans
+
+- [] Inference code & model checkpoint
+- [] Online Demo
+- [] Code for training and evaluation
+- [] Code for collecting and processing data
