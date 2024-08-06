@@ -3,7 +3,7 @@ The original text is grammatically correct and makes sense. However, some minor 
 **Revised text:**
 
 # UGround
-This is the official code repository for the ongoing project **Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents**.
+This is the official code repository for the project **Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents**.
 
 - [Paper](https://github.com/OSU-NLP-Group/UGround/blob/gh-pages/static/papers/UGround_paper.pdf)
 - [Page](https://osu-nlp-group.github.io/UGround)
