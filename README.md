@@ -8,8 +8,8 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 **Release Plans:**
 
-- [x] Inference code
-- [ ] Model checkpoint
+- [x] Model checkpoint
+- [ ] Inference code
 - [ ] Online demo
 - [ ] Code for training and evaluation
 - [ ] Code for collecting and processing data
