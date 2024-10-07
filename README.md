@@ -8,10 +8,15 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 **Release Plans:**
 
-- [x] Model checkpoint
-- [ ] Inference code
-- [ ] Online demo
-- [ ] Code for training and evaluation
-- [ ] Code for collecting and processing data
+- [x] Model Weights
+- [] Code
+  - [] Inference Code of UGround
+  - [] Offline Experiments
+  - [] Online Experiments
+- [] Data
+  - [] Data Examples
+  - [] Data Construction Scripts
+  - [] Guidance of Open-source Data 
+  - [] Full Data
+- [ ] Online Demo (HF Space)
 
-Note: This is a work in progress. The evaluation results and model checkpoints will be kept updated in later versions.
