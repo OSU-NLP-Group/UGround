@@ -174,7 +174,7 @@
   </div>
 </section>
 
-<p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:900px"></p>
+<!--<p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:900px"></p>-->
 
 <style>
   .center {
@@ -190,7 +190,7 @@
        <div class="box m-5">
         <div class="content has-text-justified">
           <p>
-              <b>UGround</b> is a universal <b>visual grounding</b> model for locating the element of an action by pixel coordinates on the screen. It is trained on 10M elements from 1.3M screenshots, and substantially outperforms previous SOTA GUI visual grounding models.
+              <b>UGround</b> is a universal <b>visual grounding</b> model for locating the element of an action by pixel coordinates on GUIs. It is trained on 10M elements from 1.3M screenshots, and substantially outperforms previous SOTA GUI visual grounding models.
 <br>
               Different from prevalent approaches that rely on HTML/A11y trees for observation or grounding, we propose a generic framework, <b>SeeAct-V</b>, that <b>perceives the GUIs entirely visually</b>, and <b>takes pixel-level operations</b> on screens. SeeAct-V Agents with UGround achieve SOTA performance on six benchmarks, spanning <b>GUI Grounding</b> (web, mobile, desktop), <b>offline agent evaluation</b> (web, mobile, desktop), and <b>online agent evaluation</b> (web, mobile):
 <!--           <ul>-->
@@ -247,10 +247,10 @@
 <!--        <div class="column is-four-fifths">-->
 
         <h2 class="title is-3">Overview</h2>
-          <p class="has-text-centered"><img src="static/images/seeact-v.png" alt="MY ALT TEXT" style="width:1000px"></p>
+          <p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:1000px"></p>
         <div class="content has-text-justified">
           <p>
-           Multimodal large language models (MLLMs) are transforming the capabilities of graphical user interface (GUI) agents, facilitating their transition from controlled simulations to complex, real-world applications across various platforms. However, the effectiveness of these agents hinges significantly on the robustness of their grounding mechanisms. Prevalent GUI agents predominantly utilize text-based inputs such as HTML or accessibility trees, which, despite their utility, often introduce noise, incompleteness, and increased computational overhead. In this paper, we propose SeeAct-V, a generic vision-only framework for building GUI agents. It involves an MLLM as a planner to determine the next action, as well as a grounding model to retrieve the coordinates of target elements from screenshots. We introduce UGround, a universal pixel-level visual grounding model developed specifically for GUIs. This model, trained on 1.3 million diverse samples, is designed to ground open-ended element descriptions directly via pixel coordinates, and to function across different operating systems. Our comprehensive evaluation across six benchmarks, including desktop, mobile, and web platforms, demonstrates that UGround not only outperforms existing visual grounding models, but also matches or exceeds the performance of state-of-the-art methods that rely on HTML or accessibility trees. These results underscore UGround's practicability in significantly advancing the field of vision-based GUI agents, illustrating its ability to navigate digital environments with human-like perception and precision.
+           Multimodal large language models (MLLMs) are transforming the capabilities of graphical user interface (GUI) agents, facilitating their transition from controlled simulations to complex, real-world applications across various platforms. However, the effectiveness of these agents hinges on the robustness of their grounding capability. Current GUI agents predominantly utilize text-based representations such as HTML or accessibility trees, which, despite their utility, often introduce noise, incompleteness, and increased computational overhead. In this paper, we advocate a human-like embodiment for GUI agents that perceive the environment entirely visually and directly take pixel-level operations on the GUI. The key is visual grounding models that can accurately map diverse referring expressions of GUI elements to their coordinates on the GUI across different platforms. We show that a simple recipe, which includes web-based synthetic data and slight adaptation of the LLaVA architecture, is surprisingly effective for training such visual grounding models. We collect the largest dataset for GUI visual grounding so far, containing 10M GUI elements and their referring expressions over 1.3M screenshots, and use it to train UGround, a strong universal visual grounding model for GUI agents. Empirical results on six benchmarks spanning three categories (grounding, offline agent, and online agent) show that 1) UGround substantially outperforms existing visual grounding models for GUI agents, by up to 20% absolute, and 2) agents with UGround outperform state-of-the-art agents, despite the fact that existing agents use additional text-based input while ours only uses visual perception. These results provide strong support for the feasibility and promises of GUI agents that navigate the digital world as humans do.
           </p>
 
 <!--          <p style="display:flex;"><img src="static/images/seeact-v.png" alt="MY ALT TEXT" style="width:300px" /><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:800px" /></p>-->
