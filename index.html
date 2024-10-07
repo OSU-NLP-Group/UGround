@@ -2,39 +2,47 @@
 <html>
 <head>
     <style>
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-        th, td {
-            padding: 12px;
-            /*text-align: center;*/
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        caption {
-            caption-side: top;
-            text-align: center;
-            font-weight: bold;
-            padding: 10px;
-            font-size: 20px;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #ff5722;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        text-align: center;  /* Horizontally center content */
+        vertical-align: middle;  /* Vertically center content */
+        font-size: 14px;
+    }
+    th, td {
+        padding: 12px;
+        text-align: center;  /* Horizontally center content */
+        vertical-align: middle;  /* Vertically center content */
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+        text-align: center;  /* Horizontally center content */
+        vertical-align: middle;  /* Vertically center content */
+        font-weight: bold;
+    }
+    caption {
+        caption-side: top;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 20px;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+        text-align: center;  /* Horizontally center content */
+        vertical-align: middle;  /* Vertically center content */
+    }
+    .highlight {
+        font-weight: bold;
+        color: #ff5722;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
@@ -292,11 +300,11 @@
     <caption>ScreenSpot (Standard Setting)</caption>
     <thead>
         <tr>
-            <th rowspan="2">Grounding Model</th>
+            <th rowspan="2"><br>Grounding Model</th>
             <th colspan="2">Mobile</th>
             <th colspan="2">Desktop</th>
             <th colspan="2">Web</th>
-            <th rowspan="2">Average</th>
+            <th rowspan="2"><br>Average</th>
         </tr>
         <tr>
             <th>Text</th>
@@ -406,12 +414,12 @@
     <caption> ScreenSpot (Agent Setting)</caption>
     <thead>
         <tr>
-            <th rowspan="2">Planner</th>
+            <th rowspan="2"><br>Planner</th>
             <th rowspan="2">Grounding</th>
             <th colspan="2">Mobile</th>
-            <th colspan="2">Desktop</th>
-            <th colspan="2">Web</th>
-            <th rowspan="2">Average</th>
+            <th colspan="2">Desktop  </th>
+            <th colspan="2">Web  </th>
+            <th rowspan="2"><br>Average</th>
         </tr>
         <tr>
             <th>Text</th>
@@ -424,7 +432,7 @@
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2">GPT-4</td>
+            <td rowspan="2"><br>GPT-4</td>
             <td>SeeClick</td>
             <td>76.6</td>
             <td>55.5</td>
@@ -445,7 +453,7 @@
             <td>75.6</td>
         </tr>
         <tr>
-            <td rowspan="2">GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>81.0</td>
             <td>59.8</td>
@@ -541,10 +549,10 @@
     <caption>AndroidControl</caption>
     <thead>
         <tr>
-            <th rowspan="2">Input</th>
-            <th rowspan="2">Planner</th>
-            <th rowspan="2">Grounding</th>
-            <th colspan="2">Step Accuracy</th>
+            <th rowspan="2"><br>Input</th>
+            <th rowspan="2"><br>Planner</th>
+            <th rowspan="2"><br>Grounding</th>
+            <th colspan="2"><br>Step Accuracy</th>
         </tr>
         <tr>
             <th>High</th>
@@ -561,10 +569,12 @@
         </tr>
         <tr>
             <td rowspan="4">
+                <br>
+                <br>
                 <div>Image</div>
                 <div>(SeeAct-V)</div>
             </td>
-            <td rowspan="2">GPT-4</td>
+            <td rowspan="2"><br>GPT-4</td>
             <td>SeeClick</td>
             <td>39.4</td>
             <td>47.2</td>
@@ -575,7 +585,7 @@
             <td>58.0</td>
         </tr>
         <tr>
-            <td rowspan="2">GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>41.8</td>
             <td>52.8</td>
@@ -601,7 +611,7 @@
     <tbody>
         <tr>
             <td>Text</td>
-            <td rowspan="2">GPT-4</td>
+            <td rowspan="2"><br>GPT-4</td>
             <td>DetACT</td>
             <td>11.6</td>
         </tr>
@@ -612,10 +622,12 @@
         </tr>
         <tr>
             <td rowspan="4">
+                <br>
+                <br>
                 <div>Image</div>
                 <div>(SeeAct-V)</div>
             </td>
-            <td rowspan="2">GPT-4</td>
+            <td rowspan="2"><br>GPT-4</td>
             <td>SeeClick</td>
             <td>28.9</td>
         </tr>
@@ -624,7 +636,7 @@
             <td>31.1</td>
         </tr>
         <tr>
-            <td rowspan="2">GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>29.6</td>
         </tr>
@@ -656,9 +668,9 @@
     </thead>
     <tbody>
         <tr>
-            <td rowspan="2">Text</td>
+            <td rowspan="2"><br>Text</td>
             <td>GPT-4</td>
-            <td rowspan="2">Choice</td>
+            <td rowspan="2"><br>Choice</td>
             <td>44.3</td>
             <td>21.1</td>
         </tr>
@@ -673,7 +685,7 @@
                 <div>(SeeAct-V)</div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2">UGround</td>
+            <td rowspan="2"><br>UGround</td>
             <td>50.7</td>
             <td><strong>23.1</strong></td>
         </tr>
@@ -698,7 +710,7 @@
     <tbody>
         <tr>
             <td>Text</td>
-            <td rowspan="2">GPT-4</td>
+            <td rowspan="2"><br>GPT-4</td>
             <td>Choice</td>
             <td>30.6</td>
         </tr>
@@ -713,7 +725,7 @@
                 <div>(SeeAct-V)</div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2">UGround</td>
+            <td rowspan="2"><br>UGround</td>
             <td>31.0</td>
         </tr>
         <tr>
