@@ -2,6 +2,35 @@
 <html>
 <head>
     <style>
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 12px;
+            /*text-align: center;*/
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        caption {
+            caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 16px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+        }
         .hidden {
             display: none;
         }
@@ -232,7 +261,7 @@
   <div class="hero-body has-text-centered">
   <h1 class="title is-1 mmmu">
     <img src="static/images/uground-icon.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-    <span class="mmmu" style="vertical-align: middle">Method</span>
+    <span class="mmmu" style="vertical-align: middle">UGround</span>
   </h1>
   </div>
 </section>
@@ -258,22 +287,445 @@
 
         <h2 class="title is-3">Offline Experiments</h2>
         <div class="content has-text-justified">
-          <p>We evaluate UGround on a very recent visual grounding benchmark, ScreenSpot. Several multimodal large language models including LLaVa, GPT-4, and GPT-4o have been exploited for planning.  
-          </p>
-          <p class="has-text-centered"><img src="static/images/screenspot.jpg" alt="MY ALT TEXT" style="width:800px" /></p>
-          <p>UGround demonstrated strong performance with or without a separate planinng model. Incorporated with GPT-4o, UGround achieved the new SOTA results on ScreenSpot in every dimension.</p>
-          <p>We also evaluate UGround on agent benchmarks, including Multimodal-Mind2Web, AndroidControl and OmniAct. This further shows that UGround can enable existing multimodal large language models to achieve strong performance just by relying on the visual inputs without HTML or accessibility trees.</p>
-          <p class="has-text-centered"><img src="static/images/androidcontrol.jpg" alt="AndroidControl" style="width:430px" /></p>
-          <p class="has-text-centered"><img src="static/images/multimodal-mind2web.jpg" alt="Multimodal-Mind2Web" style="width:580px" /></p>
+
+        <table>
+    <caption>ScreenSpot (Standard Setting).</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Grounding Model</th>
+            <th colspan="2">Mobile</th>
+            <th colspan="2">Desktop</th>
+            <th colspan="2">Web</th>
+            <th rowspan="2">Average</th>
+        </tr>
+        <tr>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>MiniGPT-v2</td>
+            <td>8.4</td>
+            <td>6.6</td>
+            <td>6.2</td>
+            <td>2.9</td>
+            <td>6.5</td>
+            <td>3.4</td>
+            <td>5.7</td>
+        </tr>
+        <tr>
+            <td>Qwen-VL</td>
+            <td>9.5</td>
+            <td>4.8</td>
+            <td>5.7</td>
+            <td>5.0</td>
+            <td>3.5</td>
+            <td>2.4</td>
+            <td>5.2</td>
+        </tr>
+        <tr>
+            <td>Groma</td>
+            <td>10.3</td>
+            <td>2.6</td>
+            <td>4.6</td>
+            <td>4.3</td>
+            <td>5.7</td>
+            <td>3.4</td>
+            <td>5.1</td>
+        </tr>
+        <tr>
+            <td>GPT-4</td>
+            <td>22.6</td>
+            <td>24.5</td>
+            <td>20.2</td>
+            <td>11.8</td>
+            <td>9.2</td>
+            <td>8.8</td>
+            <td>16.2</td>
+        </tr>
+        <tr>
+            <td>GPT-4o</td>
+            <td>20.2</td>
+            <td>24.9</td>
+            <td>21.1</td>
+            <td>23.6</td>
+            <td>12.2</td>
+            <td>7.8</td>
+            <td>18.3</td>
+        </tr>
+        <tr>
+            <td>Fuyu</td>
+            <td>41.0</td>
+            <td>1.3</td>
+            <td>33.0</td>
+            <td>3.6</td>
+            <td>33.9</td>
+            <td>4.4</td>
+            <td>19.5</td>
+        </tr>
+
+        <tr>
+            <td>CogAgent</td>
+            <td>67.0</td>
+            <td>24.0</td>
+            <td>74.2</td>
+            <td>20.0</td>
+            <td>70.4</td>
+            <td>28.6</td>
+            <td>47.4</td>
+        </tr>
+        <tr>
+            <td>SeeClick</td>
+            <td>78.0</td>
+            <td>52.0</td>
+            <td>72.2</td>
+            <td>30.0</td>
+            <td>55.7</td>
+            <td>32.5</td>
+            <td>53.4</td>
+        </tr>
+        <tr>
+            <td><strong>UGround</strong></td>
+            <td><strong>82.8</strong></td>
+            <td><strong>60.3</strong></td>
+            <td><strong>82.5</strong></td>
+            <td><strong>63.6</strong></td>
+            <td><strong>80.4</strong></td>
+            <td><strong>70.4</strong></td>
+            <td><strong>73.3</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+            <table>
+    <caption> ScreenSpot (Agent Setting).</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Planner</th>
+            <th rowspan="2">Grounding</th>
+            <th colspan="2">Mobile</th>
+            <th colspan="2">Desktop</th>
+            <th colspan="2">Web</th>
+            <th rowspan="2">Average</th>
+        </tr>
+        <tr>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+            <th>Text</th>
+            <th>Icon/Widget</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">GPT-4</td>
+            <td>SeeClick</td>
+            <td>76.6</td>
+            <td>55.5</td>
+            <td>68.0</td>
+            <td>28.6</td>
+            <td>40.9</td>
+            <td>23.3</td>
+            <td>48.8</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td>90.1</td>
+            <td>70.3</td>
+            <td>87.1</td>
+            <td>55.7</td>
+            <td>85.7</td>
+            <td>64.6</td>
+            <td>75.6</td>
+        </tr>
+        <tr>
+            <td rowspan="2">GPT-4o</td>
+            <td>SeeClick</td>
+            <td>81.0</td>
+            <td>59.8</td>
+            <td>69.6</td>
+            <td>33.6</td>
+            <td>43.9</td>
+            <td>26.2</td>
+            <td>52.3</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td><strong>93.4</strong></td>
+            <td><strong>76.9</strong></td>
+            <td><strong>92.8</strong></td>
+            <td><strong>67.9</strong></td>
+            <td><strong>88.7</strong></td>
+            <td><strong>68.9</strong></td>
+            <td><strong>81.4</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+
+            <table>
+    <caption>Element accuracy on Multimodal-Mind2Web.</caption>
+    <thead>
+        <tr>
+            <th>Input</th>
+            <th>Planner</th>
+            <th>Grounding</th>
+            <th>Cross-Task</th>
+            <th>Cross-Website</th>
+            <th>Cross-Domain</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Image + Text</td>
+            <td rowspan="2">GPT-4</td>
+            <td>Choice</td>
+            <td>46.4</td>
+            <td>38.0</td>
+            <td>42.4</td>
+            <td>42.3</td>
+        </tr>
+        <tr>
+            <td>SoM</td>
+            <td>29.6</td>
+            <td>20.1</td>
+            <td>27.0</td>
+            <td>25.6</td>
+        </tr>
+        <tr>
+            <td rowspan="4">
+                <div>Image</div>
+                <div>(SeeAct-V)</div>
+            </td>
+            <td rowspan="2">GPT-4</td>
+            <td>SeeClick</td>
+            <td>29.7</td>
+            <td>28.5</td>
+            <td>30.7</td>
+            <td>29.6</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td>45.1</td>
+            <td>44.7</td>
+            <td>44.6</td>
+            <td>44.8</td>
+        </tr>
+        <tr>
+            <td rowspan="2">GPT-4o</td>
+            <td>SeeClick</td>
+            <td>32.1</td>
+            <td>33.1</td>
+            <td>33.5</td>
+            <td>32.9</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td><strong>47.7</strong></td>
+            <td><strong>46.0</strong></td>
+            <td><strong>46.6</strong></td>
+            <td><strong>46.8</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table>
+    <caption>AndroidControl</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">Input</th>
+            <th rowspan="2">Planner</th>
+            <th rowspan="2">Grounding</th>
+            <th colspan="2">Step Accuracy</th>
+        </tr>
+        <tr>
+            <th>High</th>
+            <th>Low</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Text</td>
+            <td>GPT-4</td>
+            <td>Choice</td>
+            <td>42.1</td>
+            <td>55.0</td>
+        </tr>
+        <tr>
+            <td rowspan="4">
+                <div>Image</div>
+                <div>(SeeAct-V)</div>
+            </td>
+            <td rowspan="2">GPT-4</td>
+            <td>SeeClick</td>
+            <td>39.4</td>
+            <td>47.2</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td>46.2</td>
+            <td>58.0</td>
+        </tr>
+        <tr>
+            <td rowspan="2">GPT-4o</td>
+            <td>SeeClick</td>
+            <td>41.8</td>
+            <td>52.8</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td><strong>48.4</strong></td>
+            <td><strong>62.4</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>OmniACT</caption>
+    <thead>
+        <tr>
+            <th>Inputs</th>
+            <th>Planner</th>
+            <th>Grounding</th>
+            <th>Action Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Text</td>
+            <td rowspan="2">GPT-4</td>
+            <td>DetACT</td>
+            <td>11.6</td>
+        </tr>
+        <tr>
+            <td>Image + Text</td>
+            <td>DetACT</td>
+            <td>17.0</td>
+        </tr>
+        <tr>
+            <td rowspan="4">
+                <div>Image</div>
+                <div>(SeeAct-V)</div>
+            </td>
+            <td rowspan="2">GPT-4</td>
+            <td>SeeClick</td>
+            <td>28.9</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td>31.1</td>
+        </tr>
+        <tr>
+            <td rowspan="2">GPT-4o</td>
+            <td>SeeClick</td>
+            <td>29.6</td>
+        </tr>
+        <tr>
+            <td>UGround</td>
+            <td><strong>32.8</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
         </div>
 
         <h2 class="title is-3">Online Experiments</h2>
         <div class="content has-text-justified">
-          <p>To further evaluate the approach's performance in more realistic settings, we evaluate UGround in online Web and Mobile environments using Mind2Web-Live and AndroidWorld.
-          </p>
+
+
+            <table>
+    <caption>Mind2Web-Live</caption>
+    <thead>
+        <tr>
+            <th>Inputs</th>
+            <th>Planner</th>
+            <th>Grounding</th>
+            <th>Completion Rate</th>
+            <th>Task Success Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Text</td>
+            <td>GPT-4</td>
+            <td rowspan="2">Choice</td>
+            <td>44.3</td>
+            <td>21.1</td>
+        </tr>
+        <tr>
+            <td>GPT-4o</td>
+            <td>47.6</td>
+            <td>22.1</td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <div>Image</div>
+                <div>(SeeAct-V)</div>
+            </td>
+            <td>GPT-4</td>
+            <td rowspan="2">UGround</td>
+            <td>50.7</td>
+            <td><strong>23.1</strong></td>
+        </tr>
+        <tr>
+            <td>GPT-4o</td>
+            <td><strong>50.8</strong></td>
+            <td>19.2</td>
+        </tr>
+    </tbody>
+</table>
+
+            <table>
+    <caption>AndroidWorld</caption>
+    <thead>
+        <tr>
+            <th>Input</th>
+            <th>Planner</th>
+            <th>Grounding</th>
+            <th>Task Success Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Text</td>
+            <td rowspan="2">GPT-4</td>
+            <td>Choice</td>
+            <td>30.6</td>
+        </tr>
+        <tr>
+            <td>Image + Text</td>
+            <td>SoM</td>
+            <td>25.4</td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <div>Image</div>
+                <div>(SeeAct-V)</div>
+            </td>
+            <td>GPT-4</td>
+            <td rowspan="2">UGround</td>
+            <td>31.0</td>
+        </tr>
+        <tr>
+            <td>GPT-4o</td>
+            <td><strong>32.8</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
 <!--          <p class="has-text-centered"><img src="static/images/omniact.jpg" alt="OmniAct" style="width:300px" /></p>-->
-          <p class="has-text-centered"><img src="static/images/androidworld.jpg" alt="AndroidWorld" style="width:300px" /></p>
-          <p class="has-text-centered"><img src="static/images/mind2web-live.jpg" alt="Mind2Web-Live" style="width:400px" /></p>
         </div>
       </div>
     </div>
