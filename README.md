@@ -9,14 +9,14 @@ This is the official code repository for the project: *Navigating the Digital Wo
 **Release Plans:**
 
 - [x] Model Weights
-- [] Code
-  - [] Inference Code of UGround
-  - [] Offline Experiments
-  - [] Online Experiments
-- [] Data
-  - [] Data Examples
-  - [] Data Construction Scripts
-  - [] Guidance of Open-source Data 
-  - [] Full Data
+- [ ] Code
+  - [ ] Inference Code of UGround
+  - [ ] Offline Experiments
+  - [ ] Online Experiments
+- [ ] Data
+  - [ ] Data Examples
+  - [ ] Data Construction Scripts
+  - [ ] Guidance of Open-source Data 
+  - [ ] Full Data
 - [ ] Online Demo (HF Space)
 
