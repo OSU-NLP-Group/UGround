@@ -369,7 +369,7 @@
           <p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:1000px"></p>
         <div class="content has-text-justified">
           <p>
-              In this work, we advocate a <strong>human-like embodiment</strong> for GUI agents that perceive the environment entirely visually and directly take pixel-level operations on the GUI. The key is <strong>visual grounding models</strong> that can accurately map diverse referring expressions of GUI elements to their coordinates on the GUI across different platforms. <br>We show that a simple recipe, which includes web-based synthetic data and slight adaptation of the LLaVA architecture, is surprisingly effective for training such visual grounding models. We collect the largest dataset for GUI visual grounding so far, containing 10M GUI elements (~95% from web) and their referring expressions over 1.3M screenshots, and use it to train UGround, a strong universal visual grounding model for GUI agents.   </p>
+              In this work, we advocate a <strong>human-like embodiment</strong> for GUI agents that perceive the environment entirely visually and directly take pixel-level operations on the GUI. The key is <strong>visual grounding models</strong> that can accurately map diverse referring expressions of GUI elements to their coordinates on the GUI across different platforms. <br>We show that a simple recipe, which includes <strong>web-based synthetic data</strong> and slight adaptation of the LLaVA architecture, is surprisingly effective for training such visual grounding models. We collect the largest dataset for GUI visual grounding so far, containing 10M GUI elements (~95% from web) and their referring expressions over 1.3M screenshots, and use it to train UGround, a strong universal visual grounding model for GUI agents.   </p>
 
 <!--          <p style="display:flex;"><img src="static/images/seeact-v.png" alt="MY ALT TEXT" style="width:300px" /><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:800px" /></p>-->
         </div>
@@ -378,7 +378,7 @@
         <h2 class="title is-3">Offline Experiments</h2>
         <div class="content has-text-justified">
 
-            <p>UGround substaintially outperforms previous SOTA visual grounding model SeeClick on Screenspot on every platform. The high-quality grounding data synthesized from web (Web-Hybrid) effectively help UGround generalize to Desktop and Mobile UIs.
+            <p>The high-quality grounding data synthesized from web (9M elements from <strong>Web-Hybrid</strong>) effectively helps UGround generalize to Desktop and Mobile UIs. UGround substantially outperforms previous SOTA visual grounding model SeeClick on Screenspot on every platform.
 <!--                <br-->
 <!--                >Our experiments even show that, with only 50K screenshots (about 600K elements) of our web-based synthetic data, UGround is able to outperform SeeClick on every platform (10% in avg.), which is trained on about 3M web and Android elements from about 400K screenshots.</p>-->
 
