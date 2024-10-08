@@ -5,17 +5,18 @@
 
         /* 右侧导航栏的样式 */
     .sidebar {
-        position: fixed;
-        top: 100px;
-        right: 0;
-        width: 220px;
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        transition: all 0.3s ease;
-    }
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    z-index: 1000; /* 增加 z-index 确保它在其他元素的上层 */
+}
     .sidebar:hover {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
@@ -117,15 +118,15 @@
 
   <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script src="./static/js/question_card.js"></script>
-  <script src="./data/results/data_setting.js" defer></script>
-  <script src="./data/results/model_scores.js" defer></script>
-  <script src="./visualizer/data/data_public.js" defer></script>
+<!--  <script src="./static/js/index.js"></script>-->
+<!--  <script src="./static/js/question_card.js"></script>-->
+<!--  <script src="./data/results/data_setting.js" defer></script>-->
+<!--  <script src="./data/results/model_scores.js" defer></script>-->
+<!--  <script src="./visualizer/data/data_public.js" defer></script>-->
 </head>
 <body>
 
