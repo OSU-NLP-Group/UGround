@@ -143,7 +143,8 @@ if __name__ == "__main__":
 
                 max_target_key = max(int(key) for key in target_blocks.keys())
 
-                # Stop if action is not "SCROLL DOWN" or the last block is reached
+                # Stop if the action is not "SCROLL DOWN", the current block exceeds the max block containing the target element,
+                # or if the last block has been reached.
                 if action != "SCROLL DOWN" or block_num > max_target_key or not os.path.exists(os.path.join(block_image_dir, blocks_path, f"{block_num + 1}.png")):
                     break
 
