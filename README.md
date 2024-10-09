@@ -1,9 +1,9 @@
 # UGround
 This is the official code repository for the project: *Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents*.
-- [Homepage](https://osu-nlp-group.github.io/UGround)
-- [Paper](https://arxiv.org/abs/2410.05243)
-- [Model Weights](https://huggingface.co/osunlp/UGround)
-- Online Demo: Coming Soon
+- [🏠Homepage](https://osu-nlp-group.github.io/UGround)
+- [📖Paper](https://arxiv.org/abs/2410.05243)
+- [😊Model Weights](https://huggingface.co/osunlp/UGround)
+- [😊Online Demo](https://huggingface.co/spaces/orby-osu/UGround)
 
 <h3>Release Plans:</h3>
 
