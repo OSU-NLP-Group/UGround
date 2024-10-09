@@ -15,7 +15,7 @@ python sample.py --input_dir <dataset_dir> --output_dir <sample_dir> --samples_p
 Split full screenshots into blocks.
 
 ```bash
-python make_blocks.py --input_file <sample_jsonl> --output_file <blocks_jsonl> --image_folder <screenshots_dir> --output_folder <blocks_dir>
+python make_blocks.py --input_file <sample_jsonl> --output_file <sample_blocks_jsonl> --image_folder <screenshots_dir> --output_folder <blocks_dir>
 ```
 
 **3. `gpt_plan.py`**
@@ -24,7 +24,7 @@ Generate plan files using GPT models.
 
 ```bash
 export OPENAI_API_KEY="Your OpenAI API Key"
-python gpt_plan.py --gpt_model <model_name> --input_file <blocks_jsonl> --output_file <plan_jsonl> --blocks <blocks_dir>
+python gpt_plan.py --gpt_model <model_name> --input_file <sample_blocks_jsonl> --output_file <plan_jsonl> --blocks <blocks_dir>
 ```
 
 **4. `extract_grounding_query.py`**
@@ -44,5 +44,9 @@ Perform grounding model inference using the query file generated in the previous
 Evaluate the Element Accuracy, Operation F1 and Step Success Rate based on plan and grounding results.
 
 ```bash
-python eval.py --sample_file <blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
+python eval.py --sample_file <sample_blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
 ```
+
+
+
+**`file_schemas.py`** defines the required fields for the `sample_jsonl`, `sample_blocks_jsonl` , `plan_jsonl`,  `query_jsonl`,  and `ans_jsonl` files.

@@ -1,0 +1,10 @@
+torch==2.3.0
+transformers==4.34.0
+tqdm==4.66.4
+nltk==3.8.1
+Pillow==10.3.0
+requests==2.32.3
+scikit-learn==1.5.2
+numpy==2.1.2
+pandas==2.2.2
+openai==1.35.14
