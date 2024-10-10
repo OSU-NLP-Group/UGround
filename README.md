@@ -33,7 +33,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 ## Citation Information
 
-If you find this work useful, please consider starring our repo and citing our paper: 
+If you find this work useful, please consider starring our repo and citing our papers: 
 
 ```
 @article{gou2024uground,
