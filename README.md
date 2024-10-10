@@ -43,4 +43,11 @@ If you find this work useful, please consider starring our repo and citing our p
         year={2024},
         url={https://arxiv.org/abs/2410.05243},
       }
+
+@article{zheng2023seeact,
+        title={GPT-4V(ision) is a Generalist Web Agent, if Grounded},
+        author={Boyuan Zheng and Boyu Gou and Jihyung Kil and Huan Sun and Yu Su},
+        journal={arXiv preprint arXiv:2401.01614},
+        year={2024},
+      }
 ```
