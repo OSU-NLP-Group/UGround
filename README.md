@@ -4,7 +4,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [📖Paper](https://arxiv.org/abs/2410.05243)
 - [😊Model Weights](https://huggingface.co/osunlp/UGround)
 - [😊Online Demo](https://huggingface.co/spaces/orby-osu/UGround)
-![image](https://github.com/user-attachments/assets/d91c4e0b-2425-46c9-b193-e0f701ad160b)
 <h3>Release Plans:</h3>
 
 - [x] Model Weights
