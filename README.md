@@ -1,6 +1,5 @@
 # UGround
 This is the official code repository for the project: *Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents*.
-<img width="1700" alt="image" src="https://github.com/user-attachments/assets/e2635d07-993f-492b-be08-9e956d48540c">
 
 - [🏠Homepage](https://osu-nlp-group.github.io/UGround)
 - [📖Paper](https://arxiv.org/abs/2410.05243)
