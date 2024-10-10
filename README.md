@@ -30,3 +30,17 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - 2024/10/07: Preprint is arXived. Demo and code coming soon.
 
 - 2024/08/06: Website is live. The initial manuscript and results are available.
+
+## Citation Information
+
+If you find this work useful, please consider starring our repo and citing our paper: 
+
+```
+@article{gou2024uground,
+        title={Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
+        author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
+        journal={arXiv preprint arXiv:2410.05243},
+        year={2024},
+        url={https://arxiv.org/abs/2410.05243},
+      }
+```
