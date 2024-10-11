@@ -22,7 +22,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
   - [ ] Data Examples
   - [ ] Data Construction Scripts
   - [ ] Guidance of Open-source Data 
-  - [ ] Full Data
 - [x] Online Demo (HF Spaces)
 
 <h3>Updates</h3>
