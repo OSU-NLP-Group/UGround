@@ -27,7 +27,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 <h3>Updates</h3>
 
-- 2024/10/07: Preprint is arXived. Demo and code coming soon.
+- 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
 
 - 2024/08/06: Website is live. The initial manuscript and results are available.
 
