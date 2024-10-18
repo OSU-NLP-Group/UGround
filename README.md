@@ -1,3 +1,6 @@
+
+
+
 # UGround
 This is the official code repository for the project: *Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents*.
 <img width="1556" alt="image" src="https://github.com/user-attachments/assets/18c6a9f4-31cc-4817-a252-bfd0dbaf3fd6">
@@ -30,7 +33,11 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 - 2024/08/06: Website is live. The initial manuscript and results are available.
 
+
+![Untitled design](https://github.com/user-attachments/assets/5715547d-4f3a-4dae-9aa4-09f944025297)
+
 ## Citation Information
+
 
 If you find this work useful, please consider starring our repo and citing our papers: 
 
