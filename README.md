@@ -8,6 +8,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [📖Paper](https://arxiv.org/abs/2410.05243)
 - [😊Model Weights](https://huggingface.co/osunlp/UGround)
 - [😊Live Demo](https://huggingface.co/spaces/orby-osu/UGround) (Try it out yourself!)
+- [Inference and Training Codes](https://github.com/boyugou/llava_uground/)
 
 <h3>Release Plans:</h3>
 
