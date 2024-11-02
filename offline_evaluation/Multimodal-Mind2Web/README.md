@@ -15,7 +15,7 @@ python sample.py --input_dir <dataset_dir> --output_dir <sample_dir> --samples_p
 Split full screenshots into blocks.
 
 ```bash
-python make_blocks.py --input_file <sample_jsonl> --output_file <sample_blocks_jsonl> --image_folder <screenshots_dir> --output_folder <blocks_dir>
+python make_blocks.py --input_file <sample_jsonl> --output_file <blocks_jsonl> --image_folder <screenshots_dir> --output_folder <blocks_dir>
 ```
 
 **3. `gpt_plan.py`**
@@ -27,6 +27,11 @@ export OPENAI_API_KEY="Your OpenAI API Key"
 python gpt_plan.py --gpt_model <model_name> --input_file <sample_blocks_jsonl> --output_file <plan_jsonl> --blocks <blocks_dir>
 ```
 
+The results for gpt-4o and gpt-4-turbo with a block size of [1280, 1000] (specified in the output_size parameter of `make_blocks`) and padding of 200 can be found in the folder under `data/{gpt_model}/cross_{split}_plan.jsonl`.
+
+- `gpt_model` can be "gpt-4o" or "gpt-4-turbo"
+- `split` can be "domain", "task", or "website"
+
 **4. `extract_grounding_query.py`**
 
 Extract grounding queries from the plan files.
@@ -34,6 +39,8 @@ Extract grounding queries from the plan files.
 ```bash
 python extract_grounding_query.py --input_file <plan_jsonl> --output_file <query_jsonl> --blocks <blocks_dir>
 ```
+
+The queries extracted from the above plan files are located in `data/{gpt_model}/cross_{split}_query.jsonl`.
 
 **5. Grounding Model Inference**
 
@@ -44,9 +51,5 @@ Perform grounding model inference using the query file generated in the previous
 Evaluate the Element Accuracy, Operation F1 and Step Success Rate based on plan and grounding results.
 
 ```bash
-python eval.py --sample_file <sample_blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
+python eval.py --sample_file <blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
 ```
-
-
-
-**`file_schemas.py`** defines the required fields for the `sample_jsonl`, `sample_blocks_jsonl` , `plan_jsonl`,  `query_jsonl`,  and `ans_jsonl` files.
