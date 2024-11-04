@@ -10,6 +10,15 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [😊Live Demo](https://huggingface.co/spaces/orby-osu/UGround) (Try it out yourself!)
 - [Inference and Training Codes](https://github.com/boyugou/llava_uground/)
 
+<h3>Updates</h3>
+- 2024/11/04: Qwen2VL-based UGround-v1 has finished, with a even stronger SOTA results on ScreenSpot (85.9% Avg.). Qwen2VL-based UGround-v1.1 is coming.
+
+- 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
+
+- 2024/08/06: Website is live. The initial manuscript and results are available.
+
+
+
 <h3>Release Plans:</h3>
 
 - [x] Model Weights
@@ -29,11 +38,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
   - [ ] Guidance of Open-source Data 
 - [x] Online Demo (HF Spaces)
 
-<h3>Updates</h3>
-
-- 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
-
-- 2024/08/06: Website is live. The initial manuscript and results are available.
 
 
 ![Untitled design](https://github.com/user-attachments/assets/5715547d-4f3a-4dae-9aa4-09f944025297)
