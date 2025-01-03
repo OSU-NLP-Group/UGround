@@ -12,7 +12,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 <h3>Updates</h3>
 
-- 2024/11/04: Qwen2VL-based UGround-v1 has finished, with a even stronger SOTA result on ScreenSpot (85.9% Avg.). Qwen2VL-based UGround-v1.1 and all the codes are coming.
+- 2024/11/04: Qwen2VL-based UGround-v1 has finished, with a even stronger SOTA result on ScreenSpot. Qwen2VL-based UGround-v1.1 and all the codes are coming.
 
 - 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
 
