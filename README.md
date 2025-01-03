@@ -57,16 +57,15 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | UGround-V1               | LLaVA-UGround-V1 | UGround-V1       | 82.8        | 60.3        | 82.5         | 63.6         | 80.4     | 70.4     | 73.3     |
 | Qwen2-VL                 | Qwen2-VL         |                  | 61.3        | 39.3        | 52.0         | 45.0         | 33.0     | 21.8     | 42.1     |
 | Auguvis-G-7B             | Qwen2-VL         | Aguvis-Stage-1   | 88.3        | 78.2        | 88.1         | 70.7         | 85.7     | 74.8     | 81.0     |
-| Auguvis-7B               | Qwen2-VL         | Aguvis-Stage-1&2 | 95.6        | 77.7        | 93.8         | 67.1         | 88.3     | 75.2     | 83.0     |
+| Auguvis-7B               | Qwen2-VL         | Aguvis-Stage-1&2 | **95.6**    | 77.7        | **93.8**     | 67.1         | 88.3     | 75.2     | 83.0     |
 | OS-Atlas-Base-4B         | InternVL         | OS-Atlas         | 85.7        | 58.5        | 72.2         | 45.7         | 82.6     | 63.1     | 68.0     |
-| OS-Atlas-Base-7B         | Qwen2-VL         | OS-Atlas         | 93.0        | 72.9        | 91.8         | 62.9         | 90.9     | 74.3     | 81.0     |
+| OS-Atlas-Base-7B         | Qwen2-VL         | OS-Atlas         | 93.0        | 72.9        | 91.8         | 62.9         | **90.9** | 74.3     | 81.0     |
 | ShowUI-G                 | ShowUI           | ShowUI           | 91.6        | 69.0        | 81.8         | 59.0         | 83.0     | 65.5     | 75.0     |
 | ShowUI                   | ShowUI           | ShowUI           | 92.3        | 75.5        | 76.3         | 61.1         | 81.7     | 63.6     | 75.1     |
 | Iris                     | Iris             | SeeClick         | 85.3        | 64.2        | 86.7         | 57.5         | 82.6     | 71.2     | 74.6     |
 | Aria-UI                  | Aria             | Aria-UI          | 92.3        | 73.8        | 93.3         | 64.3         | 86.5     | 76.2     | 81.1     |
 | UGround-V1-2B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | 89.4        | 72.0        | 88.7         | 65.7         | 81.3     | 68.9     | 77.7     |
-| UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | **93.0**    | **79.9**    | **93.8**     | **76.4**     | **90.9** | **84.0** | **86.3** |
-
+| UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | 93.0        | **79.9**    | **93.8**     | **76.4**     | **90.9** | **84.0** | **86.3** |
 
 
 
