@@ -43,10 +43,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [x] Online Demo (HF Spaces)
 
 
-
-![Untitled design](https://github.com/user-attachments/assets/5715547d-4f3a-4dae-9aa4-09f944025297)
-
-
 # Main Results
 
 ## ScreenSpot (GUI Visual Grounding)
@@ -72,6 +68,8 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | 93.0        | 79.9        | 93.8         | 76.4         | 90.9     | 84.0     | 86.3 |
 
 
+
+![Untitled design](https://github.com/user-attachments/assets/5715547d-4f3a-4dae-9aa4-09f944025297)
 
 ## Citation Information
 
