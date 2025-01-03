@@ -14,9 +14,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 - 2025/01/03: Qwen2VL-based UGround-v1 has released ([2B](https://huggingface.co/osunlp/UGround-V1-2B) & [7B](https://huggingface.co/osunlp/UGround-V1-7B)). Check thier performance in [Main Results](#main-results)
 
-
-- 2024/11/04: Qwen2VL-based UGround-v1 has finished, with a even stronger SOTA result on ScreenSpot. Qwen2VL-based UGround-v1.1 and all the codes are coming.
-
 - 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
 
 - 2024/08/06: Website is live. The initial manuscript and results are available.
