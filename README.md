@@ -6,7 +6,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 <img width="1556" alt="image" src="https://github.com/user-attachments/assets/18c6a9f4-31cc-4817-a252-bfd0dbaf3fd6">
 - [🏠Homepage](https://osu-nlp-group.github.io/UGround)
 - [📖Paper](https://arxiv.org/abs/2410.05243)
-- [😊Model Weights](https://huggingface.co/osunlp/UGround)
+- [😊Model Weights](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812)
 - [😊Live Demo](https://huggingface.co/spaces/orby-osu/UGround) (Try it out yourself!)
 - [Inference and Training Codes](https://github.com/boyugou/llava_uground/)
 
