@@ -52,10 +52,9 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 
 # Main Results
-
 ## GUI Visual Grounding: ScreenSpot (Standard Setting)
 
-| Model       | Arch             | SFT data         | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text | Web-Icon | Avg      |
+| Grounding Model       | Arch             | SFT data         | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text | Web-Icon | Avg      |
 | ---------------------------- | ---------------- | ---------------- | ----------- | ----------- | ------------ | ------------ | -------- | -------- | -------- |
 | GPT-4                        |                  |                  | 22.6        | 24.5        | 20.2         | 11.8         | 9.2      | 8.8      | 16.2     |
 | GPT-4o                       |                  |                  | 20.2        | 24.9        | 21.1         | 23.6         | 12.2     | 7.8      | 18.3     |
@@ -65,7 +64,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Qwen-VL                      | Qwen-VL          |                  | 9.5         | 4.8         | 5.7          | 5.0          | 3.5      | 2.4      | 5.2      |
 | SeeClick                     | Qwen-VL          | SeeClick         | 78.0        | 52.0        | 72.2         | 30.0         | 55.7     | 32.5     | 53.4     |
 | Qwen-GUI                     | Qwen-VL          | GUICourse        | 52.4        | 10.9        | 45.9         | 5.7          | 43.0     | 13.6     | 28.6     |
-| **UGround-V1**               | LLaVA-UGround-V1 | UGround-V1       | 82.8        | 60.3        | 82.5         | 63.6         | 80.4     | 70.4     | 73.3     |
+| **UGround-V1**               | LLaVA-UGround-V1 | UGround-V1       | **82.8**        | **60.3**        | **82.5**         | **63.6**         | **80.4**     | **70.4**     | **73.3**     |
 | Qwen2-VL                     | Qwen2-VL         |                  | 61.3        | 39.3        | 52.0         | 45.0         | 33.0     | 21.8     | 42.1     |
 | Auguvis-G-7B                 | Qwen2-VL         | Aguvis-Stage-1   | 88.3        | 78.2        | 88.1         | 70.7         | 85.7     | 74.8     | 81.0     |
 | Auguvis-7B                   | Qwen2-VL         | Aguvis-Stage-1&2 | **95.6**    | 77.7        | **93.8**     | 67.1         | 88.3     | 75.2     | 83.0     |
@@ -85,11 +84,11 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | GPT-4o  | Qwen-VL                  | Qwen-VL          |                  | 21.3        | 21.4        | 18.6         | 10.7         | 9.1      | 5.8      | 14.5     |
 | GPT-4o  | SeeClick                 | Qwen-VL          | SeeClick         | 81.0        | 59.8        | 69.6         | 33.6         | 43.9     | 26.2     | 52.4     |
 | GPT-4o  | Qwen-GUI                 | Qwen-VL          | GUICourse        | 67.8        | 24.5        | 53.1         | 16.4         | 50.4     | 18.5     | 38.5     |
-| GPT-4o  | UGround-V1               | LLaVA-UGround-V1 | UGround-V1       | 93.4        | 76.9        | 92.8         | 67.9         | 88.7     | 68.9     | 81.4     |
+| GPT-4o  | **UGround-V1**               | LLaVA-UGround-V1 | UGround-V1       | **93.4**        | **76.9**        | **92.8**         | **67.9**         | **88.7**     | **68.9**     | **81.4**     |
 | GPT-4o  | OS-Atlas-Base-4B         | InternVL         | OS-Atlas         | **94.1**    | 73.8        | 77.8         | 47.1         | 86.5     | 65.3     | 74.1     |
 | GPT-4o  | OS-Atlas-Base-7B         | Qwen2-VL         | OS-Atlas         | 93.8        | **79.9**    | 90.2         | 66.4         | **92.6** | **79.1** | 83.7     |
-| GPT-4o  | UGround-V1-2B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | **94.1**    | 77.7        | 92.8         | 63.6         | 90.0     | 70.9     | 81.5     |
-| GPT-4o  | UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | **94.1**    | **79.9**    | **93.3**     | **73.6**     | 89.6     | 73.3     | **84.0** |
+| GPT-4o  | **UGround-V1-2B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | **94.1**    | 77.7        | 92.8         | 63.6         | 90.0     | 70.9     | 81.5     |
+| GPT-4o  | **UGround-V1-7B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | **94.1**    | **79.9**    | **93.3**     | **73.6**     | 89.6     | 73.3     | **84.0** |
 
 
 
