@@ -265,7 +265,7 @@
                 </a>
               </span>
               <span class="link-block">
-               <a href="https://huggingface.co/osunlp/UGround" target="_blank" class="external-link button is-normal is-rounded is-dark">
+               <a href="https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812" target="_blank" class="external-link button is-normal is-rounded is-dark">
                  <span class="icon">
                      <!-- <i class="far fa-images"></i> -->
                      <p style="font-size:18px">🤗</p>
@@ -356,7 +356,7 @@
           <ul>
 
 <li>
-              2025/01/03: Qwen2VL-based UGround-v1 has released (2B & 7B), with a even stronger SOTA performance on ScreenSpot.
+              2025/01/03: Qwen2VL-based UGround-v1 has released (2B & 7B), with a even stronger SOTA performance on GUI visual grounding.
 <!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
             </li>
 		  
@@ -524,13 +524,13 @@
     </tr>
     <tr>
         <td><strong>UGround-V1</strong></td>
-        <td>82.8</td>
-        <td>60.3</td>
-        <td>82.5</td>
-        <td>63.6</td>
-        <td>80.4</td>
-        <td>70.4</td>
-        <td>73.3</td>
+        <td><strong>82.8</strong></td>
+        <td><strong>60.3</strong></td>
+        <td><strong>82.5</strong></td>
+        <td><strong>63.6</strong></td>
+        <td><strong>80.4</strong></td>
+        <td><strong>70.4</strong></td>
+        <td><strong>73.3</strong></td>
     </tr>
     <tr>
         <td>Qwen2-VL</td>
@@ -667,7 +667,7 @@
 </thead>
 <tbody>
     <tr>
-        <td rowspan="2"><br>GPT-4</td>
+        <td rowspan="2" style="vertical-align: middle;"><br>GPT-4</td>
         <td>SeeClick</td>
         <td>76.6</td>
         <td>55.5</td>
@@ -678,17 +678,27 @@
         <td>48.8</td>
     </tr>
     <tr>
-        <td><strong>UGround</strong></td>
-        <td>90.1 <b>(+13.5)</b></td>
-        <td>70.3 <b>(+14.8)</b></td>
-        <td>87.1 <b>(+19.1)</b></td>
-        <td>55.7 <b>(+27.1)</b></td>
-        <td>85.7 <b>(+44.8)</b></td>
-        <td>64.6 <b>(+41.3)</b></td>
-        <td>75.6 <b>(+26.8)</b></td>
+        <td><strong>UGround-V1</strong></td>
+        <td><b>90.1</b></td>
+        <td><b>70.3</b></td>
+        <td><b>87.1</b></td>
+        <td><b>55.7</b></td>
+        <td><b>85.7</b></td>
+        <td><b>64.6</b></td>
+        <td><b>75.6</b></td>
     </tr>
     <tr>
-        <td rowspan="4"><br>GPT-4o</td>
+        <td rowspan="8" style="vertical-align: middle;"><br>GPT-4o</td>
+        <td>Qwen-VL</td>
+        <td>21.3</td>
+        <td>21.4</td>
+        <td>18.6</td>
+        <td>10.7</td>
+        <td>9.1</td>
+        <td>5.8</td>
+        <td>14.5</td>
+    </tr>
+    <tr>
         <td>SeeClick</td>
         <td>81.0</td>
         <td>59.8</td>
@@ -696,45 +706,72 @@
         <td>33.6</td>
         <td>43.9</td>
         <td>26.2</td>
-        <td>52.3</td>
+        <td>52.4</td>
     </tr>
-
-<tr>
-        <td>OS-Atlas-7B</td>
-        <td>93.8</td>
-        <td>79.9 </td>
-        <td>90.2 </td>
-        <td>66.4 </td>
-        <td>92.6 </td>
-        <td><b>79.1</b> </td>
-        <td>85.4 </td>
-    </tr>
-
     <tr>
-        <td><strong>UGround-v1-LLaVA</strong></td>
-        <td>93.4 <b>(+12.4)</b></td>
-        <td>76.9 <b>(+17.1)</b></td>
-        <td>92.8 <b>(+23.2)</b></td>
-        <td>67.9 <b>(+34.3)</b></td>
-        <td>88.7 <b>(+44.8)</b></td>
-        <td>68.9 <b>(+42.7)</b></td>
-        <td>81.4 <b>(+29.1)</b></td>
+        <td>Qwen-GUI</td>
+        <td>67.8</td>
+        <td>24.5</td>
+        <td>53.1</td>
+        <td>16.4</td>
+        <td>50.4</td>
+        <td>18.5</td>
+        <td>38.5</td>
     </tr>
-
- <tr>
-    <td><strong>UGround-v1-Qwen</strong></td>
-    <td>96.9 <b>(+15.9)</b></td> <!-- 修正后的增量 -->
-    <td>82.3 <b>(+22.5)</b></td> <!-- 修正后的增量 -->
-    <td>93.8 <b>(+24.2)</b></td> <!-- 修正后的增量 -->
-    <td>75.8 <b>(+42.2)</b></td> <!-- 修正后的增量 -->
-    <td>93.8 <b>(+49.9)</b></td> <!-- 修正后的增量 -->
-    <td>73.4 <b>(+47.2)</b></td> <!-- 修正后的增量 -->
-    <td>85.9 <b>(+33.6)</b></td> <!-- 修正后的增量 -->
-</tr>
-
-	
+    <tr>
+        <td><strong>UGround-V1</strong></td>
+        <td><strong>93.4</strong></td>
+        <td><strong>76.9</strong></td>
+        <td><strong>92.8</strong></td>
+        <td><strong>67.9</strong></td>
+        <td><strong>88.7</strong></td>
+        <td><strong>68.9</strong></td>
+        <td><strong>81.4</strong></td>
+    </tr>
+    <tr>
+        <td>OS-Atlas-Base-4B</td>
+        <td><strong>94.1</strong></td>
+        <td>73.8</td>
+        <td>77.8</td>
+        <td>47.1</td>
+        <td>86.5</td>
+        <td>65.3</td>
+        <td>74.1</td>
+    </tr>
+    <tr>
+        <td>OS-Atlas-Base-7B</td>
+        <td>93.8</td>
+        <td><strong>79.9</strong></td>
+        <td>90.2</td>
+        <td>66.4</td>
+        <td><strong>92.6</strong></td>
+        <td><strong>79.1</strong></td>
+        <td>83.7</td>
+    </tr>
+    <tr>
+        <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
+        <td><strong>94.1</strong></td>
+        <td>77.7</td>
+        <td>92.8</td>
+        <td>63.6</td>
+        <td>90.0</td>
+        <td>70.9</td>
+        <td>81.5</td>
+    </tr>
+    <tr>
+        <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
+        <td><strong>94.1</strong></td>
+        <td><strong>79.9</strong></td>
+        <td><strong>93.3</strong></td>
+        <td><strong>73.6</strong></td>
+        <td>89.6</td>
+        <td>73.3</td>
+        <td><strong>84.0</strong></td>
+    </tr>
 </tbody>
 </table>
+
+
 
 
             <table id="MultimodalMind2Web">
@@ -780,7 +817,7 @@
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>45.1</td>
             <td>44.7</td>
             <td>44.6</td>
@@ -795,7 +832,7 @@
             <td>32.9</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>47.7</strong></td>
             <td><strong>46.0</strong></td>
             <td><strong>46.6</strong></td>
@@ -840,7 +877,7 @@
             <td>47.2</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>46.2</td>
             <td>58.0</td>
         </tr>
@@ -851,7 +888,7 @@
             <td>52.8</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>48.4</strong></td>
             <td><strong>62.4</strong></td>
         </tr>
@@ -892,7 +929,7 @@
             <td>28.9</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>31.1</td>
         </tr>
         <tr>
@@ -901,7 +938,7 @@
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>32.8</strong></td>
         </tr>
     </tbody>
@@ -945,7 +982,7 @@
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround</strong></td>
+            <td rowspan="2"><br><strong>UGround-V1</strong></td>
             <td>50.7</td>
             <td><strong>23.1</strong></td>
         </tr>
@@ -985,7 +1022,7 @@
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround</strong></td>
+            <td rowspan="2"><br><strong>UGround-V1</strong></td>
             <td>31.0</td>
         </tr>
         <tr>
