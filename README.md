@@ -12,7 +12,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 <h3>Updates</h3>
 
-- 2025/01/03: Qwen2-VL-based UGround-v1 has released ([2B](https://huggingface.co/osunlp/UGround-V1-2B) & [7B](https://huggingface.co/osunlp/UGround-V1-7B)). Check thier performance in [Main Results](#main-results)
+- 2025/01/03: Qwen2-VL-based UGround-v1 has released ([2B](https://huggingface.co/osunlp/UGround-V1-2B) & [7B](https://huggingface.co/osunlp/UGround-V1-7B)). Check thier performance in [Main Results](#main-results).
 
 - 2024/10/07: Preprint is arXived. Demo is live. Code coming soon.
 
@@ -77,6 +77,57 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Aria-UI                      | Aria             | Aria-UI          | 92.3        | 73.8        | 93.3         | 64.3         | 86.5     | 76.2     | 81.1     |
 | **UGround-V1-2B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | 89.4        | 72.0        | 88.7         | 65.7         | 81.3     | 68.9     | 77.7     |
 | **UGround-V1-7B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | 93.0        | **79.9**    | **93.8**     | **76.4**     | **90.9** | **84.0** | **86.3** |
+
+## Inference of Qwen2-VL-Based UGround
+### vLLM server
+
+```bash
+vllm serve osunlp/UGround-V1-7B  --api-key token-abc123 --dtype float16
+```
+
+### Visual Grounding Prompt
+```python
+def format_openai_template(description: str, base64_image):
+    return [
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "image_url",
+                    "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"},
+                },
+                {
+                    "type": "text",
+                    "text": f"""
+  Your task is to help the user identify the precise coordinates (x, y) of a specific area/element/object on the screen based on a description.
+
+  - Your response should aim to point to the center or a representative point within the described area/element/object as accurately as possible.
+  - If the description is unclear or ambiguous, infer the most relevant area or element based on its likely context or purpose.
+  - Your answer should be a single string (x, y) corresponding to the point of the interest.
+
+  Description: {description}
+
+  Answer:"""
+                },
+            ],
+        },
+    ]
+
+
+messages = format_openai_template(description, base64_image)
+
+completion = await client.chat.completions.create(
+    model=args.model_path,
+    messages=messages,
+    temperature=0  # REMEMBER to set temperature to ZERO!
+# REMEMBER to set temperature to ZERO!
+# REMEMBER to set temperature to ZERO!
+)
+
+# The output will be in the range of [0,1000), which is compatible with the original Qwen2-VL
+# So the actual coordinates should be (x/1000*width, y/1000*height)
+
+```
 
 
 
