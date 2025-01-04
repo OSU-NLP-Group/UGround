@@ -105,7 +105,7 @@ python -m vllm.entrypoints.openai.api_server --served-model-name osunlp/UGround-
 ```
 You can find more instruction about training and inference in [Qwen2-VL's Official Repo](https://github.com/QwenLM/Qwen2-VL).
 
-Also, see why we use float16 instead of bfloat16 in [vLLM's Doc](https://docs.vllm.ai/en/latest/usage/faq.html#:~:text=Mitigation%20Strategies)
+Here we use float16 instead of bfloat16 for more stable decoding (See details in [vLLM's doc](https://docs.vllm.ai/en/latest/usage/faq.html#:~:text=Mitigation%20Strategies))
 
 ### Visual Grounding Prompt
 ```python
