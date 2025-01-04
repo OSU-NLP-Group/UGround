@@ -83,7 +83,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Planner | Grounding Model          | Arch             | SFT data         | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text | Web-Icon | Avg      |
 | ------- | ------------------------ | ---------------- | ---------------- | ----------- | ----------- | ------------ | ------------ | -------- | -------- | -------- |
 | GPT-4o  | Qwen-VL                  | Qwen-VL          |                  | 21.3        | 21.4        | 18.6         | 10.7         | 9.1      | 5.8      | 14.5     |
-| GPT-4o  | SeeClick                 | Qwen-VL          | Web, Mobile, ... | 81.0        | 59.8        | 69.6         | 33.6         | 43.9     | 26.2     | 52.4     |
+| GPT-4o  | SeeClick                 | Qwen-VL          | SeeClick         | 81.0        | 59.8        | 69.6         | 33.6         | 43.9     | 26.2     | 52.4     |
 | GPT-4o  | Qwen-GUI                 | Qwen-VL          | GUICourse        | 67.8        | 24.5        | 53.1         | 16.4         | 50.4     | 18.5     | 38.5     |
 | GPT-4o  | UGround-V1               | LLaVA-UGround-V1 | UGround-V1       | 93.4        | 76.9        | 92.8         | 67.9         | 88.7     | 68.9     | 81.4     |
 | GPT-4o  | OS-Atlas-Base-4B         | InternVL         | OS-Atlas         | **94.1**    | 73.8        | 77.8         | 47.1         | 86.5     | 65.3     | 74.1     |
