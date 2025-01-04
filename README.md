@@ -103,7 +103,7 @@ or
 ```bash
 python -m vllm.entrypoints.openai.api_server --served-model-name osunlp/UGround-V1-7B --model osunlp/UGround-V1-7B --dtype float16 
 ```
-You may find more instruction about training and inference in [Qwen2-VL's Official Repo](https://github.com/QwenLM/Qwen2-VL).
+You can find more instruction about training and inference in [Qwen2-VL's Official Repo](https://github.com/QwenLM/Qwen2-VL).
 
 ### Visual Grounding Prompt
 ```python
