@@ -98,6 +98,12 @@ This is the official code repository for the project: *Navigating the Digital Wo
 ```bash
 vllm serve osunlp/UGround-V1-7B  --api-key token-abc123 --dtype float16
 ```
+or
+
+```bash
+python -m vllm.entrypoints.openai.api_server --served-model-name osunlp/UGround-V1-7B --model osunlp/UGround-V1-7B --dtype float16 
+```
+You may find more instruction about training and inference in [Qwen2-VL's Official Repo](https://github.com/QwenLM/Qwen2-VL).
 
 ### Visual Grounding Prompt
 ```python
