@@ -79,8 +79,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | **UGround-V1-7B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | 93.0        | **79.9**    | **93.8**     | **76.4**     | **90.9** | **84.0** | **86.3** |
 
 
-<iframe src="[path/to/table.html](https://github.com/OSU-NLP-Group/UGround/blob/f3934314f019b34ee614b3e41c7d6a3e9cfcae44/test_table.html)" width="100%" height="600px" frameborder="0"></iframe>
-
 
 ## GUI Visual Grounding: ScreenSpot (Agent Setting)
 
