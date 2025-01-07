@@ -13,7 +13,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 <h3>Updates</h3>
 
-- 2025/01/07: UGround-V1-72B is out. ScreenSpot: 89.2% (Standard Setting) | 84.3% (Agent Setting).
+- 2025/01/07: UGround-V1-72B-Preview is out. ScreenSpot: 89.2% (Standard Setting) | 84.3% (Agent Setting).
 
 - 2025/01/05: Qwen2-VL-based UGround-v1 acheives SOTA results on a new and comprehensive GUI grounding benchmark ScreenSpot-Pro, substaintially outperforms prior models (18.9->31.1). Check the [results](https://gui-agent.github.io/grounding-leaderboard/) and [our tweet](https://x.com/BoyuGouNLP/status/1876299190889742391).
 
