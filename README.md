@@ -62,29 +62,32 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 ![image](https://github.com/user-attachments/assets/d608c189-2cac-4fd9-9b25-d60847916159)
 
+| ScreenSpot (Standard)    | Arch             | SFT data           | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text   | Web-Icon   | Avg        |
+| ------------------------ | ---------------- | ------------------ | ----------- | ----------- | ------------ | ------------ | ---------- | ---------- | ---------- |
+| Groma                    | Groma            |                    | 10.3        | 2.6         | 4.6          | 4.3          | 5.7        | 3.4        | 5.2        |
+| Qwen-VL                  | Qwen-VL          |                    | 9.5         | 4.8         | 5.7          | 5.0          | 3.5        | 2.4        | 5.2        |
+| MiniGPT-v2               | MiniGPT-v2       |                    | 8.4         | 6.6         | 6.2          | 2.9          | 6.5        | 3.4        | 5.7        |
+| GPT-4                    |                  |                    | 22.6        | 24.5        | 20.2         | 11.8         | 9.2        | 8.8        | 16.2       |
+| GPT-4o                   |                  |                    | 20.2        | 24.9        | 21.1         | 23.6         | 12.2       | 7.8        | 18.3       |
+| Fuyu                     | Fuyu             |                    | 41.0        | 1.3         | 33.0         | 3.6          | 33.9       | 4.4        | 19.5       |
+| Qwen-GUI                 | Qwen-VL          | GUICourse          | 52.4        | 10.9        | 45.9         | 5.7          | 43.0       | 13.6       | 28.6       |
+| Qwen2-VL                 | Qwen2-VL         |                    | 61.3        | 39.3        | 52.0         | 45.0         | 33.0       | 21.8       | 42.1       |
+| SeeClick                 | Qwen-VL          | SeeClick           | 78.0        | 52.0        | 72.2         | 30.0         | 55.7       | 32.5       | 53.4       |
+| OS-Atlas-Base-4B         | InternVL         | OS-Atlas           | 85.7        | 58.5        | 72.2         | 45.7         | 82.6       | 63.1       | 68.0       |
+| UGround-V1               | LLaVA-UGround-V1 | UGround-V1         | 82.8        | 60.3        | 82.5         | 63.6         | 80.4       | 70.4       | 73.3       |
+| Iris                     | Iris             | SeeClick           | 85.3        | 64.2        | 86.7         | 57.5         | 82.6       | 71.2       | 74.6       |
+| ShowUI-G                 | ShowUI           | ShowUI             | 91.6        | 69.0        | 81.8         | 59.0         | 83.0       | 65.5       | 75.0       |
+| ShowUI                   | ShowUI           | ShowUI             | 92.3        | 75.5        | 76.3         | 61.1         | 81.7       | 63.6       | 75.1       |
+| UGround-V1-2B (Qwen2-VL) | Qwen2-VL         | UGround-V1         | 89.4        | 72.0        | 88.7         | 65.7         | 81.3       | 68.9       | 77.7       |
+| Aguvis-G-7B              | Qwen2-VL         | Aguvis-Stage-1     | 88.3        | 78.2        | 88.1         | 70.7         | 85.7       | 74.8       | 81.0       |
+| OS-Atlas-Base-7B         | Qwen2-VL         | OS-Atlas           | 93.0        | 72.9        | 91.8         | 62.9         | 90.9       | 74.3       | 81.0       |
+| Aria-UI                  | Aria             | Aria-UI            | 92.3        | 73.8        | 93.3         | 64.3         | 86.5       | 76.2       | 81.1       |
+| Aguvis-7B                | Qwen2-VL         | Aguvis-Stage-1&2   | **95.6**    | 77.7        | 93.8         | 67.1         | 88.3       | 75.2       | 83.0       |
+| UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1         | 93.0        | **79.9**    | **93.8**     | **76.4**     | **90.9**   | **84.0**   | **86.3**   |
+| *AGUVIS-72B*             | *Qwen2-VL*       | *Aguvis-Stage-1&2* | ***94.5***  | ***85.2***  | *95.4*       | *77.9*       | *91.3*     | ***85.9*** | *88.4*     |
+| *UGround-V1-72B-Preview* | *Qwen2-VL*       | *UGround-V1*       | ***94.5***  | *82.1*      | ***95.9***   | ***82.9***   | ***93.0*** | ***85.9*** | ***89.2*** |
 
-| ScreenSpot (Standard)        | Arch             | SFT data         | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text | Web-Icon | Avg      |
-| ---------------------------- | ---------------- | ---------------- | ----------- | ----------- | ------------ | ------------ | -------- | -------- | -------- |
-| Groma                        | Groma            |                  | 10.3        | 2.6         | 4.6          | 4.3          | 5.7      | 3.4      | 5.2      |
-| Qwen-VL                      | Qwen-VL          |                  | 9.5         | 4.8         | 5.7          | 5.0          | 3.5      | 2.4      | 5.2      |
-| MiniGPT-v2                   | MiniGPT-v2       |                  | 8.4         | 6.6         | 6.2          | 2.9          | 6.5      | 3.4      | 5.7      |
-| GPT-4                        |                  |                  | 22.6        | 24.5        | 20.2         | 11.8         | 9.2      | 8.8      | 16.2     |
-| GPT-4o                       |                  |                  | 20.2        | 24.9        | 21.1         | 23.6         | 12.2     | 7.8      | 18.3     |
-| Fuyu                         | Fuyu             |                  | 41.0        | 1.3         | 33.0         | 3.6          | 33.9     | 4.4      | 19.5     |
-| Qwen-GUI                     | Qwen-VL          | GUICourse        | 52.4        | 10.9        | 45.9         | 5.7          | 43.0     | 13.6     | 28.6     |
-| Qwen2-VL                     | Qwen2-VL         |                  | 61.3        | 39.3        | 52.0         | 45.0         | 33.0     | 21.8     | 42.1     |
-| SeeClick                     | Qwen-VL          | SeeClick         | 78.0        | 52.0        | 72.2         | 30.0         | 55.7     | 32.5     | 53.4     |
-| OS-Atlas-Base-4B             | InternVL-2       | OS-Atlas         | 85.7        | 58.5        | 72.2         | 45.7         | 82.6     | 63.1     | 68.0     |
-| Iris                         | Iris             | SeeClick         | 85.3        | 64.2        | 86.7         | 57.5         | 82.6     | 71.2     | 74.6     |
-| ShowUI-G                     | ShowUI           | ShowUI           | 91.6        | 69.0        | 81.8         | 59.0         | 83.0     | 65.5     | 75.0     |
-| ShowUI                       | ShowUI           | ShowUI           | 92.3        | 75.5        | 76.3         | 61.1         | 81.7     | 63.6     | 75.1     |
-| Aguvis-G-7B                  | Qwen2-VL         | Aguvis-Stage-1   | 88.3        | 78.2        | 88.1         | 70.7         | 85.7     | 74.8     | 81.0     |
-| OS-Atlas-Base-7B             | Qwen2-VL         | OS-Atlas         | 93.0        | 72.9        | 91.8         | 62.9         | 90.9     | 74.3     | 81.0     |
-| Aria-UI                      | Aria             | Aria-UI          | 92.3        | 73.8        | 93.3         | 64.3         | 86.5     | 76.2     | 81.1     |
-| Aguvis-7B                    | Qwen2-VL         | Aguvis-Stage-1&2 | **95.6**    | 77.7        | 93.8         | 67.1         | 88.3     | 75.2     | 83.0     |
-| **UGround-V1**               | LLaVA-UGround-V1 | UGround-V1       | 82.8        | 60.3        | 82.5         | 63.6         | 80.4     | 70.4     | 73.3     |
-| **UGround-V1-2B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | 89.4        | 72.0        | 88.7         | 65.7         | 81.3     | 68.9     | 77.7     |
-| **UGround-V1-7B (Qwen2-VL)** | Qwen2-VL         | UGround-V1       | 93.0        | **79.9**    | **93.8**     | **76.4**     | **90.9** | **84.0** | **86.3** |
+
 
 
 
