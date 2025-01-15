@@ -30,9 +30,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [x] Model Weights
   - [x] Initial V1 (the one used in the paper)
   - [x] Qwen2-VL-based V1
-    - [x] 2B
-    - [x] 7B
-    - [ ] 72B
   - [ ] V1.1
     - [ ] 2B
     - [ ] 7B
