@@ -3,7 +3,7 @@ import json
 import re
 
 # Define the path to the directory containing the JSON files
-directory_path = '/Users/geminigby/PycharmProjects/uground_new_release/online_evaluation/Mind2Web-Live-Results/4o/json_result'
+directory_path = 'gpt-4o/json_result'
 
 # Initialize variables for statistics
 total_tasks = 0
