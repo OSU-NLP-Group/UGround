@@ -66,6 +66,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 | ScreenSpot (Standard)     | Arch             | SFT data         | Mobile-Text | Mobile-Icon | Desktop-Text | Desktop-Icon | Web-Text | Web-Icon | Avg  |
 | ------------------------- | ---------------- | ---------------- | ----------- | ----------- | ------------ | ------------ | -------- | -------- | ---- |
+| InternVL-2-4B             | InternVL-2       |                  | 9.2         | 4.8         | 4.6          | 4.3          | 0.9      | 0.1      | 4.0  |
 | Groma                     | Groma            |                  | 10.3        | 2.6         | 4.6          | 4.3          | 5.7      | 3.4      | 5.2  |
 | Qwen-VL                   | Qwen-VL          |                  | 9.5         | 4.8         | 5.7          | 5.0          | 3.5      | 2.4      | 5.2  |
 | MiniGPT-v2                | MiniGPT-v2       |                  | 8.4         | 6.6         | 6.2          | 2.9          | 6.5      | 3.4      | 5.7  |
@@ -75,7 +76,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Qwen-GUI                  | Qwen-VL          | GUICourse        | 52.4        | 10.9        | 45.9         | 5.7          | 43.0     | 13.6     | 28.6 |
 | Qwen2-VL                  | Qwen2-VL         |                  | 61.3        | 39.3        | 52.0         | 45.0         | 33.0     | 21.8     | 42.1 |
 | SeeClick                  | Qwen-VL          | SeeClick         | 78.0        | 52.0        | 72.2         | 30.0         | 55.7     | 32.5     | 53.4 |
-| OS-Atlas-Base-4B          | InternVL         | OS-Atlas         | 85.7        | 58.5        | 72.2         | 45.7         | 82.6     | 63.1     | 68.0 |
+| OS-Atlas-Base-4B          | InternVL-2       | OS-Atlas         | 85.7        | 58.5        | 72.2         | 45.7         | 82.6     | 63.1     | 68.0 |
 | OmniParser                |                  |                  | 93.9        | 57.0        | 91.3         | 63.6         | 81.3     | 51.0     | 73.0 |
 | UGround-V1                | LLaVA-UGround-V1 | UGround-V1       | 82.8        | 60.3        | 82.5         | 63.6         | 80.4     | 70.4     | 73.3 |
 | Iris                      | Iris             | SeeClick         | 85.3        | 64.2        | 86.7         | 57.5         | 82.6     | 71.2     | 74.6 |
