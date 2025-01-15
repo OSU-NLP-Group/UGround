@@ -4,268 +4,282 @@
     <style>
 
         /* 右侧导航栏的样式 */
-    .sidebar {
-    position: fixed;
-    top: 100px;
-    right: 0;
-    width: 220px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    z-index: 1000; /* 增加 z-index 确保它在其他元素的上层 */
-}
-    .sidebar:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-    .sidebar h4 {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 15px;
-        color: #333;
-    }
-    .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    .sidebar ul li {
-        margin-bottom: 12px;
-    }
-    .sidebar ul li a {
-        text-decoration: none;
-        color: #555;
-        font-weight: bold;
-        font-size: 14px;
-        padding: 10px;
-        display: block;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        border-radius: 5px;
-    }
-    .sidebar ul li a:hover {
-        background-color: #ff5722;
-        color: #ffffff;
-    }
-
-    @media (max-width: 1374px) {
         .sidebar {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            width: 220px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            z-index: 1000; /* 增加 z-index 确保它在其他元素的上层 */
+        }
+
+        .sidebar:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar h4 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #ff5722;
+            color: #ffffff;
+        }
+
+        @media (max-width: 1374px) {
+            .sidebar {
+                display: none;
+            }
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center; /* Horizontally center content */
+            vertical-align: middle; /* Vertically center content */
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center; /* Horizontally center content */
+            vertical-align: middle; /* Vertically center content */
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center; /* Horizontally center content */
+            vertical-align: middle; /* Vertically center content */
+            font-weight: bold;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        /*tr:nth-child(even) {*/
+        /*    background-color: #f9f9f9;*/
+        /*    text-align: center;  !* Horizontally center content *!*/
+        /*    vertical-align: middle;  !* Vertically center content *!*/
+        /*}*/
+        .highlight {
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .hidden {
             display: none;
         }
-    }
+    </style>
+    <!--    <script src="https://kit.fontawesome.com/c221ce7c0d.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="./static/js/fontawesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents">
+    <meta name="keywords"
+          content="UGround, SeeAct-V, MLLM, visual grounding, GUI agents, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UGround Homepage</title>
 
-    table {
-        width: 90%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        text-align: center;  /* Horizontally center content */
-        vertical-align: middle;  /* Vertically center content */
-        font-size: 14px;
-    }
-    th, td {
-        padding: 12px;
-        text-align: center;  /* Horizontally center content */
-        vertical-align: middle;  /* Vertically center content */
-        border: 1px solid #ddd;
-    }
-    th {
-        background-color: #f2f2f2;
-        text-align: center;  /* Horizontally center content */
-        vertical-align: middle;  /* Vertically center content */
-        font-weight: bold;
-    }
-    caption {
-        caption-side: top;
-        text-align: center;
-        font-weight: bold;
-        padding: 10px;
-        font-size: 20px;
-    }
-    /*tr:nth-child(even) {*/
-    /*    background-color: #f9f9f9;*/
-    /*    text-align: center;  !* Horizontally center content *!*/
-    /*    vertical-align: middle;  !* Vertically center content *!*/
-    /*}*/
-    .highlight {
-        font-weight: bold;
-        color: #ff5722;
-    }
-    .hidden {
-        display: none;
-    }
-</style>
-<!--    <script src="https://kit.fontawesome.com/c221ce7c0d.js" crossorigin="anonymous"></script>-->
-<link rel="stylesheet" href="./static/js/fontawesome.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents">
-  <meta name="keywords" content="UGround, SeeAct-V, MLLM, visual grounding, GUI agents, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UGround Homepage</title>
+    <link rel="icon" href="./static/images/uground-icon.png">
 
-  <link rel="icon" href="./static/images/uground-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <!--  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/leaderboard.css">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-<!--  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/leaderboard.css">
+    <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
-  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
-
-<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-<!--  <script src="./static/js/index.js"></script>-->
-<!--  <script src="./static/js/question_card.js"></script>-->
-<!--  <script src="./data/results/data_setting.js" defer></script>-->
-<!--  <script src="./data/results/model_scores.js" defer></script>-->
-<!--  <script src="./visualizer/data/data_public.js" defer></script>-->
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!--  <script src="./static/js/index.js"></script>-->
+    <!--  <script src="./static/js/question_card.js"></script>-->
+    <!--  <script src="./data/results/data_setting.js" defer></script>-->
+    <!--  <script src="./data/results/model_scores.js" defer></script>-->
+    <!--  <script src="./visualizer/data/data_public.js" defer></script>-->
 </head>
 <body>
 
 
 <!-- 右侧导航栏 -->
 <div class="sidebar">
-  <h4>Demo & Results</h4>
-  <ul>
-    <!-- 新增的 "Try Demo" 按钮 -->
-    <li><a href="#gradioDemo">Try Our Demo</a></li>
+    <h4>Demo & Results</h4>
+    <ul>
+        <!-- 新增的 "Try Demo" 按钮 -->
+        <li><a href="#gradioDemo">Try Our Demo</a></li>
 
-    <li><a href="#ScreenSpotStandard">ScreenSpot <br>(Standard Setting)</a></li>
-    <li><a href="#ScreenSpotAgent">ScreenSpot <br>(Agent Setting)</a></li>
-    <li><a href="#MultimodalMind2Web">Multimodal-Mind2Web</a></li>
-    <li><a href="#AndroidControl">AndroidControl</a></li>
-    <li><a href="#OmniACT">OmniACT</a></li>
-    <li><a href="#Mind2WebLive">Mind2Web-Live</a></li>
-    <li><a href="#AndroidWorld">AndroidWorld</a></li>
-  </ul>
+        <li><a href="#ScreenSpotStandard">ScreenSpot <br>(Standard Setting)</a></li>
+        <li><a href="#ScreenSpotAgent">ScreenSpot <br>(Agent Setting)</a></li>
+        <li><a href="#MultimodalMind2Web">Multimodal-Mind2Web</a></li>
+        <li><a href="#AndroidControl">AndroidControl</a></li>
+        <li><a href="#OmniACT">OmniACT</a></li>
+        <li><a href="#Mind2WebLive">Mind2Web-Live</a></li>
+        <li><a href="#AndroidWorld">AndroidWorld</a></li>
+    </ul>
 </div>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </a>
-        <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://arxiv.org/abs/2405.14831">
-              HippoRAG
-          </a>
-          <a class="navbar-item" href="https://osu-nlp-group.github.io/SeeAct/">
-              SeeAct
-          </a>
-          <a class="navbar-item" href="https://osu-nlp-group.github.io/TravelPlanner/">
-              TravelPlanner
-          </a>
-          <a class="navbar-item" href="https://osu-nlp-group.github.io/Mind2Web/">
-              Mind2Web
-          </a>
-          <a class="navbar-item" href="https://mmmu-benchmark.github.io/">
-            MMMU
-          </a>
-          <a class="navbar-item" href="https://osu-nlp-group.github.io/MagicBrush/">
-              MagicBrush
-          </a>
-         <a class="navbar-item" href="https://tiger-ai-lab.github.io/MAmmoTH/">
-              Mammoth
-          </a>
-         <a class="navbar-item" href="https://osu-nlp-group.github.io/TableLlama/">
-              TableLlama
-          </a>
-        </div>
-      </div>
     </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://arxiv.org/abs/2405.14831">
+                        HippoRAG
+                    </a>
+                    <a class="navbar-item" href="https://osu-nlp-group.github.io/SeeAct/">
+                        SeeAct
+                    </a>
+                    <a class="navbar-item" href="https://osu-nlp-group.github.io/TravelPlanner/">
+                        TravelPlanner
+                    </a>
+                    <a class="navbar-item" href="https://osu-nlp-group.github.io/Mind2Web/">
+                        Mind2Web
+                    </a>
+                    <a class="navbar-item" href="https://mmmu-benchmark.github.io/">
+                        MMMU
+                    </a>
+                    <a class="navbar-item" href="https://osu-nlp-group.github.io/MagicBrush/">
+                        MagicBrush
+                    </a>
+                    <a class="navbar-item" href="https://tiger-ai-lab.github.io/MAmmoTH/">
+                        Mammoth
+                    </a>
+                    <a class="navbar-item" href="https://osu-nlp-group.github.io/TableLlama/">
+                        TableLlama
+                    </a>
+                </div>
+            </div>
+        </div>
 
-  </div>
+    </div>
 </nav>
 
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/uground-icon.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-            <span class="mmmu" style="vertical-align: middle">UGround</span>
-            </h1>
-          <h2 class="subtitle is-3 publication-subtitle">
-        <em>Navigating the Digital World as Humans Do:</em><br>
-        Universal Visual Grounding for GUI Agents
-    </h2>
-          <div class="is-size-5 publication-authors">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title is-bold">
+                        <img src="static/images/uground-icon.png" style="width:1.5em;vertical-align: middle"
+                             alt="Logo"/>
+                        <span class="mmmu" style="vertical-align: middle">UGround</span>
+                    </h1>
+                    <h2 class="subtitle is-3 publication-subtitle">
+                        <em>Navigating the Digital World as Humans Do:</em><br>
+                        Universal Visual Grounding for GUI Agents
+                    </h2>
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
              <a href="https://boyugou.github.io/">Boyu Gou</a><sup>1</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://www.linkedin.com/in/demi-ruohanwang/">Ruohan Wang</a><sup>1</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://boyuanzheng010.github.io/">Boyuan Zheng</a><sup>1</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://www.linkedin.com/in/lorabit/">Yanan Xie</a><sup>2</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://www.linkedin.com/in/chc012/">Cheng Chang</a><sup>2</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://yihengshu.github.io/">Yiheng Shu</a><sup>1</sup>,
             </span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://u.osu.edu/ihudas/people/">Huan Sun</a><sup>1</sup>,
             </span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://ysu1989.github.io/">Yu Su</a><sup>1</sup>
             </span>
-          </div>
-          
-          <br>
-          
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>The Ohio State University</span>&nbsp; &nbsp; &nbsp;
-            <span class="author-block"><sup>2</sup>Orby AI</span>
-          </div>
+                    </div>
 
-          <div class="is-size-5 publication-authors">
+                    <br>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>The Ohio State University</span>&nbsp; &nbsp; &nbsp;
+                        <span class="author-block"><sup>2</sup>Orby AI</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
              {<a href="mailto:gou.43@osu.edu">gou.43</a>,
              <a href="mailto:sun.397@osu.edu">sun.397</a>,
              <a href="mailto:su.809@osu.edu">su.809</a>}@osu.edu
              , 
               <a href="mailto:yanan@orby.ai">yanan@orby.ai</a>
-          </div>
+                    </div>
 
-          
 
-          <br>
+                    <br>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
 
               <span class="link-block">
-                  <a href="https://arxiv.org/abs/2410.05243" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2410.05243" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
 <!--                <a href="" target="_blank"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
+                      <!--                   class="external-link button is-normal is-rounded is-dark">-->
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
-               <a href="https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                            <span class="link-block">
+               <a href="https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
                  <span class="icon">
                      <!-- <i class="far fa-images"></i> -->
                      <p style="font-size:18px">🤗</p>
@@ -274,10 +288,11 @@
                  <span>Model</span>
                </a>
              </span>
-<!--https://arxiv.org/abs/2410.05243-->
+                            <!--https://arxiv.org/abs/2410.05243-->
 
-                <span class="link-block">
-               <a href="https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                            <span class="link-block">
+               <a href="https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
                  <span class="icon">
                      <!-- <i class="far fa-images"></i> -->
                      <p style="font-size:18px">🤗</p>
@@ -288,19 +303,23 @@
              </span>
 
 
-
-
-             <span class="link-block">
-                    <a href="https://github.com/OSU-NLP-Group/UGround" class="external-link button is-normal is-rounded is-dark">
+                            <span class="link-block">
+                    <a href="https://github.com/OSU-NLP-Group/UGround"
+                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false"
+                             data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor"
+                                                                          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                          <!-- <i class="fab fa-github" aria-hidden="true"></i> Font Awesome fontawesome.com -->
                       </span>
                       <span>Code</span>
                     </a>
                   </span>
 
-                    <span class="link-block">
-                    <a href="https://x.com/ysu_nlp/status/1844186560901808328" class="external-link button is-normal is-rounded is-dark">
+                            <span class="link-block">
+                    <a href="https://x.com/ysu_nlp/status/1844186560901808328"
+                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon has-text-white">
                           <i class="fab fa-twitter"></i>
                       </span>
@@ -309,754 +328,783 @@
                   </span>
 
 
-
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!--<p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:900px"></p>-->
 
 <style>
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  </style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+</style>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-       <div class="box m-5">
-        <div class="content has-text-justified">
-          <p>
-              <b>TLDR:</b> 1) Low-cost, scalable and effective synthetic data for GUI visaul grounding 2) SOTA GUI visual grounding model UGround 3) human-like purely vision-only (modular) GUI agent framework SeeAct-V 4) first time demonstrating practical SOTA performance of vision-only GUI agents.<br>
-              <br><b>UGround</b> is a universal <b>visual grounding</b> model for locating the element of an action by pixel coordinates on GUIs. It is trained on 10M elements from 1.3M screenshots, and substantially outperforms previous SOTA <b>GUI visual grounding</b> models on ScreenSpot (web, mobile, desktop).
-<br>
-              Different from prevalent approaches that rely on HTML/accessibility trees for observation or grounding, we propose a generic framework, <b>SeeAct-V</b>, that <b>perceives the GUIs entirely visually</b>, and <b>takes pixel-level operations</b> on screens. SeeAct-V Agents with UGround achieve SOTA performance on five benchmarks, spanning <b>offline agent evaluation</b> (web, mobile, desktop), and <b>online agent evaluation</b> (web, mobile):
-<!--           <ul>-->
-<!--&lt;!&ndash;            <li>🌐 📱 💻 ScreenSpot (GUI Grounding)</li>&ndash;&gt;-->
-<!--&lt;!&ndash;            <li>🌐 Multimodal-Mind2Web </li>&ndash;&gt;-->
-<!--&lt;!&ndash;            <li>📱 AndroidControl</li>&ndash;&gt;-->
-<!--&lt;!&ndash;            <li>💻 OmniAct</li>&ndash;&gt;-->
-<!--&lt;!&ndash;            <li>🌐 Mind2Web-Live (Online)</li>&ndash;&gt;-->
-<!--&lt;!&ndash;            <li>📱 AndroidWorld  (Online)</li>&ndash;&gt;-->
-<!--           </ul>-->
+    <div class="container is-max-desktop">
+        <div class="box m-5">
+            <div class="content has-text-justified">
+                <p>
+                    <b>TLDR:</b> 1) Low-cost, scalable and effective synthetic data for GUI visaul grounding 2) SOTA GUI
+                    visual grounding model UGround 3) human-like purely vision-only (modular) GUI agent framework
+                    SeeAct-V 4) first time demonstrating practical SOTA performance of vision-only GUI agents.<br>
+                    <br><b>UGround</b> is a universal <b>visual grounding</b> model for locating the element of an
+                    action by pixel coordinates on GUIs. It is trained on 10M elements from 1.3M screenshots, and
+                    substantially outperforms previous SOTA <b>GUI visual grounding</b> models on ScreenSpot (web,
+                    mobile, desktop).
+                    <br>
+                    Different from prevalent approaches that rely on HTML/accessibility trees for observation or
+                    grounding, we propose a generic framework, <b>SeeAct-V</b>, that <b>perceives the GUIs entirely
+                    visually</b>, and <b>takes pixel-level operations</b> on screens. SeeAct-V Agents with UGround
+                    achieve SOTA performance on five benchmarks, spanning <b>offline agent evaluation</b> (web, mobile,
+                    desktop), and <b>online agent evaluation</b> (web, mobile):
+                    <!--           <ul>-->
+                    <!--&lt;!&ndash;            <li>🌐 📱 💻 ScreenSpot (GUI Grounding)</li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;            <li>🌐 Multimodal-Mind2Web </li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;            <li>📱 AndroidControl</li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;            <li>💻 OmniAct</li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;            <li>🌐 Mind2Web-Live (Online)</li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;            <li>📱 AndroidWorld  (Online)</li>&ndash;&gt;-->
+                    <!--           </ul>-->
 
-              <p class="has-text-centered"><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:900px"></p>
-          </p>
+                <p class="has-text-centered"><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:900px">
+                </p>
+                </p>
 
 
-          <p>
-            <strong>Updates</strong>
-          </p>
-          <ul>
+                <p>
+                    <strong>Updates</strong>
+                </p>
+                <ul>
 
-<li>
-              2025/01/03: Qwen2VL-based UGround-v1 has released (2B & 7B), with a even stronger SOTA performance on GUI visual grounding.
-<!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
-            </li>
-		  
-              <li>
-              2024/10/07: Preprint is arXived.
-<!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
-            </li>
-            <li>
-              2024/08/06: Website is live. The initial manuscript and results are available.
-<!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
-            </li>
-          </ul>
+                    <li>
+                        2025/01/03: Qwen2VL-based UGround-v1 has released (2B & 7B), with a even stronger SOTA
+                        performance on GUI visual grounding.
+                        <!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
+                    </li>
+
+                    <li>
+                        2024/10/07: Preprint is arXived.
+                        <!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
+                    </li>
+                    <li>
+                        2024/08/06: Website is live. The initial manuscript and results are available.
+                        <!--                More evaluation results can be found on <a href="https://lamb.community">lamb.community</a>.-->
+                    </li>
+                </ul>
+
+            </div>
 
         </div>
-
-       </div>
     </div>
 
-  </div>
+    </div>
 </section>
 
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-  <h1 class="title is-1 mmmu">
-    <img src="static/images/uground-icon.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
-    <span class="mmmu" style="vertical-align: middle">SeeAct-V and UGround</span>
-  </h1>
-  </div>
+    <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+            <img src="static/images/uground-icon.png" style="width:1.5em;vertical-align: middle" alt="Logo"/>
+            <span class="mmmu" style="vertical-align: middle">SeeAct-V and UGround</span>
+        </h1>
+    </div>
 </section>
-            
+
 <section class="section">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <!-- <div class="column is-full-width has-text-centered"> -->
-      <div class="column is-four-fifths">
+    <div class="container">
+        <div class="columns is-centered has-text-centered">
+            <!-- <div class="column is-full-width has-text-centered"> -->
+            <div class="column is-four-fifths">
 
-<!--        <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
+                <!--        <div class="columns is-centered has-text-centered">-->
+                <!--        <div class="column is-four-fifths">-->
 
-        <h2 class="title is-3">Overview</h2>
-          <p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT" style="width:1000px"></p>
-        <div class="content has-text-justified">
-          <p>
-              In this work, we advocate a <strong>human-like embodiment</strong> for GUI agents that perceive the environment entirely visually and directly take pixel-level operations on the GUI (<strong>SeeAct-V framework</strong>). The key is <strong>visual grounding models</strong> that can accurately map diverse referring expressions of GUI elements to their coordinates on the GUI across different platforms. <br>We show that a simple recipe, which includes <strong>web-based synthetic data</strong> and slight adaptation of the LLaVA architecture, is surprisingly effective for training such visual grounding models. We collect the largest dataset for GUI visual grounding so far, containing 10M GUI elements (~95% from web) and their referring expressions over 1.3M screenshots, and use it to train <strong>UGround</strong>, a strong universal visual grounding model for GUI agents.   </p>
+                <h2 class="title is-3">Overview</h2>
+                <p class="has-text-centered"><img src="static/images/framework.png" alt="MY ALT TEXT"
+                                                  style="width:1000px"></p>
+                <div class="content has-text-justified">
+                    <p>
+                        In this work, we advocate a <strong>human-like embodiment</strong> for GUI agents that perceive
+                        the environment entirely visually and directly take pixel-level operations on the GUI (<strong>SeeAct-V
+                        framework</strong>). The key is <strong>visual grounding models</strong> that can accurately map
+                        diverse referring expressions of GUI elements to their coordinates on the GUI across different
+                        platforms. <br>We show that a simple recipe, which includes <strong>web-based synthetic
+                        data</strong> and slight adaptation of the LLaVA architecture, is surprisingly effective for
+                        training such visual grounding models. We collect the largest dataset for GUI visual grounding
+                        so far, containing 10M GUI elements (~95% from web) and their referring expressions over 1.3M
+                        screenshots, and use it to train <strong>UGround</strong>, a strong universal visual grounding
+                        model for GUI agents. </p>
 
-<!--          <p style="display:flex;"><img src="static/images/seeact-v.png" alt="MY ALT TEXT" style="width:300px" /><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:800px" /></p>-->
-        </div>
+                    <!--          <p style="display:flex;"><img src="static/images/seeact-v.png" alt="MY ALT TEXT" style="width:300px" /><img src="static/images/radar.png" alt="MY ALT TEXT" style="width:800px" /></p>-->
+                </div>
 
-<h2 class="title is-3">Live Demo</h2>
-          <script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/4.16.0/gradio.js"
-></script>
+                <h2 class="title is-3">Live Demo</h2>
+                <script
+                        type="module"
+                        src="https://gradio.s3-us-west-2.amazonaws.com/4.16.0/gradio.js"
+                ></script>
 
-<gradio-app id="gradioDemo" src="https://orby-osu-uground.hf.space"></gradio-app>
-
-
-        <h2 class="title is-3">Offline Experiments</h2>
-        <div class="content has-text-justified">
-
-            <p>The high-quality grounding data synthesized from web (9M elements from <strong>Web-Hybrid</strong>) effectively helps UGround generalize to Desktop and Mobile UIs, making UGround outperform previous SOTA SeeClick on every platform and element type on ScreenSpot.
-<!--                <br-->
-<!--                >Our experiments even show that, with only 50K screenshots (about 600K elements) of our web-based synthetic data, UGround is able to outperform SeeClick on every platform (10% in avg.), which is trained on about 3M web and Android elements from about 400K screenshots.</p>-->
-
-        <table id="ScreenSpotStandard">
-    <caption>ScreenSpot (Standard Setting)</caption>
-
-            <p class="has-text-centered"><img src="static/images/screenspot_paper_with_code.png" alt="MY ALT TEXT" style="width:1000px"></p>
-<thead>
-    <tr>
-        <th rowspan="2">Grounding Model</th>
-        <th colspan="2">Mobile</th>
-        <th colspan="2">Desktop</th>
-        <th colspan="2">Web</th>
-        <th rowspan="2">Average</th>
-    </tr>
-    <tr>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>GPT-4</td>
-        <td>22.6</td>
-        <td>24.5</td>
-        <td>20.2</td>
-        <td>11.8</td>
-        <td>9.2</td>
-        <td>8.8</td>
-        <td>16.2</td>
-    </tr>
-    <tr>
-        <td>GPT-4o</td>
-        <td>20.2</td>
-        <td>24.9</td>
-        <td>21.1</td>
-        <td>23.6</td>
-        <td>12.2</td>
-        <td>7.8</td>
-        <td>18.3</td>
-    </tr>
-    <tr>
-        <td>MiniGPT-v2</td>
-        <td>8.4</td>
-        <td>6.6</td>
-        <td>6.2</td>
-        <td>2.9</td>
-        <td>6.5</td>
-        <td>3.4</td>
-        <td>5.7</td>
-    </tr>
-    <tr>
-        <td>Groma</td>
-        <td>10.3</td>
-        <td>2.6</td>
-        <td>4.6</td>
-        <td>4.3</td>
-        <td>5.7</td>
-        <td>3.4</td>
-        <td>5.2</td>
-    </tr>
-    <tr>
-        <td>Fuyu</td>
-        <td>41.0</td>
-        <td>1.3</td>
-        <td>33.0</td>
-        <td>3.6</td>
-        <td>33.9</td>
-        <td>4.4</td>
-        <td>19.5</td>
-    </tr>
-    <tr>
-        <td>Qwen-VL</td>
-        <td>9.5</td>
-        <td>4.8</td>
-        <td>5.7</td>
-        <td>5.0</td>
-        <td>3.5</td>
-        <td>2.4</td>
-        <td>5.2</td>
-    </tr>
-    <tr>
-        <td>SeeClick</td>
-        <td>78.0</td>
-        <td>52.0</td>
-        <td>72.2</td>
-        <td>30.0</td>
-        <td>55.7</td>
-        <td>32.5</td>
-        <td>53.4</td>
-    </tr>
-    <tr>
-        <td>Qwen-GUI</td>
-        <td>52.4</td>
-        <td>10.9</td>
-        <td>45.9</td>
-        <td>5.7</td>
-        <td>43.0</td>
-        <td>13.6</td>
-        <td>28.6</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1</strong></td>
-        <td><strong>82.8</strong></td>
-        <td><strong>60.3</strong></td>
-        <td><strong>82.5</strong></td>
-        <td><strong>63.6</strong></td>
-        <td><strong>80.4</strong></td>
-        <td><strong>70.4</strong></td>
-        <td><strong>73.3</strong></td>
-    </tr>
-    <tr>
-        <td>Qwen2-VL</td>
-        <td>61.3</td>
-        <td>39.3</td>
-        <td>52.0</td>
-        <td>45.0</td>
-        <td>33.0</td>
-        <td>21.8</td>
-        <td>42.1</td>
-    </tr>
-    <tr>
-        <td>Aguvis-G-7B</td>
-        <td>88.3</td>
-        <td>78.2</td>
-        <td>88.1</td>
-        <td>70.7</td>
-        <td>85.7</td>
-        <td>74.8</td>
-        <td>81.0</td>
-    </tr>
-    <tr>
-        <td>Aguvis-7B</td>
-        <td><strong>95.6</strong></td>
-        <td>77.7</td>
-        <td><strong>93.8</strong></td>
-        <td>67.1</td>
-        <td>88.3</td>
-        <td>75.2</td>
-        <td>83.0</td>
-    </tr>
-    <tr>
-        <td>OS-Atlas-Base-4B</td>
-        <td>85.7</td>
-        <td>58.5</td>
-        <td>72.2</td>
-        <td>45.7</td>
-        <td>82.6</td>
-        <td>63.1</td>
-        <td>68.0</td>
-    </tr>
-    <tr>
-        <td>OS-Atlas-Base-7B</td>
-        <td>93.0</td>
-        <td>72.9</td>
-        <td>91.8</td>
-        <td>62.9</td>
-        <td><strong>90.9</strong></td>
-        <td>74.3</td>
-        <td>81.0</td>
-    </tr>
-    <tr>
-        <td>ShowUI-G</td>
-        <td>91.6</td>
-        <td>69.0</td>
-        <td>81.8</td>
-        <td>59.0</td>
-        <td>83.0</td>
-        <td>65.5</td>
-        <td>75.0</td>
-    </tr>
-    <tr>
-        <td>ShowUI</td>
-        <td>92.3</td>
-        <td>75.5</td>
-        <td>76.3</td>
-        <td>61.1</td>
-        <td>81.7</td>
-        <td>63.6</td>
-        <td>75.1</td>
-    </tr>
-    <tr>
-        <td>Iris</td>
-        <td>85.3</td>
-        <td>64.2</td>
-        <td>86.7</td>
-        <td>57.5</td>
-        <td>82.6</td>
-        <td>71.2</td>
-        <td>74.6</td>
-    </tr>
-    <tr>
-        <td>Aria-UI</td>
-        <td>92.3</td>
-        <td>73.8</td>
-        <td>93.3</td>
-        <td>64.3</td>
-        <td>86.5</td>
-        <td>76.2</td>
-        <td>81.1</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-        <td>89.4</td>
-        <td>72.0</td>
-        <td>88.7</td>
-        <td>65.7</td>
-        <td>81.3</td>
-        <td>68.9</td>
-        <td>77.7</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-        <td>93.0</td>
-        <td><strong>79.9</strong></td>
-        <td><strong>93.8</strong></td>
-        <td><strong>76.4</strong></td>
-        <td><strong>90.9</strong></td>
-        <td><strong>84.0</strong></td>
-        <td><strong>86.3</strong></td>
-    </tr>
-</tbody>
-</table>
-
-<table id="ScreenSpotAgent">
-<caption> ScreenSpot (Agent Setting)</caption>
-<thead>
-    <tr>
-        <th rowspan="2"><br>Planner</th>
-        <th rowspan="2"><br>Grounding</th>
-        <th colspan="2">Mobile</th>
-        <th colspan="2">Desktop  </th>
-        <th colspan="2">Web  </th>
-        <th rowspan="2"><br>Average</th>
-    </tr>
-    <tr>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-        <th>Text</th>
-        <th>Icon/Widget</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td rowspan="2" style="vertical-align: middle;"><br>GPT-4</td>
-        <td>SeeClick</td>
-        <td>76.6</td>
-        <td>55.5</td>
-        <td>68.0</td>
-        <td>28.6</td>
-        <td>40.9</td>
-        <td>23.3</td>
-        <td>48.8</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1</strong></td>
-        <td><b>90.1</b></td>
-        <td><b>70.3</b></td>
-        <td><b>87.1</b></td>
-        <td><b>55.7</b></td>
-        <td><b>85.7</b></td>
-        <td><b>64.6</b></td>
-        <td><b>75.6</b></td>
-    </tr>
-    <tr>
-        <td rowspan="8" style="vertical-align: middle;"><br>GPT-4o</td>
-        <td>Qwen-VL</td>
-        <td>21.3</td>
-        <td>21.4</td>
-        <td>18.6</td>
-        <td>10.7</td>
-        <td>9.1</td>
-        <td>5.8</td>
-        <td>14.5</td>
-    </tr>
-    <tr>
-        <td>SeeClick</td>
-        <td>81.0</td>
-        <td>59.8</td>
-        <td>69.6</td>
-        <td>33.6</td>
-        <td>43.9</td>
-        <td>26.2</td>
-        <td>52.4</td>
-    </tr>
-    <tr>
-        <td>Qwen-GUI</td>
-        <td>67.8</td>
-        <td>24.5</td>
-        <td>53.1</td>
-        <td>16.4</td>
-        <td>50.4</td>
-        <td>18.5</td>
-        <td>38.5</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1</strong></td>
-        <td><strong>93.4</strong></td>
-        <td><strong>76.9</strong></td>
-        <td><strong>92.8</strong></td>
-        <td><strong>67.9</strong></td>
-        <td><strong>88.7</strong></td>
-        <td><strong>68.9</strong></td>
-        <td><strong>81.4</strong></td>
-    </tr>
-    <tr>
-        <td>OS-Atlas-Base-4B</td>
-        <td><strong>94.1</strong></td>
-        <td>73.8</td>
-        <td>77.8</td>
-        <td>47.1</td>
-        <td>86.5</td>
-        <td>65.3</td>
-        <td>74.1</td>
-    </tr>
-    <tr>
-        <td>OS-Atlas-Base-7B</td>
-        <td>93.8</td>
-        <td><strong>79.9</strong></td>
-        <td>90.2</td>
-        <td>66.4</td>
-        <td><strong>92.6</strong></td>
-        <td><strong>79.1</strong></td>
-        <td>83.7</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-        <td><strong>94.1</strong></td>
-        <td>77.7</td>
-        <td>92.8</td>
-        <td>63.6</td>
-        <td>90.0</td>
-        <td>70.9</td>
-        <td>81.5</td>
-    </tr>
-    <tr>
-        <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-        <td><strong>94.1</strong></td>
-        <td><strong>79.9</strong></td>
-        <td><strong>93.3</strong></td>
-        <td><strong>73.6</strong></td>
-        <td>89.6</td>
-        <td>73.3</td>
-        <td><strong>84.0</strong></td>
-    </tr>
-</tbody>
-</table>
+                <gradio-app id="gradioDemo" src="https://orby-osu-uground.hf.space"></gradio-app>
 
 
+                <h2 class="title is-3">Offline Experiments</h2>
+                <div class="content has-text-justified">
+
+                    <p>The high-quality grounding data synthesized from web (9M elements from
+                        <strong>Web-Hybrid</strong>) effectively helps UGround generalize to Desktop and Mobile UIs,
+                        making UGround outperform previous SOTA SeeClick on every platform and element type on
+                        ScreenSpot.
+                        <!--                <br-->
+                        <!--                >Our experiments even show that, with only 50K screenshots (about 600K elements) of our web-based synthetic data, UGround is able to outperform SeeClick on every platform (10% in avg.), which is trained on about 3M web and Android elements from about 400K screenshots.</p>-->
+
+                    <table id="ScreenSpotStandard">
+                        <caption>ScreenSpot (Standard Setting)</caption>
+
+                        <p class="has-text-centered"><img src="static/images/screenspot_paper_with_code.png"
+                                                          alt="MY ALT TEXT" style="width:1000px"></p>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">Grounding Model</th>
+                            <th colspan="2">Mobile</th>
+                            <th colspan="2">Desktop</th>
+                            <th colspan="2">Web</th>
+                            <th rowspan="2">Average</th>
+                        </tr>
+                        <tr>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>GPT-4</td>
+                            <td>22.6</td>
+                            <td>24.5</td>
+                            <td>20.2</td>
+                            <td>11.8</td>
+                            <td>9.2</td>
+                            <td>8.8</td>
+                            <td>16.2</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-4o</td>
+                            <td>20.2</td>
+                            <td>24.9</td>
+                            <td>21.1</td>
+                            <td>23.6</td>
+                            <td>12.2</td>
+                            <td>7.8</td>
+                            <td>18.3</td>
+                        </tr>
+                        <tr>
+                            <td>MiniGPT-v2</td>
+                            <td>8.4</td>
+                            <td>6.6</td>
+                            <td>6.2</td>
+                            <td>2.9</td>
+                            <td>6.5</td>
+                            <td>3.4</td>
+                            <td>5.7</td>
+                        </tr>
+                        <tr>
+                            <td>Groma</td>
+                            <td>10.3</td>
+                            <td>2.6</td>
+                            <td>4.6</td>
+                            <td>4.3</td>
+                            <td>5.7</td>
+                            <td>3.4</td>
+                            <td>5.2</td>
+                        </tr>
+                        <tr>
+                            <td>Fuyu</td>
+                            <td>41.0</td>
+                            <td>1.3</td>
+                            <td>33.0</td>
+                            <td>3.6</td>
+                            <td>33.9</td>
+                            <td>4.4</td>
+                            <td>19.5</td>
+                        </tr>
+                        <tr>
+                            <td>Qwen-VL</td>
+                            <td>9.5</td>
+                            <td>4.8</td>
+                            <td>5.7</td>
+                            <td>5.0</td>
+                            <td>3.5</td>
+                            <td>2.4</td>
+                            <td>5.2</td>
+                        </tr>
+                        <tr>
+                            <td>SeeClick</td>
+                            <td>78.0</td>
+                            <td>52.0</td>
+                            <td>72.2</td>
+                            <td>30.0</td>
+                            <td>55.7</td>
+                            <td>32.5</td>
+                            <td>53.4</td>
+                        </tr>
+                        <tr>
+                            <td>Qwen-GUI</td>
+                            <td>52.4</td>
+                            <td>10.9</td>
+                            <td>45.9</td>
+                            <td>5.7</td>
+                            <td>43.0</td>
+                            <td>13.6</td>
+                            <td>28.6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><strong>82.8</strong></td>
+                            <td><strong>60.3</strong></td>
+                            <td><strong>82.5</strong></td>
+                            <td><strong>63.6</strong></td>
+                            <td><strong>80.4</strong></td>
+                            <td><strong>70.4</strong></td>
+                            <td><strong>73.3</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Qwen2-VL</td>
+                            <td>61.3</td>
+                            <td>39.3</td>
+                            <td>52.0</td>
+                            <td>45.0</td>
+                            <td>33.0</td>
+                            <td>21.8</td>
+                            <td>42.1</td>
+                        </tr>
+                        <tr>
+                            <td>Aguvis-G-7B</td>
+                            <td>88.3</td>
+                            <td>78.2</td>
+                            <td>88.1</td>
+                            <td>70.7</td>
+                            <td>85.7</td>
+                            <td>74.8</td>
+                            <td>81.0</td>
+                        </tr>
+                        <tr>
+                            <td>Aguvis-7B</td>
+                            <td><strong>95.6</strong></td>
+                            <td>77.7</td>
+                            <td><strong>93.8</strong></td>
+                            <td>67.1</td>
+                            <td>88.3</td>
+                            <td>75.2</td>
+                            <td>83.0</td>
+                        </tr>
+                        <tr>
+                            <td>OS-Atlas-Base-4B</td>
+                            <td>85.7</td>
+                            <td>58.5</td>
+                            <td>72.2</td>
+                            <td>45.7</td>
+                            <td>82.6</td>
+                            <td>63.1</td>
+                            <td>68.0</td>
+                        </tr>
+                        <tr>
+                            <td>OS-Atlas-Base-7B</td>
+                            <td>93.0</td>
+                            <td>72.9</td>
+                            <td>91.8</td>
+                            <td>62.9</td>
+                            <td><strong>90.9</strong></td>
+                            <td>74.3</td>
+                            <td>81.0</td>
+                        </tr>
+                        <tr>
+                            <td>ShowUI-G</td>
+                            <td>91.6</td>
+                            <td>69.0</td>
+                            <td>81.8</td>
+                            <td>59.0</td>
+                            <td>83.0</td>
+                            <td>65.5</td>
+                            <td>75.0</td>
+                        </tr>
+                        <tr>
+                            <td>ShowUI</td>
+                            <td>92.3</td>
+                            <td>75.5</td>
+                            <td>76.3</td>
+                            <td>61.1</td>
+                            <td>81.7</td>
+                            <td>63.6</td>
+                            <td>75.1</td>
+                        </tr>
+                        <tr>
+                            <td>Iris</td>
+                            <td>85.3</td>
+                            <td>64.2</td>
+                            <td>86.7</td>
+                            <td>57.5</td>
+                            <td>82.6</td>
+                            <td>71.2</td>
+                            <td>74.6</td>
+                        </tr>
+                        <tr>
+                            <td>Aria-UI</td>
+                            <td>92.3</td>
+                            <td>73.8</td>
+                            <td>93.3</td>
+                            <td>64.3</td>
+                            <td>86.5</td>
+                            <td>76.2</td>
+                            <td>81.1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
+                            <td>89.4</td>
+                            <td>72.0</td>
+                            <td>88.7</td>
+                            <td>65.7</td>
+                            <td>81.3</td>
+                            <td>68.9</td>
+                            <td>77.7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
+                            <td>93.0</td>
+                            <td><strong>79.9</strong></td>
+                            <td><strong>93.8</strong></td>
+                            <td><strong>76.4</strong></td>
+                            <td><strong>90.9</strong></td>
+                            <td><strong>84.0</strong></td>
+                            <td><strong>86.3</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table id="ScreenSpotAgent">
+                        <caption> ScreenSpot (Agent Setting)</caption>
+                        <thead>
+                        <tr>
+                            <th rowspan="2"><br>Planner</th>
+                            <th rowspan="2"><br>Grounding</th>
+                            <th colspan="2">Mobile</th>
+                            <th colspan="2">Desktop</th>
+                            <th colspan="2">Web</th>
+                            <th rowspan="2"><br>Average</th>
+                        </tr>
+                        <tr>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                            <th>Text</th>
+                            <th>Icon/Widget</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="2" style="vertical-align: middle;"><br>GPT-4</td>
+                            <td>SeeClick</td>
+                            <td>76.6</td>
+                            <td>55.5</td>
+                            <td>68.0</td>
+                            <td>28.6</td>
+                            <td>40.9</td>
+                            <td>23.3</td>
+                            <td>48.8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><b>90.1</b></td>
+                            <td><b>70.3</b></td>
+                            <td><b>87.1</b></td>
+                            <td><b>55.7</b></td>
+                            <td><b>85.7</b></td>
+                            <td><b>64.6</b></td>
+                            <td><b>75.6</b></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="8" style="vertical-align: middle;"><br>GPT-4o</td>
+                            <td>Qwen-VL</td>
+                            <td>21.3</td>
+                            <td>21.4</td>
+                            <td>18.6</td>
+                            <td>10.7</td>
+                            <td>9.1</td>
+                            <td>5.8</td>
+                            <td>14.5</td>
+                        </tr>
+                        <tr>
+                            <td>SeeClick</td>
+                            <td>81.0</td>
+                            <td>59.8</td>
+                            <td>69.6</td>
+                            <td>33.6</td>
+                            <td>43.9</td>
+                            <td>26.2</td>
+                            <td>52.4</td>
+                        </tr>
+                        <tr>
+                            <td>Qwen-GUI</td>
+                            <td>67.8</td>
+                            <td>24.5</td>
+                            <td>53.1</td>
+                            <td>16.4</td>
+                            <td>50.4</td>
+                            <td>18.5</td>
+                            <td>38.5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><strong>93.4</strong></td>
+                            <td><strong>76.9</strong></td>
+                            <td><strong>92.8</strong></td>
+                            <td><strong>67.9</strong></td>
+                            <td><strong>88.7</strong></td>
+                            <td><strong>68.9</strong></td>
+                            <td><strong>81.4</strong></td>
+                        </tr>
+                        <tr>
+                            <td>OS-Atlas-Base-4B</td>
+                            <td><strong>94.1</strong></td>
+                            <td>73.8</td>
+                            <td>77.8</td>
+                            <td>47.1</td>
+                            <td>86.5</td>
+                            <td>65.3</td>
+                            <td>74.1</td>
+                        </tr>
+                        <tr>
+                            <td>OS-Atlas-Base-7B</td>
+                            <td>93.8</td>
+                            <td><strong>79.9</strong></td>
+                            <td>90.2</td>
+                            <td>66.4</td>
+                            <td><strong>92.6</strong></td>
+                            <td><strong>79.1</strong></td>
+                            <td>83.7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
+                            <td><strong>94.1</strong></td>
+                            <td>77.7</td>
+                            <td>92.8</td>
+                            <td>63.6</td>
+                            <td>90.0</td>
+                            <td>70.9</td>
+                            <td>81.5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
+                            <td><strong>94.1</strong></td>
+                            <td><strong>79.9</strong></td>
+                            <td><strong>93.3</strong></td>
+                            <td><strong>73.6</strong></td>
+                            <td>89.6</td>
+                            <td>73.3</td>
+                            <td><strong>84.0</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
-            <table id="MultimodalMind2Web">
-    <caption>Multimodal-Mind2Web (Element Accuracy)</caption>
-    <thead>
-        <tr>
-            <th>Input</th>
-            <th>Planner</th>
-            <th>Grounding</th>
-            <th>Cross-Task</th>
-            <th>Cross-Website</th>
-            <th>Cross-Domain</th>
-            <th>Average</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="2"><br>Image + Text</td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>Choice</td>
-            <td>46.4</td>
-            <td>38.0</td>
-            <td>42.4</td>
-            <td>42.3</td>
-        </tr>
-        <tr>
-            <td>SoM</td>
-            <td>29.6</td>
-            <td>20.1</td>
-            <td>27.0</td>
-            <td>25.6</td>
-        </tr>
-        <tr>
-            <td rowspan="4">
-                <br><br><div><div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>SeeClick</td>
-            <td>29.7</td>
-            <td>28.5</td>
-            <td>30.7</td>
-            <td>29.6</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td>45.1</td>
-            <td>44.7</td>
-            <td>44.6</td>
-            <td>44.8</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><br>GPT-4o</td>
-            <td>SeeClick</td>
-            <td>32.1</td>
-            <td>33.1</td>
-            <td>33.5</td>
-            <td>32.9</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td><strong>47.7</strong></td>
-            <td><strong>46.0</strong></td>
-            <td><strong>46.6</strong></td>
-            <td><strong>46.8</strong></td>
-        </tr>
-    </tbody>
-</table>
+                    <table id="MultimodalMind2Web">
+                        <caption>Multimodal-Mind2Web (Element Accuracy)</caption>
+                        <thead>
+                        <tr>
+                            <th>Input</th>
+                            <th>Planner</th>
+                            <th>Grounding</th>
+                            <th>Cross-Task</th>
+                            <th>Cross-Website</th>
+                            <th>Cross-Domain</th>
+                            <th>Average</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="2"><br>Image + Text</td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>Choice</td>
+                            <td>46.4</td>
+                            <td>38.0</td>
+                            <td>42.4</td>
+                            <td>42.3</td>
+                        </tr>
+                        <tr>
+                            <td>SoM</td>
+                            <td>29.6</td>
+                            <td>20.1</td>
+                            <td>27.0</td>
+                            <td>25.6</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">
+                                <br><br>
+                                <div>
+                                    <div><strong>Image</strong></div>
+                                    <div><strong>(SeeAct-V)</strong></div>
+                            </td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>SeeClick</td>
+                            <td>29.7</td>
+                            <td>28.5</td>
+                            <td>30.7</td>
+                            <td>29.6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td>45.1</td>
+                            <td>44.7</td>
+                            <td>44.6</td>
+                            <td>44.8</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><br>GPT-4o</td>
+                            <td>SeeClick</td>
+                            <td>32.1</td>
+                            <td>33.1</td>
+                            <td>33.5</td>
+                            <td>32.9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><strong>47.7</strong></td>
+                            <td><strong>46.0</strong></td>
+                            <td><strong>46.6</strong></td>
+                            <td><strong>46.8</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
-<table id="AndroidControl">
-    <caption>AndroidControl</caption>
-    <thead>
-        <tr>
-            <th rowspan="2"><br>Input</th>
-            <th rowspan="2"><br>Planner</th>
-            <th rowspan="2"><br>Grounding</th>
-            <th colspan="2">Step Accuracy</th>
-        </tr>
-        <tr>
-            <th>High</th>
-            <th>Low</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Text</td>
-            <td>GPT-4</td>
-            <td>Choice</td>
-            <td>42.1</td>
-            <td>55.0</td>
-        </tr>
-        <tr>
-            <td rowspan="4">
-                <br>
-                <br>
-                <div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>SeeClick</td>
-            <td>39.4</td>
-            <td>47.2</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td>46.2</td>
-            <td>58.0</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><br>GPT-4o</td>
-            <td>SeeClick</td>
-            <td>41.8</td>
-            <td>52.8</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td><strong>48.4</strong></td>
-            <td><strong>62.4</strong></td>
-        </tr>
-    </tbody>
-</table>
+                    <table id="AndroidControl">
+                        <caption>AndroidControl</caption>
+                        <thead>
+                        <tr>
+                            <th rowspan="2"><br>Input</th>
+                            <th rowspan="2"><br>Planner</th>
+                            <th rowspan="2"><br>Grounding</th>
+                            <th colspan="2">Step Accuracy</th>
+                        </tr>
+                        <tr>
+                            <th>High</th>
+                            <th>Low</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Text</td>
+                            <td>GPT-4</td>
+                            <td>Choice</td>
+                            <td>42.1</td>
+                            <td>55.0</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">
+                                <br>
+                                <br>
+                                <div><strong>Image</strong></div>
+                                <div><strong>(SeeAct-V)</strong></div>
+                            </td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>SeeClick</td>
+                            <td>39.4</td>
+                            <td>47.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td>46.2</td>
+                            <td>58.0</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><br>GPT-4o</td>
+                            <td>SeeClick</td>
+                            <td>41.8</td>
+                            <td>52.8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><strong>48.4</strong></td>
+                            <td><strong>62.4</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<table id="OmniACT">
-    <caption>OmniACT</caption>
-    <thead>
-        <tr>
-            <th>Inputs</th>
-            <th>Planner</th>
-            <th>Grounding</th>
-            <th>Action Score</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Text</td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>DetACT</td>
-            <td>11.6</td>
-        </tr>
-        <tr>
-            <td>Image + Text</td>
-            <td>DetACT</td>
-            <td>17.0</td>
-        </tr>
-        <tr>
-            <td rowspan="4">
-                <br>
-                <br>
-                <div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>SeeClick</td>
-            <td>28.9</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td>31.1</td>
-        </tr>
-        <tr>
-            <td rowspan="2"><br>GPT-4o</td>
-            <td>SeeClick</td>
-            <td>29.6</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1</strong></td>
-            <td><strong>32.8</strong></td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-        </div>
-
-        <h2 class="title is-3">Online Experiments</h2>
-        <div class="content has-text-justified">
+                    <table id="OmniACT">
+                        <caption>OmniACT</caption>
+                        <thead>
+                        <tr>
+                            <th>Inputs</th>
+                            <th>Planner</th>
+                            <th>Grounding</th>
+                            <th>Action Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Text</td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>DetACT</td>
+                            <td>11.6</td>
+                        </tr>
+                        <tr>
+                            <td>Image + Text</td>
+                            <td>DetACT</td>
+                            <td>17.0</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">
+                                <br>
+                                <br>
+                                <div><strong>Image</strong></div>
+                                <div><strong>(SeeAct-V)</strong></div>
+                            </td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>SeeClick</td>
+                            <td>28.9</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td>31.1</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><br>GPT-4o</td>
+                            <td>SeeClick</td>
+                            <td>29.6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UGround-V1</strong></td>
+                            <td><strong>32.8</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
-           <table id="Mind2WebLive">
-    <caption>Mind2Web-Live</caption>
-    <thead>
-        <tr>
-            <th>Inputs</th>
-            <th>Planner</th>
-            <th>Grounding</th>
-            <th>Completion Rate</th>
-            <th>Task Success Rate</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="2"><br>Text</td>
-            <td>GPT-4</td>
-            <td rowspan="2"><br>Choice</td>
-            <td>44.3</td>
-            <td>21.1</td>
-        </tr>
-        <tr>
-            <td>GPT-4o</td>
-            <td>47.6</td>
-            <td>22.1</td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround-V1</strong></td>
-            <td>50.7</td>
-            <td><strong>23.1</strong></td>
-        </tr>
-        <tr>
-            <td>GPT-4o</td>
-            <td><strong>50.8</strong></td>
-            <td>19.2</td>
-        </tr>
-    </tbody>
-</table>
+                </div>
 
-            <table id="AndroidWorld">
-    <caption>AndroidWorld</caption>
-    <thead>
-        <tr>
-            <th>Input</th>
-            <th>Planner</th>
-            <th>Grounding</th>
-            <th>Task Success Rate</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Text</td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>Choice</td>
-            <td>30.6</td>
-        </tr>
-        <tr>
-            <td>Image + Text</td>
-            <td>SoM</td>
-            <td>25.4</td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround-V1</strong></td>
-            <td>31.0</td>
-        </tr>
-        <tr>
-            <td>GPT-4o</td>
-            <td><strong>32.8</strong></td>
-        </tr>
-    </tbody>
-</table>
+                <h2 class="title is-3">Online Experiments</h2>
+                <div class="content has-text-justified">
 
 
+                    <table id="Mind2WebLive">
+                        <caption>Mind2Web-Live</caption>
+                        <thead>
+                        <tr>
+                            <th>Inputs</th>
+                            <th>Planner</th>
+                            <th>Grounding</th>
+                            <th>Completion Rate</th>
+                            <th>Task Success Rate</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="2"><br>Text</td>
+                            <td>GPT-4</td>
+                            <td rowspan="2"><br>Choice</td>
+                            <td>44.3</td>
+                            <td>21.1</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-4o</td>
+                            <td>47.6</td>
+                            <td>22.1</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <div><strong>Image</strong></div>
+                                <div><strong>(SeeAct-V)</strong></div>
+                            </td>
+                            <td>GPT-4</td>
+                            <td rowspan="2"><br><strong>UGround-V1</strong></td>
+                            <td>50.7</td>
+                            <td><strong>23.1</strong></td>
+                        </tr>
+                        <tr>
+                            <td>GPT-4o</td>
+                            <td><strong>50.8</strong></td>
+                            <td>19.2</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-            <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>
-      @article{gou2024uground,
-        title={Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
-        author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
-        journal={arXiv preprint arXiv:2410.05243},
-        year={2024},
-        url={https://arxiv.org/abs/2410.05243},
-      }
+                    <table id="AndroidWorld">
+                        <caption>AndroidWorld</caption>
+                        <thead>
+                        <tr>
+                            <th>Input</th>
+                            <th>Planner</th>
+                            <th>Grounding</th>
+                            <th>Task Success Rate</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Text</td>
+                            <td rowspan="2"><br>GPT-4</td>
+                            <td>Choice</td>
+                            <td>30.6</td>
+                        </tr>
+                        <tr>
+                            <td>Image + Text</td>
+                            <td>SoM</td>
+                            <td>25.4</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                <div><strong>Image</strong></div>
+                                <div><strong>(SeeAct-V)</strong></div>
+                            </td>
+                            <td>GPT-4</td>
+                            <td rowspan="2"><br><strong>UGround-V1</strong></td>
+                            <td>31.0</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-4o</td>
+                            <td><strong>32.8</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="container is-max-desktop content">
+                        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+                        <pre><code>
+@article{gou2024uground,
+title = {Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
+author = {Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
+journal = {arXiv preprint arXiv:2410.05243},
+year = {2024},
+url = {https://arxiv.org/abs/2410.05243},
+}
+@InProceedings{zheng2024seeact,
+title = {{GPT}-4{V}(ision) is a Generalist Web Agent, if Grounded},
+author = {Zheng, Boyuan and Gou, Boyu and Kil, Jihyung and Sun, Huan and Su, Yu},
+booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+pages = {61349--61385},
+year = {2024},
+}
 </code></pre>
 
-  </div>
+                    </div>
 
 
-<!--          <p class="has-text-centered"><img src="static/images/omniact.jpg" alt="OmniAct" style="width:300px" /></p>-->
+                    <!--          <p class="has-text-centered"><img src="static/images/omniact.jpg" alt="OmniAct" style="width:300px" /></p>-->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!--&lt;!&ndash; @PAN TODO: bibtex &ndash;&gt;-->
@@ -1071,1370 +1119,1349 @@
 <!--</section>-->
 
 <footer class="footer">
-  <!-- <div class="container"> -->
+    <!-- <div class="container"> -->
     <div class="content has-text-centered">
     </div>
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is adapted from <a href="https://mmmu-benchmark.github.io/">MMMU</a>, <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+        <div class="column is-8">
+            <div class="content">
+                <p>
+                    This website is adapted from <a href="https://mmmu-benchmark.github.io/">MMMU</a>, <a
+                        href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>,
+                    licensed under a <a rel="license"
+                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-  <!-- </div> -->
+    <!-- </div> -->
 
 </footer>
 
 <script>
-  function changeButtonText() {
-    var button = document.getElementById('toggleButton');
-    if (button.innerHTML.includes("Test Set Leaderboard")) {
-      button.innerHTML = "<b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)";
-    } else {
-      button.innerHTML = "<b style='font-size: larger;'>Test Set Leaderboard</b> (Click to Switch)";
+    function changeButtonText() {
+        var button = document.getElementById('toggleButton');
+        if (button.innerHTML.includes("Test Set Leaderboard")) {
+            button.innerHTML = "<b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)";
+        } else {
+            button.innerHTML = "<b style='font-size: larger;'>Test Set Leaderboard</b> (Click to Switch)";
+        }
     }
-  }
-  document.addEventListener('DOMContentLoaded', function() {
-    var tables = document.querySelectorAll('table');
-    
-    tables.forEach(function(table) {
-        if (!table) return;
 
-        var initialRows = Array.from(table.rows).slice(1);
-        table.addEventListener('click', function(event) {
-            var clickedCell = event.target.closest('td, th');
-            if (!clickedCell) return;
-            var headerRow = clickedCell.parentNode;
-            var columnIndex = Array.from(headerRow.cells).indexOf(clickedCell);
-            var type = clickedCell.getAttribute('data-type');
+    document.addEventListener('DOMContentLoaded', function () {
+        var tables = document.querySelectorAll('table');
 
-            if (headerRow.rowIndex === 0) {
-                if (columnIndex === 0) {
-                    table.tBodies[0].innerHTML = '';
-                    initialRows.forEach(row => table.tBodies[0].appendChild(row.cloneNode(true)));
+        tables.forEach(function (table) {
+            if (!table) return;
+
+            var initialRows = Array.from(table.rows).slice(1);
+            table.addEventListener('click', function (event) {
+                var clickedCell = event.target.closest('td, th');
+                if (!clickedCell) return;
+                var headerRow = clickedCell.parentNode;
+                var columnIndex = Array.from(headerRow.cells).indexOf(clickedCell);
+                var type = clickedCell.getAttribute('data-type');
+
+                if (headerRow.rowIndex === 0) {
+                    if (columnIndex === 0) {
+                        table.tBodies[0].innerHTML = '';
+                        initialRows.forEach(row => table.tBodies[0].appendChild(row.cloneNode(true)));
+                    }
+                }
+            });
+        });
+    });
+
+    function sortTable(table, column, type, asc) {
+        var tbody = table.tBodies[0];
+        var rows = Array.from(tbody.rows);
+
+        rows.sort(function (a, b) {
+            var valA = a.cells[column].textContent;
+            var valB = b.cells[column].textContent;
+
+            if (type === 'number') {
+                valA = parseFloat(valA);
+                valB = parseFloat(valB);
+            }
+
+            return asc ? valA - valB : valB - valA;
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    // 切换表格的函数
+    function toggleTables() {
+        var table1 = document.getElementById('table1');
+        var table2 = document.getElementById('table2');
+        table1.classList.toggle('hidden');
+        table2.classList.toggle('hidden');
+    }
+
+    document.getElementById('toggleButton').addEventListener('click', toggleTables);
+    const canvas = document.getElementById('difficulty_level_chart');
+    canvas.style.width = '500px';
+    canvas.style.height = '120px';
+    const ctx = document.getElementById('difficulty_level_chart').getContext('2d');
+    const difficulty_level_chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Easy', 'Medium', 'Hard', 'Overall'],
+            datasets: [{
+                label: 'Fuyu-8B',
+                data: [28.9, 27, 26.4, 27.4],
+                backgroundColor: 'rgba(196, 123, 160, 0.6)',
+                borderColor: 'rgba(196, 123, 160, 1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(196, 123, 160, 1)'
+            },
+                {
+                    label: 'Qwen-VL-7B',
+                    data: [39.4, 31.9, 27.6, 32.9],
+                    backgroundColor: 'rgba(245, 123, 113, 0.6)',
+                    borderColor: 'rgba(245, 123, 113, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(245, 123, 113, 1)'
+                },
+                {
+                    label: 'LLaVA-1.5-13B',
+                    data: [41.3, 32.7, 26.7, 33.6],
+                    backgroundColor: 'rgba(255, 208, 80, 0.6)',
+                    borderColor: 'rgba(255, 208, 80, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(255, 208, 80, 1)'
+                },
+                {
+                    label: 'InstructBLIP-T5-XXL',
+                    data: [40.3, 32.3, 29.4, 33.8],
+                    backgroundColor: 'rgba(110, 194, 134, 0.6)',
+                    borderColor: 'rgba(110, 194, 134, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(110, 194, 134, 1)'
+                },
+                {
+                    label: 'BLIP-2 FLAN-T5-XXL',
+                    data: [41, 32.7, 28.5, 34],
+                    backgroundColor: 'rgba(255, 153, 78, 0.6)',
+                    borderColor: 'rgba(255, 153, 78, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(255, 153, 78, 1)'
+                },
+                {
+                    label: 'GPT-4V',
+                    data: [76.1, 55.6, 31.2, 55.7],
+                    backgroundColor: 'rgba(117, 209, 215, 0.6)',
+                    borderColor: 'rgba(117, 209, 215, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(117, 209, 215, 1)'
+                }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        font: {
+                            size: 16
+                        }
+                    }
+                },
+                x: {
+                    ticks: {
+                        font: {
+                            size: 16 // 设置X轴字体大小
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 16 // 设置标签文字大小
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return context.dataset.label + ': ' + context.parsed.y;
+                        }
+                    }
+                }
+            },
+            onHover: (event, chartElement) => {
+                event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+            }
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        // Data for the "Diagrams" chart
+        const data_Diagrams = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [27.6, 30.1, 31.8, 30.0, 32.0, 46.8],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+
+        // "data_Diagrams" chart
+        new Chart(document.getElementById('chart_Diagrams'), {
+            type: 'bar',
+            data: data_Diagrams,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Tables" chart
+        const data_Tables = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [26.6, 29.0, 29.8, 27.8, 27.8, 61.8],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Tables'), {
+            type: 'bar',
+            data: data_Tables,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_PlotsAndCharts " chart
+        const data_PlotsAndCharts = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [24.8, 31.8, 36.2, 30.4, 35.8, 55.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_PlotsAndCharts'), {
+            type: 'bar',
+            data: data_PlotsAndCharts,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_ChemicalStructures " chart
+        const data_ChemicalStructures = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [25.0, 27.2, 27.1, 26.7, 25.5, 50.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_ChemicalStructures'), {
+            type: 'bar',
+            data: data_ChemicalStructures,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Photographs " chart
+        const data_Photographs = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [27.6, 40.5, 41.4, 44.4, 42.0, 64.2],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Photographs'), {
+            type: 'bar',
+            data: data_Photographs,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Paintings " chart
+        const data_Paintings = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [28.7, 57.2, 53.6, 56.3, 52.1, 75.9],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Paintings'), {
+            type: 'bar',
+            data: data_Paintings,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_GeometricShapes " chart
+        const data_GeometricShapes = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [21.1, 25.3, 21.4, 25.6, 28.3, 40.2],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_GeometricShapes'), {
+            type: 'bar',
+            data: data_GeometricShapes,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_SheetMusic " chart
+        const data_SheetMusic = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [35.2, 33.4, 34.6, 35.8, 34.9, 38.8],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_SheetMusic'), {
+            type: 'bar',
+            data: data_SheetMusic,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_MedicalImages " chart
+        const data_MedicalImages = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [25.4, 29.8, 31.6, 36.4, 29.8, 59.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_MedicalImages'), {
+            type: 'bar',
+            data: data_MedicalImages,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_PathologicalImages " chart
+        const data_PathologicalImages = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [26.5, 27.7, 31.2, 35.2, 35.6, 63.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_PathologicalImages'), {
+            type: 'bar',
+            data: data_PathologicalImages,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_MicroscopicImages " chart
+        const data_MicroscopicImages = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [27.0, 37.6, 29.2, 36.3, 32.7, 58.0],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_MicroscopicImages'), {
+            type: 'bar',
+            data: data_MicroscopicImages,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_MRIsCTScansXrays " chart
+        const data_MRIsCTScansXrays = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [21.7, 36.9, 33.3, 39.4, 29.8, 50.0],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_MRIsCTScansXrays'), {
+            type: 'bar',
+            data: data_MRIsCTScansXrays,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_SketchesAndDrafts " chart
+        const data_SketchesAndDrafts = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [37.0, 32.1, 29.9, 38.0, 33.7, 55.4],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_SketchesAndDrafts'), {
+            type: 'bar',
+            data: data_SketchesAndDrafts,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Maps " chart
+        const data_Maps = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [38.2, 36.5, 45.9, 47.6, 43.5, 61.8],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Maps'), {
+            type: 'bar',
+            data: data_Maps,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_TechnicalBlueprints " chart
+        const data_TechnicalBlueprints = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [24.7, 25.9, 28.4, 25.3, 27.8, 38.9],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_TechnicalBlueprints'), {
+            type: 'bar',
+            data: data_TechnicalBlueprints,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_TreesAndGraphs " chart
+        const data_TreesAndGraphs = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [30.1, 28.1, 28.8, 28.8, 34.9, 50.0],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_TreesAndGraphs'), {
+            type: 'bar',
+            data: data_TreesAndGraphs,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_MathematicalNotations " chart
+        const data_MathematicalNotations = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [15.8, 27.1, 22.6, 21.8, 21.1, 45.9],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_MathematicalNotations'), {
+            type: 'bar',
+            data: data_MathematicalNotations,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_ComicsAndCartoons " chart
+        const data_ComicsAndCartoons = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [29.0, 51.9, 49.6, 54.2, 51.1, 68.7],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_ComicsAndCartoons'), {
+            type: 'bar',
+            data: data_ComicsAndCartoons,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Sculpture " chart
+        const data_Sculpture = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [30.8, 46.2, 49.6, 51.3, 53.0, 76.1],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Sculpture'), {
+            type: 'bar',
+            data: data_Sculpture,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Portraits " chart
+        const data_Portraits = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [20.9, 52.7, 46.2, 54.9, 47.3, 70.3],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Portraits'), {
+            type: 'bar',
+            data: data_Portraits,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Screenshots " chart
+        const data_Screenshots = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [38.6, 35.7, 38.6, 34.3, 47.1, 65.7],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Screenshots'), {
+            type: 'bar',
+            data: data_Screenshots,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Other " chart
+        const data_Other = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [28.3, 38.3, 50.0, 51.7, 58.3, 68.3],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Other'), {
+            type: 'bar',
+            data: data_Other,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Poster " chart
+        const data_Poster = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [38.6, 50.9, 52.6, 61.4, 64.9, 80.7],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Poster'), {
+            type: 'bar',
+            data: data_Poster,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_IconsAndSymbols " chart
+        const data_IconsAndSymbols = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [23.8, 66.7, 57.1, 59.5, 59.5, 78.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_IconsAndSymbols'), {
+            type: 'bar',
+            data: data_IconsAndSymbols,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_HistoricalTimelines " chart
+        const data_HistoricalTimelines = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [30.0, 36.7, 40.0, 43.3, 43.3, 63.3],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_HistoricalTimelines'), {
+            type: 'bar',
+            data: data_HistoricalTimelines,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_3DRenderings " chart
+        const data_3DRenderings = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [33.3, 28.6, 57.1, 38.1, 47.6, 47.6],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_3DRenderings'), {
+            type: 'bar',
+            data: data_3DRenderings,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_DNASequences " chart
+        const data_DNASequences = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [20.0, 45.0, 25.0, 25.0, 45.0, 55.0],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_DNASequences'), {
+            type: 'bar',
+            data: data_DNASequences,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Landscapes " chart
+        const data_Landscapes = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [43.8, 43.8, 50.0, 31.2, 62.5, 68.8],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Landscapes'), {
+            type: 'bar',
+            data: data_Landscapes,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_LogosAndBranding " chart
+        const data_LogosAndBranding = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [21.4, 57.1, 64.3, 35.7, 50.0, 85.7],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_LogosAndBranding'), {
+            type: 'bar',
+            data: data_LogosAndBranding,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
+                }
+            }
+        });
+
+        // "data_Advertisements " chart
+        const data_Advertisements = {
+            labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
+            datasets: [{
+                data: [30.0, 60.0, 50.0, 60.0, 70.0, 100.0],
+                backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
+                borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
+                hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
+            }]
+        };
+        new Chart(document.getElementById('chart_Advertisements'), {
+            type: 'bar',
+            data: data_Advertisements,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {}
                 }
             }
         });
     });
-});
-
-function sortTable(table, column, type, asc) {
-    var tbody = table.tBodies[0];
-    var rows = Array.from(tbody.rows);
-
-    rows.sort(function(a, b) {
-        var valA = a.cells[column].textContent;
-        var valB = b.cells[column].textContent;
-
-        if (type === 'number') {
-            valA = parseFloat(valA);
-            valB = parseFloat(valB);
-        }
-
-        return asc ? valA - valB : valB - valA;
-    });
-
-    rows.forEach(row => tbody.appendChild(row));
-}
-
-  // 切换表格的函数
-  function toggleTables () {
-      var table1 = document.getElementById('table1');
-      var table2 = document.getElementById('table2');
-      table1.classList.toggle('hidden');
-      table2.classList.toggle('hidden');
-  }
-
-  document.getElementById('toggleButton').addEventListener('click', toggleTables);
-  const canvas = document.getElementById('difficulty_level_chart');
-  canvas.style.width = '500px';
-  canvas.style.height = '120px';
-  const ctx = document.getElementById('difficulty_level_chart').getContext('2d');
-  const difficulty_level_chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Easy', 'Medium', 'Hard', 'Overall'],
-      datasets: [{
-        label: 'Fuyu-8B',
-        data: [28.9, 27, 26.4, 27.4],
-        backgroundColor: 'rgba(196, 123, 160, 0.6)',
-        borderColor: 'rgba(196, 123, 160, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(196, 123, 160, 1)'
-      },
-      {
-        label: 'Qwen-VL-7B',
-        data: [39.4, 31.9, 27.6, 32.9],
-        backgroundColor: 'rgba(245, 123, 113, 0.6)',
-        borderColor: 'rgba(245, 123, 113, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(245, 123, 113, 1)'
-      },
-      {
-        label: 'LLaVA-1.5-13B',
-        data: [41.3, 32.7, 26.7, 33.6],
-        backgroundColor: 'rgba(255, 208, 80, 0.6)',
-        borderColor: 'rgba(255, 208, 80, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 208, 80, 1)'
-      },
-      {
-        label: 'InstructBLIP-T5-XXL',
-        data: [40.3, 32.3, 29.4, 33.8],
-        backgroundColor: 'rgba(110, 194, 134, 0.6)',
-        borderColor: 'rgba(110, 194, 134, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(110, 194, 134, 1)'
-      },
-      {
-        label: 'BLIP-2 FLAN-T5-XXL',
-        data: [41, 32.7, 28.5, 34],
-        backgroundColor: 'rgba(255, 153, 78, 0.6)',
-        borderColor: 'rgba(255, 153, 78, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 153, 78, 1)'
-      },
-      {
-        label: 'GPT-4V',
-        data: [76.1, 55.6, 31.2, 55.7],
-        backgroundColor: 'rgba(117, 209, 215, 0.6)',
-        borderColor: 'rgba(117, 209, 215, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(117, 209, 215, 1)'
-      }]
-    },
-    options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        min: 0,     
-        max: 100,
-        ticks: {
-          stepSize: 20,
-          font: {
-            size: 16
-          }
-        }
-      },
-      x: {
-        ticks: {
-          font: {
-            size: 16 // 设置X轴字体大小
-          }
-        }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 16 // 设置标签文字大小
-          }
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context) {
-            return context.dataset.label + ': ' + context.parsed.y;
-          }
-        }
-      }
-    },
-      onHover: (event, chartElement) => {
-        event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-      }
-    }
-  });
-  document.addEventListener('DOMContentLoaded', function() {
-    // Data for the "Diagrams" chart
-    const data_Diagrams = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [27.6, 30.1, 31.8, 30.0, 32.0, 46.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-
-    // "data_Diagrams" chart
-    new Chart(document.getElementById('chart_Diagrams'), {
-        type: 'bar',
-        data: data_Diagrams,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Tables" chart
-    const data_Tables  = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [26.6, 29.0, 29.8, 27.8, 27.8, 61.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Tables'), {
-        type: 'bar',
-        data: data_Tables,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_PlotsAndCharts " chart
-    const data_PlotsAndCharts   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [24.8, 31.8, 36.2, 30.4, 35.8, 55.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_PlotsAndCharts'), {
-        type: 'bar',
-        data: data_PlotsAndCharts ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_ChemicalStructures " chart
-    const data_ChemicalStructures   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [25.0, 27.2, 27.1, 26.7, 25.5, 50.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_ChemicalStructures'), {
-        type: 'bar',
-        data: data_ChemicalStructures ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Photographs " chart
-    const data_Photographs   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [27.6, 40.5, 41.4, 44.4, 42.0, 64.2],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Photographs'), {
-        type: 'bar',
-        data: data_Photographs ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Paintings " chart
-    const data_Paintings   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [28.7, 57.2, 53.6, 56.3, 52.1, 75.9],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Paintings'), {
-        type: 'bar',
-        data: data_Paintings ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_GeometricShapes " chart
-    const data_GeometricShapes   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [21.1, 25.3, 21.4, 25.6, 28.3, 40.2],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_GeometricShapes'), {
-        type: 'bar',
-        data: data_GeometricShapes ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_SheetMusic " chart
-    const data_SheetMusic   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [35.2, 33.4, 34.6, 35.8, 34.9, 38.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_SheetMusic'), {
-        type: 'bar',
-        data: data_SheetMusic ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_MedicalImages " chart
-    const data_MedicalImages   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [25.4, 29.8, 31.6, 36.4, 29.8, 59.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_MedicalImages'), {
-        type: 'bar',
-        data: data_MedicalImages ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_PathologicalImages " chart
-    const data_PathologicalImages   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [26.5, 27.7, 31.2, 35.2, 35.6, 63.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_PathologicalImages'), {
-        type: 'bar',
-        data: data_PathologicalImages ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_MicroscopicImages " chart
-    const data_MicroscopicImages   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [27.0, 37.6, 29.2, 36.3, 32.7, 58.0],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_MicroscopicImages'), {
-        type: 'bar',
-        data: data_MicroscopicImages ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_MRIsCTScansXrays " chart
-    const data_MRIsCTScansXrays   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [21.7, 36.9, 33.3, 39.4, 29.8, 50.0],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_MRIsCTScansXrays'), {
-        type: 'bar',
-        data: data_MRIsCTScansXrays ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_SketchesAndDrafts " chart
-    const data_SketchesAndDrafts   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [37.0, 32.1, 29.9, 38.0, 33.7, 55.4],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_SketchesAndDrafts'), {
-        type: 'bar',
-        data: data_SketchesAndDrafts ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Maps " chart
-    const data_Maps   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [38.2, 36.5, 45.9, 47.6, 43.5, 61.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Maps'), {
-        type: 'bar',
-        data: data_Maps ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_TechnicalBlueprints " chart
-    const data_TechnicalBlueprints   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [24.7, 25.9, 28.4, 25.3, 27.8, 38.9],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_TechnicalBlueprints'), {
-        type: 'bar',
-        data: data_TechnicalBlueprints ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_TreesAndGraphs " chart
-    const data_TreesAndGraphs   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [30.1, 28.1, 28.8, 28.8, 34.9, 50.0],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_TreesAndGraphs'), {
-        type: 'bar',
-        data: data_TreesAndGraphs ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_MathematicalNotations " chart
-    const data_MathematicalNotations   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [15.8, 27.1, 22.6, 21.8, 21.1, 45.9],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_MathematicalNotations'), {
-        type: 'bar',
-        data: data_MathematicalNotations ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_ComicsAndCartoons " chart
-    const data_ComicsAndCartoons   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [29.0, 51.9, 49.6, 54.2, 51.1, 68.7],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_ComicsAndCartoons'), {
-        type: 'bar',
-        data: data_ComicsAndCartoons ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Sculpture " chart
-    const data_Sculpture   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [30.8, 46.2, 49.6, 51.3, 53.0, 76.1],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Sculpture'), {
-        type: 'bar',
-        data: data_Sculpture ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Portraits " chart
-    const data_Portraits   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [20.9, 52.7, 46.2, 54.9, 47.3, 70.3],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Portraits'), {
-        type: 'bar',
-        data: data_Portraits ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Screenshots " chart
-    const data_Screenshots   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [38.6, 35.7, 38.6, 34.3, 47.1, 65.7],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Screenshots'), {
-        type: 'bar',
-        data: data_Screenshots ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Other " chart
-    const data_Other   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [28.3, 38.3, 50.0, 51.7, 58.3, 68.3],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Other'), {
-        type: 'bar',
-        data: data_Other ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Poster " chart
-    const data_Poster   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [38.6, 50.9, 52.6, 61.4, 64.9, 80.7],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Poster'), {
-        type: 'bar',
-        data: data_Poster ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_IconsAndSymbols " chart
-    const data_IconsAndSymbols   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [23.8, 66.7, 57.1, 59.5, 59.5, 78.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_IconsAndSymbols'), {
-        type: 'bar',
-        data: data_IconsAndSymbols ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_HistoricalTimelines " chart
-    const data_HistoricalTimelines   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [30.0, 36.7, 40.0, 43.3, 43.3, 63.3],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_HistoricalTimelines'), {
-        type: 'bar',
-        data: data_HistoricalTimelines ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_3DRenderings " chart
-    const data_3DRenderings   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [33.3, 28.6, 57.1, 38.1, 47.6, 47.6],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_3DRenderings'), {
-        type: 'bar',
-        data: data_3DRenderings ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_DNASequences " chart
-    const data_DNASequences   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [20.0, 45.0, 25.0, 25.0, 45.0, 55.0],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_DNASequences'), {
-        type: 'bar',
-        data: data_DNASequences ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Landscapes " chart
-    const data_Landscapes   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [43.8, 43.8, 50.0, 31.2, 62.5, 68.8],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Landscapes'), {
-        type: 'bar',
-        data: data_Landscapes ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_LogosAndBranding " chart
-    const data_LogosAndBranding   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [21.4, 57.1, 64.3, 35.7, 50.0, 85.7],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_LogosAndBranding'), {
-        type: 'bar',
-        data: data_LogosAndBranding ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-    
-    // "data_Advertisements " chart
-    const data_Advertisements   = {
-        labels: ['Fuyu-8B', 'Qwen-VL-7B', 'InstructBLIP-T5-XXL', 'LLaVA-1.5-13B', 'BLIP-2 FLAN-T5-XXL', 'GPT-4V'],
-        datasets: [{
-            data: [30.0, 60.0, 50.0, 60.0, 70.0, 100.0],
-            backgroundColor: ['rgba(196, 123, 160, 0.6)', 'rgba(245, 123, 113, 0.6)', 'rgba(255, 208, 80, 0.6)', 'rgba(110, 194, 134, 0.6)', 'rgba(255, 153, 78, 0.6)', 'rgba(117, 209, 215, 0.6)'],
-            borderColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,0.4)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)'],
-            hoverBackgroundColor: ['rgba(196, 123, 160, 1)', 'rgba(245, 123, 113,1)', 'rgba(255, 208, 80, 1)', 'rgba(110, 194, 134, 1)', 'rgba(255, 153, 78, 1)', 'rgba(117, 209, 215, 1)']
-        }]
-    };
-    new Chart(document.getElementById('chart_Advertisements'), {
-        type: 'bar',
-        data: data_Advertisements ,
-        options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            min: 0,     
-            max: 100,   
-            ticks: {
-              stepSize: 20 
-            }
-          },
-          x: {
-            display: false 
-          }
-        },
-        plugins: {
-          legend: {
-            display: false 
-          },
-          tooltip: {
-          }
-        }
-      }
-    });
-});
 
 </script>
 
 <style>
-  .hidden {
-      display: none;
-  }
-  .sortable:hover {
-      cursor: pointer;
-  }
-  .asc::after {
-      content: ' ↑';
-  }
-  .desc::after {
-      content: ' ↓';
-  }
-  #toggleButton {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    color: #555555;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 25px; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition-duration: 0.4s;
-  }
+    .hidden {
+        display: none;
+    }
 
-  #toggleButton:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* 鼠标悬停时的阴影效果 */
-  }
+    .sortable:hover {
+        cursor: pointer;
+    }
 
-  /*.results-carousel {*/
-  /*overflow: hidden;*/
-  /*}*/
+    .asc::after {
+        content: ' ↑';
+    }
 
-  /*.results-carousel .item {*/
-  /*margin: 5px;*/
-  /*overflow: hidden;*/
-  /*border: 1px solid #bbb;*/
-  /*border-radius: 10px;*/
-  /*padding: 0;*/
-  /*font-size: 0;*/
-  /*}*/
+    .desc::after {
+        content: ' ↓';
+    }
 
-  /*.results-carousel video {*/
-  /*margin: 0;*/
-  /*}*/
+    #toggleButton {
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        color: #555555;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition-duration: 0.4s;
+    }
+
+    #toggleButton:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); /* 鼠标悬停时的阴影效果 */
+    }
+
+    /*.results-carousel {*/
+    /*overflow: hidden;*/
+    /*}*/
+
+    /*.results-carousel .item {*/
+    /*margin: 5px;*/
+    /*overflow: hidden;*/
+    /*border: 1px solid #bbb;*/
+    /*border-radius: 10px;*/
+    /*padding: 0;*/
+    /*font-size: 0;*/
+    /*}*/
+
+    /*.results-carousel video {*/
+    /*margin: 0;*/
+    /*}*/
 
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-  }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+    }
 
-  th, td {
-      text-align: left;
-      padding: 8px;
-  }
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
 
-  th {
-      background-color: #f2f2f2;
-      border-bottom: 2px solid #ddd;
-  }
+    th {
+        background-color: #f2f2f2;
+        border-bottom: 2px solid #ddd;
+    }
 
-  td:hover {background-color: #ffffff;}
+    td:hover {
+        background-color: #ffffff;
+    }
 </style>
 
 </body>
