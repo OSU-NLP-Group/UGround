@@ -1,0 +1,171 @@
+integrations:
+  - integration_type: wandb
+    # This project does not matter for logging and the logging project and entity needs
+    # to be set independently below.
+    project: UGround  # Replace project name later.
+    entity: orby-osu
+  - integration_type: git_repo
+    git_repo: mosaicml/llm-foundry
+    git_branch: release/v0.11.0 
+    pip_install: .[gpu-flash2]
+    ssh_clone: true
+  - integration_type: git_repo
+    git_repo: orby-ai-engineering/multimodal
+    git_branch: boyu_qwen_ablation
+    pip_install: .[all]
+    ssh_clone: true
+
+command: |
+  # Install liger kernel for faster ops.
+  pip install --no-deps -U liger-kernel==0.4.0
+  # Update the transformer version as Qwen2-VL is added in 4.45.0.
+  pip install -U transformers==4.46.1
+  # Accelerate checkpoint downloading.
+  pip install hf-transfer
+  export HF_HUB_ENABLE_HF_TRANSFER=1
+  cd multimodal
+  composer scripts/train/train_llm_foundry.py /mnt/config/parameters.yaml
+  if [ "$NODE_RANK" = "0" ]; then
+    python /multimodal/scripts/inference/convert_composer_ckpt_to_hf.py \
+    --composer_path s3://orby-osu/boyugou/uground/full-finetuning/$RUN_NAME/checkpoints/latest-rank0.pt.symlink \
+    --hf_output_path s3://orby-osu/boyugou/uground/full-finetuning/$RUN_NAME/checkpoints/latest-hf/ \
+    --output_precision bf16
+  fi
+  
+
+image: mosaicml/llm-foundry:2.3.0_cu121_flash2-latest
+name: UGround-v1-7B
+compute:
+  gpus: 128 # Number of GPUs to use
+  cluster: r8z12p1
+  instance: oci.bm.gpu.h100.8
+
+# The below is injected as a YAML file: /mnt/config/parameters.yaml
+parameters:
+  max_seq_len: 10000
+  code_paths:
+    - /multimodal/orby/multimodal/llmfoundry/models/qwen2_vl/foundry_imports.py
+
+  # Run Name
+  run_name:  # If left blank, will be read from env var $RUN_NAME
+
+  max_split_size_mb: 512
+  expandable_segments: true
+
+  model:
+    name: qwen2_vl
+    init_device: mixed
+    pretrained_model_name_or_path: Qwen/Qwen2-VL-7B-Instruct
+    pretrained: true
+    # Note: you must have set the HUGGING_FACE_HUB_TOKEN environment variable and have access to the llama2 models
+    use_auth_token: true
+    use_flash_attention_2: true
+    additional_eval_metrics:
+      # Accuracy of predicted coordinates within the GT bbox
+      - point_in_bbox_accuracy
+      # Cider score for text similarity between predicted and GT text
+      - cider
+
+  # Tokenizer
+  tokenizer:
+    name: Qwen/Qwen2-VL-7B-Instruct
+    kwargs:
+      model_max_length: ${max_seq_len}
+
+  # Dataloaders
+  train_loader:
+    name: qwen_multimodal_finetuning
+    dataset:
+      shuffle: true
+      streams:
+        uground_v1_other:
+          local: ./train-data/uground_other/
+          remote: s3://orby-osu-va/boyugou/mds_datasets/test_mds_and_multiturn/UGround_v1_other/train/
+
+        uground_v1_web_hybrid:
+          local: ./train-data/uground_web_hybrid/
+          remote: s3://orby-osu-va/boyugou/mds_datasets/formatted/UGround_v1_Web_Hybrid_chunk_25qa_848k/train/
+        
+      max_seq_len: ${max_seq_len}
+      download_timeout: 5000
+      allow_pad_trimming: false
+      decoder_only_format: true
+
+    timeout: 1000
+    drop_last: true
+    pin_memory: false
+    num_workers: 1
+    prefetch_factor: 2
+    persistent_workers: true
+
+  # Optimization
+  scheduler:
+    name: cosine_with_warmup
+    t_warmup: 100ba
+    alpha_f: 0.1
+
+  # Note: You may want to change learning rate, betas, weight decay
+  optimizer:
+    name: decoupled_adamw
+    lr: 1.0e-6
+    betas:
+    - 0.9
+    - 0.95
+    weight_decay: 0.0
+
+  algorithms:
+    gradient_clipping:
+      clipping_type: norm
+      clipping_threshold: 1.0
+
+  max_duration: 2ep
+  eval_first: false
+  eval_interval: 1000000ba
+  eval_subset_num_batches: 512
+
+  # System
+  seed: 17
+  device_eval_batch_size: 1
+  device_train_microbatch_size: 1
+  global_train_batch_size: 128
+  precision: amp_bf16
+
+  # FSDP
+  fsdp_config:
+    sharding_strategy: FULL_SHARD
+    mixed_precision: PURE
+    activation_checkpointing: true
+    activation_checkpointing_reentrant: false
+    activation_cpu_offload: false
+    limit_all_gathers: true
+
+  # No ICL eval for now.
+  # icl_tasks: "scripts/eval/yamls/ag_screenspot.yaml"
+  eval_gauntlet: "scripts/eval/yamls/orby_eval_gauntlet.yaml"
+  icl_subset_num_batches: 32
+  icl_seq_len: 8196
+
+  # We need longer timeout for the 72B model (originally 600).
+  dist_timeout: 1800
+
+  # Logging
+  progress_bar: true
+  log_to_console: true
+  console_log_interval: 1ba
+  loggers:
+    wandb:
+      # Use a project/eneity that you have access to.
+      project: UGround
+      entity: orby-osu
+  callbacks:
+    speed_monitor:
+      window_size: 10
+    lr_monitor: {}
+    memory_monitor: {}
+    runtime_estimator: {}
+
+  save_interval: 1000ba
+  save_num_checkpoints_to_keep: 1
+  # Upload GCP creds to MosaicML platform as a secret if using a GCS path
+  save_folder: s3://orby-osu/boyugou/uground/full-finetuning/{run_name}/checkpoints/
+  load_weights_only: true # Only load the weights, not the optimizer state, LR schedule, etc
