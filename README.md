@@ -189,18 +189,18 @@ If you find this work useful, please consider starring our repo and citing our p
 
 ```
 @article{gou2024uground,
-        title={Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
-        author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
-        journal={arXiv preprint arXiv:2410.05243},
-        year={2024},
-        url={https://arxiv.org/abs/2410.05243},
-      }
+title = {Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
+author = {Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
+journal = {arXiv preprint arXiv:2410.05243},
+year = {2024},
+url = {https://arxiv.org/abs/2410.05243},
+}
 
-@InProceedings{seeact,
-  title = 	 {{GPT}-4{V}(ision) is a Generalist Web Agent, if Grounded},
-  author =       {Zheng, Boyuan and Gou, Boyu and Kil, Jihyung and Sun, Huan and Su, Yu},
-  booktitle = 	 {Proceedings of the 41st International Conference on Machine Learning},
-  pages = 	 {61349--61385},
-  year = 	 {2024},
+@InProceedings{zheng2024seeact,
+title = {{GPT}-4{V}(ision) is a Generalist Web Agent, if Grounded},
+author = {Zheng, Boyuan and Gou, Boyu and Kil, Jihyung and Sun, Huan and Su, Yu},
+booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+pages = {61349--61385},
+year = {2024},
 }
 ```
