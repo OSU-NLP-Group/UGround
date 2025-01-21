@@ -1,4 +1,4 @@
-We used an in-house infra for the training, which can not be shared.
+We used an in-house infra for the training, which will not be shared.
 
 Here we mainly provide the yaml files to share the critical hyperparameters we used.
 
