@@ -1,6 +1,6 @@
 We used an in-house infra for the training, which will not be shared.
 
-Here we mainly provide the yaml files to share the critical hyperparameters we used.
+Here we mainly provide the yaml files to share the hyperparameters we used.
 
 From our ablations, we found the following lessons that may be useful for future research:
 
