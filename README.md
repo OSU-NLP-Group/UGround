@@ -61,7 +61,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Groma                     | Groma            |                  | 10.3        | 2.6         | 4.6          | 4.3          | 5.7      | 3.4      | 5.2  |
 | Qwen-VL                   | Qwen-VL          |                  | 9.5         | 4.8         | 5.7          | 5.0          | 3.5      | 2.4      | 5.2  |
 | MiniGPT-v2                | MiniGPT-v2       |                  | 8.4         | 6.6         | 6.2          | 2.9          | 6.5      | 3.4      | 5.7  |
-| Sonnet 3.5 (Computer Use) |                  |                  |             |             |              |              |          |          | 14.0 |
 | GPT-4                     |                  |                  | 22.6        | 24.5        | 20.2         | 11.8         | 9.2      | 8.8      | 16.2 |
 | GPT-4o                    |                  |                  | 20.2        | 24.9        | 21.1         | 23.6         | 12.2     | 7.8      | 18.3 |
 | Fuyu                      | Fuyu             |                  | 41.0        | 1.3         | 33.0         | 3.6          | 33.9     | 4.4      | 19.5 |
