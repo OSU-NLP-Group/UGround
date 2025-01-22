@@ -31,12 +31,12 @@ This folder contains the pipeline for evaluating grounding agents in the OmniACT
    Evaluate the sequence score from the generated plan files and extract grounding queries in one step.
 
    ```bash
-   python e_grounding_query.py --plan_file <path_to_plan_file> --base_path <path_to_dataset> --seq_output_file <path_to_seq_score_output> --query_output_file <path_to_grounding_query_output>
+   python extract_grounding_query.py --plan_file <path_to_plan_file> --base_path <path_to_dataset> --seq_output_file <path_to_seq_score_output> --query_output_file <path_to_grounding_query_output>
    ```
 
 5. **Grounding Model Inference**
 
-   Perform grounding model inference using the queries generated in the previous step. This step requires running the scripts in the `Grounding` folder.
+   Perform grounding model inference using the queries generated in the previous step. 
 
 6. **`eval_action.py`**
 

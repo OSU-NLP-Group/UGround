@@ -24,6 +24,8 @@ python gpt_plan.py --model <gpt_model> --input_file <sample_jsonl> --output_file
 - `gpt_model` can be "gpt-4o" or "gpt-4-turbo"
 - `level` can be "high" or "low"
 
+The GPT-4o-generated plan files we use are in `data/plan_gpt-4o_{level}.jsonl`.
+
 **3. `extract_grounding_query.py`**
 
 Extract grounding queries from the plan files.
@@ -32,13 +34,15 @@ Extract grounding queries from the plan files.
 python extract_grounding_query.py --sample_file <sample_jsonl> --input_file <plan_jsonl> --output_file <query_jsonl> --screenshot_dir <screenshot_dir>
 ```
 
+The queries extracted from GPT-4o plan files are in `data/query_gpt-4o_{level}.jsonl`.
+
 **4. Grounding Model Inference**
 
-Perform grounding model inference using the query file generated in the previous step. This step requires running the scripts in the `Grounding` folder.
+Perform grounding model inference using the query file generated in the previous step. 
 
 **5. `eval.py`**
 
-Evaluate the Step Accuracy, Grounding Accuracy based on plan and grounding results.
+Evaluate the Step Accuracy and Grounding Accuracy based on plan and grounding results.
 
 ```bash
 python eval.py --sample_file <sample_blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
