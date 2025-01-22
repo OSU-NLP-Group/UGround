@@ -9,7 +9,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [📖Paper](https://arxiv.org/abs/2410.05243)
 - [😊Model Weights](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812)
 - [😊Live Demo](https://huggingface.co/spaces/orby-osu/UGround) (Try it out yourself!)
-- [😊Training Data]([https://huggingface.co/spaces/orby-osu/UGround](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812))
+- [😊Training Data](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812)
 
 <h3>Updates</h3>
 
@@ -45,7 +45,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
     - [x] [AndroidWorld-SeeAct-V](https://github.com/boyugou/android_world_seeact_v)
 - [ ] Data-V1
   - [ ] Data Construction Scripts
-  - [ ] Training Data
+  - [x] Training Data
 - [x] Online Demo (HF Spaces)
 
 
