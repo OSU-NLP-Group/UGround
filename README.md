@@ -81,11 +81,14 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Aguvis-G-7B               | Qwen2-VL         | Aguvis-Stage-1   | 88.3        | 78.2        | 88.1         | 70.7         | 85.7     | 74.8     | 81.0 |
 | OS-Atlas-Base-7B          | Qwen2-VL         | OS-Atlas         | 93.0        | 72.9        | 91.8         | 62.9         | 90.9     | 74.3     | 81.0 |
 | Aria-UI                   | Aria             | Aria-UI          | 92.3        | 73.8        | 93.3         | 64.3         | 86.5     | 76.2     | 81.1 |
+| Claude (Computer-Use)     |                  |                  | 98.2        | 85.6        | 79.9         | 57.1         | 92.2     | 84.5     | 82.9 |
 | Aguvis-7B                 | Qwen2-VL         | Aguvis-Stage-1&2 | 95.6        | 77.7        | 93.8         | 67.1         | 88.3     | 75.2     | 83.0 |
 | Project Mariner           |                  |                  |             |             |              |              |          |          | 84.0 |
 | UGround-V1-7B (Qwen2-VL)  | Qwen2-VL         | UGround-V1       | 93.0        | 79.9        | 93.8         | 76.4         | 90.9     | 84.0     | 86.3 |
 | AGUVIS-72B                | Qwen2-VL         | Aguvis-Stage-1&2 | 94.5        | 85.2        | 95.4         | 77.9         | 91.3     | 85.9     | 88.4 |
 | UGround-V1-72B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | 94.1        | 83.4        | 94.9         | 85.7         | 90.4     | 87.9     | 89.4 |
+
+
 
 
 
