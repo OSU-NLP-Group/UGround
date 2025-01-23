@@ -46,7 +46,7 @@ The queries extracted from the plan files are located in `data/{gpt_model}_resul
 
 **5. Grounding Model Inference**
 
-Perform grounding model inference using the query file generated in the previous step. 
+Perform grounding model inference using the query file generated in the previous step. If you want to test with UGround-V1, you can use the scripts provided in the `grounding` folder.
 
 **6. `eval.py`**
 

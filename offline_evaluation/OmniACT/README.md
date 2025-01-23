@@ -36,7 +36,7 @@ This folder contains the pipeline for evaluating grounding agents in the OmniACT
 
 5. **Grounding Model Inference**
 
-   Perform grounding model inference using the queries generated in the previous step. 
+   Perform grounding model inference using the queries generated in the previous step. If you want to test with UGround-V1, you can use the scripts provided in the `grounding` folder.
 
 6. **`eval_action.py`**
 

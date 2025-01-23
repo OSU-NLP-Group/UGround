@@ -42,9 +42,9 @@ Perform grounding model inference using the query file generated in the previous
 
 **5. `eval.py`**
 
-Evaluate the Step Accuracy and Grounding Accuracy based on plan and grounding results.
+Evaluate the Step Accuracy and Grounding Accuracy based on plan and grounding results. If you want to test with UGround-V1, you can use the scripts provided in the `grounding` folder.
 
 ```bash
-python eval.py --sample_file <sample_blocks_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl> --blocks <blocks_dir>
+python eval.py --sample_file <sample_jsonl> --plan_file <plan_jsonl> --ans_file <grounding_answer_jsonl>
 ```
 
