@@ -80,6 +80,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | Project Mariner                 |                  |                    |             |             |              |              |          |          | 84.0     |
 | **UGround-V1-7B (Qwen2-VL)**    | Qwen2-VL         | UGround-V1         | 93.0        | 79.9        | **93.8**     | **76.4**     | 90.9     | 84.0     | **86.3** |
 | *AGUVIS-72B*                    | *Qwen2-VL*       | *Aguvis-Stage-1&2* | *94.5*      | *85.2*      | *95.4*       | *77.9*       | *91.3*   | *85.9*   | *88.4*   |
+| *UI-TARS-7B*                    | *Qwen2-VL*       | *UI-TARS*          | *94.5*      | *85.2*      | *95.9*       | *85.7*       | 90.0     |  83.5    | *89.1*   |
 | ***UGround-V1-72B (Qwen2-VL)*** | *Qwen2-VL*       | *UGround-V1*       | *94.1*      | *83.4*      | *94.9*       | *85.7*       | *90.4*   | *87.9*   | *89.4*   |
 
 
