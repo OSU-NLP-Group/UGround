@@ -9,7 +9,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [📖Paper](https://arxiv.org/abs/2410.05243)
 - [😊Model Weights](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812)
 - [😊Live Demo](https://huggingface.co/spaces/orby-osu/UGround) (Try it out yourself!)
-- [😊Training Data](https://huggingface.co/collections/osunlp/uground-677824fc5823d21267bc9812)
+- [😊Training Data](https://huggingface.co/datasets/osunlp/UGround-V1-Data)
 
 <h3>Updates</h3>
 
