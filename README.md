@@ -40,8 +40,8 @@ This is the official code repository for the project: *Navigating the Digital Wo
     - [x] Multimodal-Mind2Web
     - [x] OmniAct
     - [ ] Android Control
-  - [ ] Online Experiments
-    - [ ] Mind2Web-Live-SeeAct-V
+  - [x] Online Experiments
+    - [x] [Mind2Web-Live-SeeAct-V](https://github.com/boyugou/Mind2Web_Live_SeeAct_V)
     - [x] [AndroidWorld-SeeAct-V](https://github.com/boyugou/android_world_seeact_v)
 - [ ] Data-V1
   - [ ] Data Construction Scripts
