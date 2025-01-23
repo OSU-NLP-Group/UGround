@@ -31,7 +31,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
   - [x] Initial Version (the one used in the paper)
   - [x] Qwen2-VL-Based V1 (2B, 7B, 72B)
 - [x] Code
-  - [x] [Inference Code of UGround (Initial & Qwen2-VL-Based)](https://github.com/boyugou/llava_uground/)
+  - [x] [Training and Inference](https://github.com/OSU-NLP-Group/UGround/tree/main/train)
   - [x] Offline Experiments (Code, Results, and Useful Resources)
     - [x] [ScreenSpot](https://github.com/OSU-NLP-Group/UGround/tree/main/offline_evaluation/ScreenSpot)
     - [x] [Multimodal-Mind2Web](https://github.com/OSU-NLP-Group/UGround/tree/main/offline_evaluation/Multimodal-Mind2Web)
