@@ -169,8 +169,8 @@ completion = await client.chat.completions.create(
 ```
 
 
+![Untitled design](https://github.com/user-attachments/assets/31758aff-7fc8-4c83-a259-86dc27a5b90a)
 
-![Untitled design](https://github.com/user-attachments/assets/5715547d-4f3a-4dae-9aa4-09f944025297)
 
 ## Citation Information
 
