@@ -425,335 +425,227 @@
 
         <table id="ScreenSpotStandard">
     <caption>ScreenSpot (Standard Setting)</caption>
-    <thead>
-        <tr>
-            <th rowspan="2">Model</th>
-            <th colspan="2">Mobile</th>
-            <th colspan="2">Desktop</th>
-            <th colspan="2">Web</th>
-            <th rowspan="2">Average</th>
-        </tr>
-        <tr>
-            <th>Text</th>
-            <th>Icon/Widget</th>
-            <th>Text</th>
-            <th>Icon/Widget</th>
-            <th>Text</th>
-            <th>Icon/Widget</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>InternVL-2-4B</td>
-            <td>9.2</td>
-            <td>4.8</td>
-            <td>4.6</td>
-            <td>4.3</td>
-            <td>0.9</td>
-            <td>0.1</td>
-            <td>4.0</td>
-        </tr>
-        <tr>
-            <td>Groma</td>
-            <td>10.3</td>
-            <td>2.6</td>
-            <td>4.6</td>
-            <td>4.3</td>
-            <td>5.7</td>
-            <td>3.4</td>
-            <td>5.2</td>
-        </tr>
-        <tr>
-            <td>Qwen-VL</td>
-            <td>9.5</td>
-            <td>4.8</td>
-            <td>5.7</td>
-            <td>5.0</td>
-            <td>3.5</td>
-            <td>2.4</td>
-            <td>5.2</td>
-        </tr>
-        <tr>
-            <td>MiniGPT-v2</td>
-            <td>8.4</td>
-            <td>6.6</td>
-            <td>6.2</td>
-            <td>2.9</td>
-            <td>6.5</td>
-            <td>3.4</td>
-            <td>5.7</td>
-        </tr>
-        <tr>
-            <td>GPT-4</td>
-            <td>22.6</td>
-            <td>24.5</td>
-            <td>20.2</td>
-            <td>11.8</td>
-            <td>9.2</td>
-            <td>8.8</td>
-            <td>16.2</td>
-        </tr>
-        <tr>
-            <td>GPT-4o</td>
-            <td>20.2</td>
-            <td>24.9</td>
-            <td>21.1</td>
-            <td>23.6</td>
-            <td>12.2</td>
-            <td>7.8</td>
-            <td>18.3</td>
-        </tr>
-        <tr>
-            <td>Fuyu</td>
-            <td>41.0</td>
-            <td>1.3</td>
-            <td>33.0</td>
-            <td>3.6</td>
-            <td>33.9</td>
-            <td>4.4</td>
-            <td>19.5</td>
-        </tr>
-        <tr>
-            <td>Qwen-GUI</td>
-            <td>52.4</td>
-            <td>10.9</td>
-            <td>45.9</td>
-            <td>5.7</td>
-            <td>43.0</td>
-            <td>13.6</td>
-            <td>28.6</td>
-        </tr>
-        <tr>
-            <td>Ferret-UI-Llama8b</td>
-            <td>64.5</td>
-            <td>32.3</td>
-            <td>45.9</td>
-            <td>11.4</td>
-            <td>28.3</td>
-            <td>11.7</td>
-            <td>32.3</td>
-        </tr>
-        <tr>
-            <td>Qwen2-VL</td>
-            <td>61.3</td>
-            <td>39.3</td>
-            <td>52.0</td>
-            <td>45.0</td>
-            <td>33.0</td>
-            <td>21.8</td>
-            <td>42.1</td>
-        </tr>
-        <tr>
-            <td>CogAgent</td>
-            <td>67.0</td>
-            <td>24.0</td>
-            <td>74.2</td>
-            <td>20.0</td>
-            <td>70.4</td>
-            <td>28.6</td>
-            <td>47.4</td>
-        </tr>
-        <tr>
-            <td>SeeClick</td>
-            <td>78.0</td>
-            <td>52.0</td>
-            <td>72.2</td>
-            <td>30.0</td>
-            <td>55.7</td>
-            <td>32.5</td>
-            <td>53.4</td>
-        </tr>
-        <tr>
-            <td>OS-Atlas-Base-4B</td>
-            <td>85.7</td>
-            <td>58.5</td>
-            <td>72.2</td>
-            <td>45.7</td>
-            <td>82.6</td>
-            <td>63.1</td>
-            <td>68.0</td>
-        </tr>
-        <tr>
-            <td>OmniParser</td>
-            <td>93.9</td>
-            <td>57.0</td>
-            <td>91.3</td>
-            <td>63.6</td>
-            <td>81.3</td>
-            <td>51.0</td>
-            <td>73.0</td>
-        </tr>
-        <tr>
-            <td><strong>UGround (Initial)</strong></td>
-            <td>82.8</td>
-            <td>60.3</td>
-            <td>82.5</td>
-            <td>63.6</td>
-            <td>80.4</td>
-            <td>70.4</td>
-            <td>73.3</td>
-        </tr>
-        <tr>
-            <td>Iris</td>
-            <td>85.3</td>
-            <td>64.2</td>
-            <td>86.7</td>
-            <td>57.5</td>
-            <td>82.6</td>
-            <td>71.2</td>
-            <td>74.6</td>
-        </tr>
-        <tr>
-            <td>ShowUI-G</td>
-            <td>91.6</td>
-            <td>69.0</td>
-            <td>81.8</td>
-            <td>59.0</td>
-            <td>83.0</td>
-            <td>65.5</td>
-            <td>75.0</td>
-        </tr>
-        <tr>
-            <td>ShowUI</td>
-            <td>92.3</td>
-            <td>75.5</td>
-            <td>76.3</td>
-            <td>61.1</td>
-            <td>81.7</td>
-            <td>63.6</td>
-            <td>75.1</td>
-        </tr>
-        <tr>
-            <td>Molmo-7B-D</td>
-            <td>85.4</td>
-            <td>69.0</td>
-            <td>79.4</td>
-            <td>70.7</td>
-            <td>81.3</td>
-            <td>65.5</td>
-            <td>75.2</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-            <td>89.4</td>
-            <td>72.0</td>
-            <td>88.7</td>
-            <td>65.7</td>
-            <td>81.3</td>
-            <td>68.9</td>
-            <td>77.7</td>
-        </tr>
-        <tr>
-            <td>Molmo-72B</td>
-            <td>92.7</td>
-            <td>79.5</td>
-            <td>86.1</td>
-            <td>64.3</td>
-            <td>83.0</td>
-            <td>66.0</td>
-            <td>78.6</td>
-        </tr>
-        <tr>
-            <td>Aguvis-G-7B</td>
-            <td>88.3</td>
-            <td>78.2</td>
-            <td>88.1</td>
-            <td>70.7</td>
-            <td>85.7</td>
-            <td>74.8</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>OS-Atlas-Base-7B</td>
-            <td>93.0</td>
-            <td>72.9</td>
-            <td>91.8</td>
-            <td>62.9</td>
-            <td>90.9</td>
-            <td>74.3</td>
-            <td>81.0</td>
-        </tr>
-        <tr>
-            <td>Aria-UI</td>
-            <td>92.3</td>
-            <td>73.8</td>
-            <td>93.3</td>
-            <td>64.3</td>
-            <td>86.5</td>
-            <td>76.2</td>
-            <td>81.1</td>
-        </tr>
-        <tr>
-            <td>Claude (Computer-Use)</td>
-            <td><strong>98.2</strong></td>
-            <td><strong>85.6</strong></td>
-            <td>79.9</td>
-            <td>57.1</td>
-            <td><strong>92.2</strong></td>
-            <td>84.5</td>
-            <td>82.9</td>
-        </tr>
-        <tr>
-            <td>Aguvis-7B</td>
-            <td>95.6</td>
-            <td>77.7</td>
-            <td>93.8</td>
-            <td>67.1</td>
-            <td>88.3</td>
-            <td>75.2</td>
-            <td>83.0</td>
-        </tr>
-        <tr>
-            <td>Project Mariner</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>84.0</td>
-        </tr>
-        <tr>
-            <td>CogAgent-9B-20241220</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>85.4</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-            <td>93.0</td>
-            <td><strong>79.9</strong></td>
-            <td><strong>93.8</strong></td>
-            <td><strong>76.4</strong></td>
-            <td><strong>90.9</strong></td>
-            <td>84.0</td>
-            <td>86.3</td>
-        </tr>
-        <tr>
-            <td>AGUVIS-72B</td>
-            <td>94.5</td>
-            <td>85.2</td>
-            <td><strong>95.4</strong></td>
-            <td>77.9</td>
-            <td>91.3</td>
-            <td>85.9</td>
-            <td>88.4</td>
-        </tr>
-        <tr>
-            <td><strong>UGround-V1-72B (Qwen2-VL)</strong></td>
-            <td>94.1</td>
-            <td>83.4</td>
-            <td>94.9</td>
-            <td><strong>85.7</strong></td>
-            <td>90.4</td>
-            <td><strong>87.9</strong></td>
-            <td><strong>89.4</strong></td>
-        </tr>
-    </tbody>
+
+            <p class="has-text-centered"><img src="static/images/screenspot_paper_with_code.png" alt="MY ALT TEXT" style="width:1000px"></p>
+<thead>
+    <tr>
+        <th rowspan="2">Grounding Model</th>
+        <th colspan="2">Mobile</th>
+        <th colspan="2">Desktop</th>
+        <th colspan="2">Web</th>
+        <th rowspan="2">Average</th>
+    </tr>
+    <tr>
+        <th>Text</th>
+        <th>Icon/Widget</th>
+        <th>Text</th>
+        <th>Icon/Widget</th>
+        <th>Text</th>
+        <th>Icon/Widget</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>GPT-4</td>
+        <td>22.6</td>
+        <td>24.5</td>
+        <td>20.2</td>
+        <td>11.8</td>
+        <td>9.2</td>
+        <td>8.8</td>
+        <td>16.2</td>
+    </tr>
+    <tr>
+        <td>GPT-4o</td>
+        <td>20.2</td>
+        <td>24.9</td>
+        <td>21.1</td>
+        <td>23.6</td>
+        <td>12.2</td>
+        <td>7.8</td>
+        <td>18.3</td>
+    </tr>
+    <tr>
+        <td>MiniGPT-v2</td>
+        <td>8.4</td>
+        <td>6.6</td>
+        <td>6.2</td>
+        <td>2.9</td>
+        <td>6.5</td>
+        <td>3.4</td>
+        <td>5.7</td>
+    </tr>
+    <tr>
+        <td>Groma</td>
+        <td>10.3</td>
+        <td>2.6</td>
+        <td>4.6</td>
+        <td>4.3</td>
+        <td>5.7</td>
+        <td>3.4</td>
+        <td>5.2</td>
+    </tr>
+    <tr>
+        <td>Fuyu</td>
+        <td>41.0</td>
+        <td>1.3</td>
+        <td>33.0</td>
+        <td>3.6</td>
+        <td>33.9</td>
+        <td>4.4</td>
+        <td>19.5</td>
+    </tr>
+    <tr>
+        <td>Qwen-VL</td>
+        <td>9.5</td>
+        <td>4.8</td>
+        <td>5.7</td>
+        <td>5.0</td>
+        <td>3.5</td>
+        <td>2.4</td>
+        <td>5.2</td>
+    </tr>
+    <tr>
+        <td>SeeClick</td>
+        <td>78.0</td>
+        <td>52.0</td>
+        <td>72.2</td>
+        <td>30.0</td>
+        <td>55.7</td>
+        <td>32.5</td>
+        <td>53.4</td>
+    </tr>
+    <tr>
+        <td>Qwen-GUI</td>
+        <td>52.4</td>
+        <td>10.9</td>
+        <td>45.9</td>
+        <td>5.7</td>
+        <td>43.0</td>
+        <td>13.6</td>
+        <td>28.6</td>
+    </tr>
+    <tr>
+        <td><strong>UGround-V1</strong></td>
+        <td><strong>82.8</strong></td>
+        <td><strong>60.3</strong></td>
+        <td><strong>82.5</strong></td>
+        <td><strong>63.6</strong></td>
+        <td><strong>80.4</strong></td>
+        <td><strong>70.4</strong></td>
+        <td><strong>73.3</strong></td>
+    </tr>
+    <tr>
+        <td>Qwen2-VL</td>
+        <td>61.3</td>
+        <td>39.3</td>
+        <td>52.0</td>
+        <td>45.0</td>
+        <td>33.0</td>
+        <td>21.8</td>
+        <td>42.1</td>
+    </tr>
+    <tr>
+        <td>Aguvis-G-7B</td>
+        <td>88.3</td>
+        <td>78.2</td>
+        <td>88.1</td>
+        <td>70.7</td>
+        <td>85.7</td>
+        <td>74.8</td>
+        <td>81.0</td>
+    </tr>
+    <tr>
+        <td>Aguvis-7B</td>
+        <td><strong>95.6</strong></td>
+        <td>77.7</td>
+        <td><strong>93.8</strong></td>
+        <td>67.1</td>
+        <td>88.3</td>
+        <td>75.2</td>
+        <td>83.0</td>
+    </tr>
+    <tr>
+        <td>OS-Atlas-Base-4B</td>
+        <td>85.7</td>
+        <td>58.5</td>
+        <td>72.2</td>
+        <td>45.7</td>
+        <td>82.6</td>
+        <td>63.1</td>
+        <td>68.0</td>
+    </tr>
+    <tr>
+        <td>OS-Atlas-Base-7B</td>
+        <td>93.0</td>
+        <td>72.9</td>
+        <td>91.8</td>
+        <td>62.9</td>
+        <td><strong>90.9</strong></td>
+        <td>74.3</td>
+        <td>81.0</td>
+    </tr>
+    <tr>
+        <td>ShowUI-G</td>
+        <td>91.6</td>
+        <td>69.0</td>
+        <td>81.8</td>
+        <td>59.0</td>
+        <td>83.0</td>
+        <td>65.5</td>
+        <td>75.0</td>
+    </tr>
+    <tr>
+        <td>ShowUI</td>
+        <td>92.3</td>
+        <td>75.5</td>
+        <td>76.3</td>
+        <td>61.1</td>
+        <td>81.7</td>
+        <td>63.6</td>
+        <td>75.1</td>
+    </tr>
+    <tr>
+        <td>Iris</td>
+        <td>85.3</td>
+        <td>64.2</td>
+        <td>86.7</td>
+        <td>57.5</td>
+        <td>82.6</td>
+        <td>71.2</td>
+        <td>74.6</td>
+    </tr>
+    <tr>
+        <td>Aria-UI</td>
+        <td>92.3</td>
+        <td>73.8</td>
+        <td>93.3</td>
+        <td>64.3</td>
+        <td>86.5</td>
+        <td>76.2</td>
+        <td>81.1</td>
+    </tr>
+    <tr>
+        <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
+        <td>89.4</td>
+        <td>72.0</td>
+        <td>88.7</td>
+        <td>65.7</td>
+        <td>81.3</td>
+        <td>68.9</td>
+        <td>77.7</td>
+    </tr>
+    <tr>
+        <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
+        <td>93.0</td>
+        <td><strong>79.9</strong></td>
+        <td><strong>93.8</strong></td>
+        <td><strong>76.4</strong></td>
+        <td><strong>90.9</strong></td>
+        <td><strong>84.0</strong></td>
+        <td><strong>86.3</strong></td>
+    </tr>
+</tbody>
 </table>
 
 <table id="ScreenSpotAgent">
@@ -789,7 +681,7 @@
         <td>48.8</td>
     </tr>
     <tr>
-        <td><strong>UGround (Initial)</strong></td>
+        <td><strong>UGround-V1</strong></td>
         <td><b>90.1</b></td>
         <td><b>70.3</b></td>
         <td><b>87.1</b></td>
@@ -799,7 +691,7 @@
         <td><b>75.6</b></td>
     </tr>
     <tr>
-        <td rowspan="9" style="vertical-align: middle;"><br>GPT-4o</td>
+        <td rowspan="8" style="vertical-align: middle;"><br>GPT-4o</td>
         <td>Qwen-VL</td>
         <td>21.3</td>
         <td>21.4</td>
@@ -830,7 +722,7 @@
         <td>38.5</td>
     </tr>
     <tr>
-        <td><strong>UGround (Initial)</strong></td>
+        <td><strong>UGround-V1</strong></td>
         <td><strong>93.4</strong></td>
         <td><strong>76.9</strong></td>
         <td><strong>92.8</strong></td>
@@ -879,18 +771,6 @@
         <td>73.3</td>
         <td><strong>84.0</strong></td>
     </tr>
-
-
-    <tr>
-        <td><strong>UGround-V1-72B (Qwen2-VL)</strong></td>
-        <td><strong>94.5</strong></td>
-        <td><strong>79.9</strong></td>
-        <td><strong>93.8</strong></td>
-        <td><strong>75.0</strong></td>
-        <td>88.7</td>
-        <td>75.2</td>
-        <td><strong>84.5</strong></td>
-    </tr>
 </tbody>
 </table>
 
@@ -928,7 +808,7 @@
             <td>25.6</td>
         </tr>
         <tr>
-            <td rowspan="6">
+            <td rowspan="4">
                 <br><br><div><div><strong>Image</strong></div>
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
@@ -940,14 +820,14 @@
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>45.1</td>
             <td>44.7</td>
             <td>44.6</td>
             <td>44.8</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>32.1</td>
             <td>33.1</td>
@@ -955,29 +835,11 @@
             <td>32.9</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>47.7</strong></td>
             <td><strong>46.0</strong></td>
             <td><strong>46.6</strong></td>
             <td><strong>46.8</strong></td>
-        </tr>
-
-
-        <tr>
-            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-            <td><strong>48.6</strong></td>
-            <td><strong>47.6</strong></td>
-            <td><strong>47.7</strong></td>
-            <td><strong>48.0</strong></td>
-        </tr>
-
-
-        <tr>
-            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-            <td><strong>50.7</strong></td>
-            <td><strong>48.1</strong></td>
-            <td><strong>48.5</strong></td>
-            <td><strong>49.1</strong></td>
         </tr>
     </tbody>
 </table>
@@ -1006,7 +868,7 @@
             <td>55.0</td>
         </tr>
         <tr>
-            <td rowspan="6">
+            <td rowspan="4">
                 <br>
                 <br>
                 <div><strong>Image</strong></div>
@@ -1018,32 +880,20 @@
             <td>47.2</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>46.2</td>
             <td>58.0</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>41.8</td>
             <td>52.8</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>48.4</strong></td>
             <td><strong>62.4</strong></td>
-        </tr>
-
-    <tr>
-            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-            <td><strong>50.0</strong></td>
-            <td><strong>65.0</strong></td>
-        </tr>
-
-    <tr>
-            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-            <td><strong>49.8</strong></td>
-            <td><strong>66.2</strong></td>
         </tr>
     </tbody>
 </table>
@@ -1071,7 +921,7 @@
             <td>17.0</td>
         </tr>
         <tr>
-            <td rowspan="6">
+            <td rowspan="4">
                 <br>
                 <br>
                 <div><strong>Image</strong></div>
@@ -1082,27 +932,17 @@
             <td>28.9</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td>31.1</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="2"><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround (Initial)</strong></td>
+            <td><strong>UGround-V1</strong></td>
             <td><strong>32.8</strong></td>
-        </tr>
-
-    <tr>
-            <td><strong>UGround-V1-2B (Qwen2-VL)</strong></td>
-            <td><strong>32.9</strong></td>
-        </tr>
-
-    <tr>
-            <td><strong>UGround-V1-7B (Qwen2-VL)</strong></td>
-            <td><strong>34.0</strong></td>
         </tr>
     </tbody>
 </table>
@@ -1145,7 +985,7 @@
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround (Initial)</strong></td>
+            <td rowspan="2"><br><strong>UGround-V1</strong></td>
             <td>50.7</td>
             <td><strong>23.1</strong></td>
         </tr>
@@ -1185,7 +1025,7 @@
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround (Initial)</strong></td>
+            <td rowspan="2"><br><strong>UGround-V1</strong></td>
             <td>31.0</td>
         </tr>
         <tr>
