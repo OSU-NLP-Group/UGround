@@ -112,6 +112,7 @@ This is the official code repository for the project: *Navigating the Digital Wo
 | GPT-4o  | Molmo-7B-D               |                  |                  | 93.4        | 80.8        | 91.2         | 72.9         | 88.7     | 69.4     | 82.7 |
 | GPT-4o  | OS-Atlas-Base-7B         | Qwen2-VL         | OS-Atlas         | 93.8        | 79.9        | 90.2         | 66.4         | 92.6     | 79.1     | 83.7 |
 | GPT-4o  | UGround-V1-7B (Qwen2-VL) | Qwen2-VL         | UGround-V1       | 94.1        | 79.9        | 93.3         | 73.6         | 89.6     | 73.3     | 84.0 |
+| GPT-4o  | UGround-V1-72B (Qwen2-VL)| Qwen2-VL         | UGround-V1       | 94.5        | 79.9        | 93.8         | 75.0         | 88.7     | 75.2     | 84.5 |
 
 
 
