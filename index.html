@@ -919,7 +919,7 @@
         </tr>
         <tr>
             <td rowspan="6">
-                <br><br><div><div><strong>Image</strong></div>
+                <br><br><br><br><div><div><strong>Image</strong></div>
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td rowspan="2"><br>GPT-4</td>
@@ -930,14 +930,14 @@
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td>45.1</td>
             <td>44.7</td>
             <td>44.6</td>
             <td>44.8</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="4"><br><br><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>32.1</td>
             <td>33.1</td>
@@ -945,7 +945,7 @@
             <td>32.9</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td><strong>47.7</strong></td>
             <td><strong>46.0</strong></td>
             <td><strong>46.6</strong></td>
@@ -999,6 +999,8 @@
             <td rowspan="6">
                 <br>
                 <br>
+                <br>
+                <br>
                 <div><strong>Image</strong></div>
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
@@ -1008,18 +1010,18 @@
             <td>47.2</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td>46.2</td>
             <td>58.0</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="4"><br><br><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>41.8</td>
             <td>52.8</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td><strong>48.4</strong></td>
             <td><strong>62.4</strong></td>
         </tr>
@@ -1064,7 +1066,7 @@
         <tr>
             <td rowspan="6">
                 <br>
-                <br>
+                <br><br>
                 <div><strong>Image</strong></div>
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
@@ -1073,16 +1075,16 @@
             <td>28.9</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td>31.1</td>
         </tr>
         <tr>
-            <td rowspan="4"><br>GPT-4o</td>
+            <td rowspan="4"><br><br><br>GPT-4o</td>
             <td>SeeClick</td>
             <td>29.6</td>
         </tr>
         <tr>
-            <td><strong>UGround-V1</strong></td>
+            <td><strong>UGround (Initial)</strong></td>
             <td><strong>32.8</strong></td>
         </tr>
 
@@ -1137,7 +1139,7 @@
                 <div><strong>(SeeAct-V)</strong></div>
             </td>
             <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround-V1</strong></td>
+            <td rowspan="2"><br><strong>UGround (Initial)</strong></td>
             <td>50.7</td>
             <td><strong>23.1</strong></td>
         </tr>
@@ -1150,42 +1152,50 @@
 </table>
 
             <table id="AndroidWorld">
-    <caption>AndroidWorld</caption>
-    <thead>
-        <tr>
-            <th>Input</th>
-            <th>Planner</th>
-            <th>Grounding</th>
-            <th>Task Success Rate</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Text</td>
-            <td rowspan="2"><br>GPT-4</td>
-            <td>Choice</td>
-            <td>30.6</td>
-        </tr>
-        <tr>
-            <td>Image + Text</td>
-            <td>SoM</td>
-            <td>25.4</td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <div><strong>Image</strong></div>
-                <div><strong>(SeeAct-V)</strong></div>
-            </td>
-            <td>GPT-4</td>
-            <td rowspan="2"><br><strong>UGround-V1</strong></td>
-            <td>31.0</td>
-        </tr>
-        <tr>
-            <td>GPT-4o</td>
-            <td><strong>32.8</strong></td>
-        </tr>
-    </tbody>
+  <caption>AndroidWorld</caption>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Planner</th>
+      <th>Grounding</th>
+      <th>Task Success Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Text</td>
+      <td>GPT-4</td>
+      <td>Choice</td>
+      <td>30.6</td>
+    </tr>
+    <tr>
+      <td>Image + Text</td>
+      <td>GPT-4</td>
+      <td>SoM</td>
+      <td>25.4</td>
+    </tr>
+    <tr>
+      <td rowspan="3">
+        <div><strong>Image</strong></div>
+        <div><strong>(SeeAct-V)</strong></div>
+      </td>
+      <td>GPT-4</td>
+      <td>UGround</td>
+      <td>31.0</td>
+    </tr>
+    <tr>
+      <td>GPT-4o</td>
+      <td>UGround</td>
+      <td>32.8</td>
+    </tr>
+    <tr>
+      <td>GPT-4o</td>
+      <td>UGround-V1-7B (Qwen2-VL)</td>
+      <td>44.0</td>
+    </tr>
+  </tbody>
 </table>
+
 
 
 
