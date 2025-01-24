@@ -13,6 +13,8 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 <h3>Updates</h3>
 
+- 2025/01/23: Our [training data](https://huggingface.co/datasets/osunlp/UGround-V1-Data) for the UGround-V1 series (Initial/Qwen2-VL) has been released. We also have provided a comprehensive evaluation suite packed with meaningful resources to help researchers test GUI Agents and grounding models with ease. Try them out! The performance of Qwen2-VL-based UGround-V1 on several benchmarks are also updated on the [homepage](https://osu-nlp-group.github.io/UGround) (e.g., AndroidWorld: 33->44). 
+
 - 2025/01/05: Qwen2-VL-based UGround-V1 acheives SOTA results on a new and comprehensive GUI grounding benchmark ScreenSpot-Pro, substaintially outperforms prior models (18.9->31.1). Check the [results](https://gui-agent.github.io/grounding-leaderboard/) and [our tweet](https://x.com/BoyuGouNLP/status/1876299190889742391).
 
 - 2025/01/03: Qwen2-VL-based UGround-V1 has been released ([2B](https://huggingface.co/osunlp/UGround-V1-2B), [7B](https://huggingface.co/osunlp/UGround-V1-7B), [72B](https://huggingface.co/osunlp/UGround-V1-72B)). Check thier performance in [Main Results](#main-results).
