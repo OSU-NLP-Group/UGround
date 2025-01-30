@@ -117,6 +117,18 @@ This is the official code repository for the project: *Navigating the Digital Wo
 
 
 ## Inference of Qwen2-VL-Based UGround
+
+### Python Environment (followed from Qwen2-VL's official repo)
+
+```bash
+#inference
+pip install git+https://github.com/huggingface/transformers@21fac7abba2a37fae86106f87fcf9974fd1e3830
+pip install accelerate
+pip install qwen-vl-utils
+pip install 'vllm==0.6.1' 
+```
+
+
 ### vLLM server
 
 ```bash
