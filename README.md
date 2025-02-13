@@ -1,8 +1,8 @@
 
 
 
-# UGround
-This is the official code repository for the project: *Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents* [**ICLR'25 Oral**]. This work is a collaboration between [OSUNLP](https://x.com/osunlp) and [Orby AI](https://www.orby.ai/).
+# UGround [**ICLR'25 Oral**]
+This is the official code repository for the project: *Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents*. This work is a collaboration between [OSUNLP](https://x.com/osunlp) and [Orby AI](https://www.orby.ai/).
 <img width="1556" alt="image" src="https://github.com/user-attachments/assets/18c6a9f4-31cc-4817-a252-bfd0dbaf3fd6">
 
 - [🏠Homepage](https://osu-nlp-group.github.io/UGround)
