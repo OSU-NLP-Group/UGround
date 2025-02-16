@@ -52,7 +52,7 @@ def process_files(sample_file, plan_file, output_file, screenshot_dir):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process sample and plan files and generate output in JSONL format")
     parser.add_argument("--sample_file", type=str, required=True, help="Path to sample JSON file")
-    parser.add_argument("--plan_file", type=str, required=True, help="Path to plan JSONL file")
+    parser.add_argument("--input_file", type=str, required=True, help="Path to plan JSONL file")
     parser.add_argument("--output_file", type=str, required=True, help="Path to output JSONL file")
     parser.add_argument("--screenshot_dir", type=str, required=True, help="Directory where screenshot images are stored")
 

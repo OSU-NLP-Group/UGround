@@ -2,6 +2,8 @@
 
 This folder contains the evaluation pipeline for the **AndroidControl** benchmark. Below is a detailed description of the scripts, their usage, and the order in which they should be executed.
 
+You can download the AndroidControl test split images folder from [GoogleDrive](https://drive.google.com/file/d/1HcqXk17C1oUGUmDoZZXHkS-n41lxXDQ6/view?usp=sharing). The **subfolder names** represent `episode_id`, and each image is named `screenshot_{step}.png`.
+
 **1. `sample.py`**
 
 Sample a subset of data from the whole dataset.
@@ -18,7 +20,7 @@ Generate plan files using GPT models.
 
 ```bash
 export OPENAI_API_KEY="Your OpenAI API Key"
-python gpt_plan.py --model <gpt_model> --input_file <sample_jsonl> --output_file <plan_jsonl> --image_dir <screenshot_dir> --level <task_level>
+python gpt_plan.py --model <gpt_model> --input_file <sample_jsonl> --output_file <plan_jsonl> --screenshot_dir <screenshot_dir> --level <task_level>
 ```
 
 - `gpt_model` can be "gpt-4o" or "gpt-4-turbo"

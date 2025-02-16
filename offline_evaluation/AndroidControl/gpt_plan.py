@@ -143,9 +143,9 @@ def extract_reason_and_action(gpt_output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='gpt-4-turbo', help="GPT model name")
-    parser.add_argument("--input_file", type=str, required=True, help="Path to input JSON file")
-    parser.add_argument("--output_file", type=str, required=True, help="Path to output JSON file")
-    parser.add_argument("--image_dir", type=str, required=True, help="Directory for screenshot images")
+    parser.add_argument("--input_file", type=str, required=True, help="Path to sample JSON file")
+    parser.add_argument("--output_file", type=str, required=True, help="Path to plan JSON file")
+    parser.add_argument("--screenshot_dir", type=str, required=True, help="Directory for screenshot images")
     parser.add_argument("--level", required=True, type=str, choices=['high', 'low'], help="Task level in AndroidControl")  # task level in AndroidControl
     args = parser.parse_args()
 
@@ -185,7 +185,7 @@ if __name__ == "__main__":
             
             print('prompt', prompt)
 
-            screenshot_path = os.path.join(args.image_dir, item["screenshot"])
+            screenshot_path = os.path.join(args.screenshot_dir, item["screenshot"])
             base64_image = encode_image(screenshot_path)
             
             gpt_output = call_openai_api(prompt, base64_image, api_key, args.model)
