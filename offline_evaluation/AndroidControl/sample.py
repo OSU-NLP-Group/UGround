@@ -26,7 +26,7 @@ def sample_data(input_file, output_file, sample_size=100):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_file", help="Path to the input JSONL file")
+    parser.add_argument("--input_file", help="Path to the full test steps JSON file")
     parser.add_argument("--output_file", help="Path to the output JSON file for sampled data")
     parser.add_argument("-n", "--num_samples", type=int, default=100, help="Number of samples to take (default: 100)")
     
