@@ -4,11 +4,11 @@ This folder contains the evaluation pipeline for the **AndroidControl** benchmar
 
 ![AndroidControl Evaluation Example](./assets/image.png)
 
-You can download the AndroidControl test split images folder from [Hugging Face](https://huggingface.co/datasets/demisama/UGround-Offline-Evaluation/blob/main/AndroidControl_images.zip). The subfolder names represent `episode_id`, and each image is named `screenshot_{step}.png`.
+You can download the **AndroidControl** test split images folder from [Hugging Face](https://huggingface.co/datasets/demisama/UGround-Offline-Evaluation/blob/main/AndroidControl_images.zip). The subfolder names represent `episode_id`, and each image is named `screenshot_{step}.png`.
 
 For more information about the benchmark, please refer to the [Android Control's official repo](https://github.com/google-research/google-research/tree/master/android_control).
 
-For more details on our experiments, please refer to Sections 3.2 and E.3 of [our paper](https://arxiv.org/pdf/2410.05243).
+For more details on our experiments, please refer to **Sections 3.2** and **E.3** of [our paper](https://arxiv.org/pdf/2410.05243).
 
 ### Quick Start
 
@@ -37,8 +37,8 @@ export OPENAI_API_KEY="Your OpenAI API Key"
 python gpt_plan.py --model <gpt_model> --input_file <sample_jsonl> --output_file <plan_jsonl> --screenshot_dir <screenshot_dir> --level <task_level>
 ```
 
-- `gpt_model` can be "gpt-4o" or "gpt-4-turbo"
-- `level` can be "high" or "low"
+- For `gpt_model`, we use `gpt-4o-2024-05-13` and `gpt-4-turbo-2024-04-09`.
+- `level` can be "high" or "low".
 
 The GPT-4o-generated plan files we use are in `data/plan_gpt-4o_{level}.jsonl`.
 
@@ -56,7 +56,7 @@ The queries extracted from GPT-4o plan files are in `data/query_gpt-4o_{level}.j
 
 Perform grounding model inference using the query file generated in the previous step. 
 
-To use **UGround-V1**, please refer to the [UGround-V1 Inference Guidelines](https://github.com/OSU-NLP-Group/UGround/tree/main/grounding).
+To use **UGround-V1**, please refer to the [UGround-V1 Inference Guidelines](https://github.com/OSU-NLP-Group/UGround/tree/main/grounding) and the scripts provided in the `../../grounding` folder.
 
 To compare with our results, use `data/query_gpt-4o_{level}.jsonl` as the question file.
 

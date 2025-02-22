@@ -10,19 +10,6 @@ action_pattern = re.compile(
     r'|pyautogui\.dragTo\("([^"]+)",'
 )
 
-def scale_image(image_path, long_edge=1344):
-    """Scales the image to have the longer edge equal to the specified long_edge value."""
-    image = Image.open(image_path)
-    width, height = image.size
-    if width > height:
-        new_height = int((height / width) * long_edge)
-        new_width = long_edge
-    else:
-        new_width = int((width / height) * long_edge)
-        new_height = long_edge
-    scale_factor = new_width / width
-    return scale_factor
-
 def extract_descriptions(gpt_output):
     """Extracts element descriptions from the GPT output using regex."""
     matches = action_pattern.findall(gpt_output)
@@ -90,7 +77,6 @@ def process_file(base_path, result_file, seq_output_file, query_output_file):
     with open(query_output_file, 'w') as query_file:
         for item in updated_records:
             image_path = os.path.join(base_path, item["image"])
-            scale_factor = scale_image(image_path)
             if item["seq_score"] > 0:
                 descriptions = extract_descriptions(item["gpt_output"])
                 for description in descriptions:
@@ -98,7 +84,6 @@ def process_file(base_path, result_file, seq_output_file, query_output_file):
                         'id': item['id'],
                         'image': item['image'],
                         'description': description,
-                        'scale': scale_factor,
                     })
                     query_file.write(jsonl_record + '\n')
 

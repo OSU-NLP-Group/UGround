@@ -4,7 +4,7 @@ This folder contains our evaluation pipeline for the **OmniACT** benchmark, whic
 
 ![OmniACT Evaluation Example](./assets/image.png)
 
-You can download the OmniACT dataset from [Hugging Face](https://huggingface.co/datasets/Writer/omniact/tree/main).
+You can download the **OmniACT** dataset from [Hugging Face](https://huggingface.co/datasets/Writer/omniact/tree/main).
 
 For more details on our experiments, please refer to **Sections 3.2** and **E.4** of [our paper](https://arxiv.org/pdf/2410.05243).
 
@@ -40,7 +40,7 @@ To use our GPT-4o generated plan results, skip to **step 5: Grounding Model Infe
 
    - `train_file` refers to the `train.json` file in the OmniACT dataset.
    
-   For more details, refer to Section 6 of the [OmniACT's paper](https://arxiv.org/pdf/2402.17553).
+   For more details, refer to **Section 6** of the [OmniACT's paper](https://arxiv.org/pdf/2402.17553).
 
 **3. `gpt_plan.py`**
 
@@ -51,7 +51,7 @@ To use our GPT-4o generated plan results, skip to **step 5: Grounding Model Infe
    python gpt_plan.py --gpt_model <gpt_model> --embedding_file <path_to_embedding_file> --sample_path <path_to_sample_json> --base_path <path_to_dataset> --output_path <path_to_output_plan>
    ```
 
-   - `gpt_model` can be "gpt-4o" or "gpt-4-turbo"
+   - For `gpt_model`, we use `gpt-4o-2024-05-13` and `gpt-4-turbo-2024-04-09`.
    - To use our processed test data, set `sample_path` to `data/processed_test.json`.
    - To use our generated embeddings, set `embedding_file` to `data/train_embeddings.jsonl`.
 
@@ -71,7 +71,7 @@ To use our GPT-4o generated plan results, skip to **step 5: Grounding Model Infe
 
    Perform grounding model inference using the query file generated in the previous step. 
 
-   To use **UGround-V1**, please refer to the [UGround-V1 Inference Guidelines](https://github.com/OSU-NLP-Group/UGround/tree/main/grounding) and the scripts provided in the `grounding` folder.
+   To use **UGround-V1**, please refer to the [UGround-V1 Inference Guidelines](https://github.com/OSU-NLP-Group/UGround/tree/main/grounding) and the scripts provided in the `../../grounding` folder.
 
    To compare with our results, use `data/gpt-4o_query.jsonl` as the question file.
 
@@ -83,9 +83,9 @@ To use our GPT-4o generated plan results, skip to **step 5: Grounding Model Infe
    python eval_action.py --base_path <path_to_dataset> --seq_file <path_to_seq_score_file> --ans_file <path_to_grounding_answer_file>
    ```
 
-To compare with our results, use the following:
-- `base_path`: OmniACT dataset folder.
-- `seq_file`: `data/gpt-4o_seq.jsonl`.
-- The `ans_file` should be inferred from `data/gpt-4o_query.jsonl`.
+   To compare with our results, use the following:
+   - `base_path`: OmniACT dataset folder.
+   - `seq_file`: `data/gpt-4o_seq.jsonl`.
+   - The `ans_file` should be inferred from `data/gpt-4o_query.jsonl`.
 
 **`file_schemas.py`** defines the required fields for the `plan_jsonl`, `query_jsonl`, `seq_jsonl`, and `ans_jsonl` files.
