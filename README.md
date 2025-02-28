@@ -197,8 +197,7 @@ completion = await client.chat.completions.create(
 If you find this work useful, please consider starring our repo and citing our papers: 
 
 ```
-@inproceedings{
-gou2025navigating,
+@inproceedings{gou2025uground,
 title={Navigating the Digital World as Humans Do: Universal Visual Grounding for {GUI} Agents},
 author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
 booktitle={The Thirteenth International Conference on Learning Representations},
