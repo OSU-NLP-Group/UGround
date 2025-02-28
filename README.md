@@ -197,13 +197,14 @@ completion = await client.chat.completions.create(
 If you find this work useful, please consider starring our repo and citing our papers: 
 
 ```
-@article{gou2024uground,
-        title={Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents},
-        author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
-        journal={arXiv preprint arXiv:2410.05243},
-        year={2024},
-        url={https://arxiv.org/abs/2410.05243},
-      }
+@inproceedings{
+gou2025navigating,
+title={Navigating the Digital World as Humans Do: Universal Visual Grounding for {GUI} Agents},
+author={Boyu Gou and Ruohan Wang and Boyuan Zheng and Yanan Xie and Cheng Chang and Yiheng Shu and Huan Sun and Yu Su},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=kxnoqaisCT}
+}
 
 @article{zheng2023seeact,
         title={GPT-4V(ision) is a Generalist Web Agent, if Grounded},
