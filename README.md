@@ -12,7 +12,8 @@ This is the official code repository for the project: *Navigating the Digital Wo
 - [😊Training Data](https://huggingface.co/datasets/osunlp/UGround-V1-Data)
 
 <h3>Updates</h3>
-- 2025/05/01: The bounding-box version of the training data is now available on [HF Dataset](https://huggingface.co/datasets/osunlp/UGround-V1-Data-Box)
+
+- 2025/05/01: The bounding-box version of the training data is now available [here](https://huggingface.co/datasets/osunlp/UGround-V1-Data-Box).
 
 - 2025/01/23: Our [training data](https://huggingface.co/datasets/osunlp/UGround-V1-Data) for the UGround-V1 series (Initial/Qwen2-VL) has been released. We also have provided a comprehensive evaluation suite packed with meaningful resources to help researchers test GUI Agents and grounding models with ease. Try them out! The performance of Qwen2-VL-based UGround-V1 on several benchmarks are also updated on the [homepage](https://osu-nlp-group.github.io/UGround) (e.g., AndroidWorld: 33->44). 
 
