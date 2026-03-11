@@ -42,7 +42,6 @@ This is the official code repository for the project: *Navigating the Digital Wo
   - [x] Online Experiments
     - [x] [Mind2Web-Live-SeeAct-V](https://github.com/boyugou/Mind2Web_Live_SeeAct_V)
     - [x] [AndroidWorld-SeeAct-V](https://github.com/boyugou/android_world_seeact_v)
-  - [ ] Data Synthesis Pipeline (Coming Soon)
 - [x] [Training Data (V1)](https://huggingface.co/datasets/osunlp/UGround-V1-Data)
 - [x] Online Demo (HF Spaces)
 
